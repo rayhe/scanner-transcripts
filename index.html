@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Scanner Transcripts - MPKA</title>
+<title>Scanner Transcripts</title>
 <style>
-  :root { --bg: #0d1117; --surface: #161b22; --border: #30363d; --text: #e6edf3; --muted: #8b949e; --accent: #58a6ff; --green: #3fb950; --yellow: #d29922; }
+  :root { --bg: #0d1117; --surface: #161b22; --border: #30363d; --text: #e6edf3; --muted: #8b949e; --accent: #58a6ff; --green: #3fb950; --yellow: #d29922; --red: #f85149; --purple: #bc8cff; }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); line-height: 1.5; }
   .container { max-width: 900px; margin: 0 auto; padding: 16px; }
@@ -25,6 +25,9 @@
   .call-tag.menlo-park { color: var(--accent); }
   .call-tag.atherton { color: var(--green); }
   .call-tag.east-palo-alto { color: var(--yellow); }
+  .call-tag.sheriff { color: var(--red); }
+  .call-tag.transit { color: var(--purple); }
+  .call-tag.ems { color: var(--green); }
   .call-meta { color: var(--muted); font-size: 12px; display: flex; align-items: center; gap: 6px; }
   .call-transcript { font-size: 14px; line-height: 1.6; }
   .call-transcript mark { background: #d2992244; color: var(--text); border-radius: 2px; padding: 0 2px; }
@@ -39,11 +42,13 @@
 <div class="container">
   <header>
     <h1>Scanner Transcripts</h1>
-    <p>Menlo Park &middot; Atherton &middot; East Palo Alto Police Dispatch</p>
+    <p>Menlo Park &middot; Atherton &middot; East Palo Alto &middot; San Mateo County Sheriff</p>
   </header>
   <div class="controls">
     <input type="search" class="search-box" id="search" placeholder="Search transcripts..." autofocus>
     <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="mpka">MPKA</button>
+    <button class="filter-btn" data-filter="smcso">SMC Sheriff</button>
     <button class="filter-btn" data-filter="100">Menlo Park</button>
     <button class="filter-btn" data-filter="200">Atherton</button>
     <button class="filter-btn" data-filter="300">E. Palo Alto</button>
@@ -52,7 +57,7 @@
   <div id="calls"><div class="loading">Loading transcripts...</div></div>
 </div>
 <script>
-const GROUPS = { 'Menlo Park': 'menlo-park', 'Atherton': 'atherton', 'East Palo Alto': 'east-palo-alto' };
+const GROUPS = { 'Menlo Park': 'menlo-park', 'Atherton': 'atherton', 'East Palo Alto': 'east-palo-alto', 'Sheriff': 'sheriff', 'Transit': 'transit', 'EMS': 'ems' };
 const PLAY_SVG = '<svg viewBox="0 0 16 16"><path d="M6.271 2.147a.5.5 0 0 1 .529.047l7 5a.5.5 0 0 1 0 .812l-7 5A.5.5 0 0 1 6 12.5v-10a.5.5 0 0 1 .271-.353z"/></svg>';
 let allCalls = [];
 let activeFilter = 'all';
@@ -83,7 +88,11 @@ function render() {
 
   let filtered = allCalls;
   if (activeFilter !== 'all') {
-    filtered = filtered.filter(c => String(c.talkgroup) === activeFilter);
+    if (activeFilter === 'mpka' || activeFilter === 'smcso') {
+      filtered = filtered.filter(c => c.short_name === activeFilter);
+    } else {
+      filtered = filtered.filter(c => String(c.talkgroup) === activeFilter);
+    }
   }
   if (query) {
     filtered = filtered.filter(c =>
@@ -110,7 +119,7 @@ function render() {
     const dt = new Date(c.start_time * 1000);
     const dateStr = dt.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' });
     const time = dt.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit', second: '2-digit' });
-    const group = GROUPS[c.talkgroup_group] || '';
+    const group = GROUPS[c.talkgroup_group] || GROUPS[c.talkgroup_category] || '';
     const len = c.call_length ? `${Math.round(c.call_length)}s` : '';
 
     if (dateStr !== lastDate) {
