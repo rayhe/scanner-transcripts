@@ -12,27 +12,27 @@
   header { padding: 24px 0 16px; border-bottom: 1px solid var(--border); margin-bottom: 16px; }
   header h1 { font-size: 24px; font-weight: 600; }
   header p { color: var(--muted); font-size: 14px; margin-top: 4px; }
-  .controls { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
+  .controls { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; align-items: center; }
   .search-box { flex: 1; min-width: 200px; padding: 8px 12px; background: var(--surface); border: 1px solid var(--border); border-radius: 6px; color: var(--text); font-size: 14px; outline: none; }
   .search-box:focus { border-color: var(--accent); }
-  .filter-btn { padding: 6px 12px; background: var(--surface); border: 1px solid var(--border); border-radius: 6px; color: var(--muted); font-size: 13px; cursor: pointer; }
+  .filter-btn { padding: 6px 12px; background: var(--surface); border: 1px solid var(--border); border-radius: 6px; color: var(--muted); font-size: 13px; cursor: pointer; white-space: nowrap; }
   .filter-btn.active { border-color: var(--accent); color: var(--accent); }
   .stats { color: var(--muted); font-size: 13px; margin-bottom: 12px; }
-  .call { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 16px; margin-bottom: 8px; }
-  .call-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px; flex-wrap: wrap; gap: 4px; }
+  .day-header { color: var(--muted); font-size: 13px; font-weight: 600; padding: 12px 0 6px; border-bottom: 1px solid var(--border); margin-bottom: 8px; }
+  .call { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 12px 16px; margin-bottom: 6px; }
+  .call-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px; flex-wrap: wrap; gap: 4px; }
   .call-tag { font-weight: 600; font-size: 14px; }
   .call-tag.menlo-park { color: var(--accent); }
   .call-tag.atherton { color: var(--green); }
   .call-tag.east-palo-alto { color: var(--yellow); }
-  .call-meta { color: var(--muted); font-size: 12px; }
-  .call-transcript { font-size: 14px; line-height: 1.6; margin-top: 4px; }
+  .call-meta { color: var(--muted); font-size: 12px; display: flex; align-items: center; gap: 6px; }
+  .call-transcript { font-size: 14px; line-height: 1.6; }
   .call-transcript mark { background: #d2992244; color: var(--text); border-radius: 2px; padding: 0 2px; }
-  .call-actions { margin-top: 8px; display: flex; gap: 12px; }
-  .call-actions a { color: var(--accent); font-size: 12px; text-decoration: none; }
-  .call-actions a:hover { text-decoration: underline; }
+  .openmhz-link { display: inline-flex; align-items: center; gap: 4px; color: var(--accent); font-size: 12px; text-decoration: none; padding: 2px 8px; border: 1px solid var(--border); border-radius: 4px; margin-left: 4px; }
+  .openmhz-link:hover { border-color: var(--accent); background: #58a6ff11; }
+  .openmhz-link svg { width: 12px; height: 12px; fill: currentColor; }
   .empty { text-align: center; color: var(--muted); padding: 48px 0; }
   .loading { text-align: center; color: var(--muted); padding: 48px 0; }
-  #date-picker { padding: 6px 10px; background: var(--surface); border: 1px solid var(--border); border-radius: 6px; color: var(--text); font-size: 13px; }
 </style>
 </head>
 <body>
@@ -43,7 +43,6 @@
   </header>
   <div class="controls">
     <input type="search" class="search-box" id="search" placeholder="Search transcripts..." autofocus>
-    <input type="date" id="date-picker">
     <button class="filter-btn active" data-filter="all">All</button>
     <button class="filter-btn" data-filter="100">Menlo Park</button>
     <button class="filter-btn" data-filter="200">Atherton</button>
@@ -54,23 +53,27 @@
 </div>
 <script>
 const GROUPS = { 'Menlo Park': 'menlo-park', 'Atherton': 'atherton', 'East Palo Alto': 'east-palo-alto' };
+const PLAY_SVG = '<svg viewBox="0 0 16 16"><path d="M6.271 2.147a.5.5 0 0 1 .529.047l7 5a.5.5 0 0 1 0 .812l-7 5A.5.5 0 0 1 6 12.5v-10a.5.5 0 0 1 .271-.353z"/></svg>';
 let allCalls = [];
 let activeFilter = 'all';
 
-document.getElementById('date-picker').valueAsDate = new Date();
-
-async function loadData() {
-  const dateEl = document.getElementById('date-picker');
-  const d = new Date(dateEl.value + 'T12:00:00');
-  const path = `data/${d.getFullYear()}/${d.getMonth()+1}/${d.getDate()}/calls.json`;
-  try {
-    const res = await fetch(path);
-    if (!res.ok) throw new Error('No data');
-    allCalls = await res.json();
-    allCalls.sort((a, b) => b.start_time - a.start_time);
-  } catch {
-    allCalls = [];
+async function loadAllData() {
+  const now = new Date();
+  const calls = [];
+  // Load last 7 days of data
+  for (let i = 0; i < 7; i++) {
+    const d = new Date(now);
+    d.setDate(d.getDate() - i);
+    const path = `data/${d.getFullYear()}/${d.getMonth()+1}/${d.getDate()}/calls.json`;
+    try {
+      const res = await fetch(path);
+      if (res.ok) {
+        const dayCalls = await res.json();
+        calls.push(...dayCalls);
+      }
+    } catch {}
   }
+  allCalls = calls.sort((a, b) => b.start_time - a.start_time);
   render();
 }
 
@@ -83,22 +86,37 @@ function render() {
     filtered = filtered.filter(c => String(c.talkgroup) === activeFilter);
   }
   if (query) {
-    filtered = filtered.filter(c => c.transcript.toLowerCase().includes(query));
+    filtered = filtered.filter(c =>
+      c.transcript.toLowerCase().includes(query) ||
+      (c.talkgroup_tag || '').toLowerCase().includes(query)
+    );
   }
 
-  document.getElementById('stats').textContent = `${filtered.length} of ${allCalls.length} calls`;
+  document.getElementById('stats').textContent =
+    `Showing ${filtered.length} of ${allCalls.length} calls` +
+    (query ? ` matching "${query}"` : '');
 
   if (filtered.length === 0) {
-    container.innerHTML = '<div class="empty">No matching transcripts</div>';
+    container.innerHTML = query
+      ? '<div class="empty">No calls matching your search</div>'
+      : '<div class="empty">No transcripts available</div>';
     return;
   }
 
-  container.innerHTML = filtered.map(c => {
+  let html = '';
+  let lastDate = '';
+
+  for (const c of filtered) {
     const dt = new Date(c.start_time * 1000);
+    const dateStr = dt.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' });
     const time = dt.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit', second: '2-digit' });
     const group = GROUPS[c.talkgroup_group] || '';
     const len = c.call_length ? `${Math.round(c.call_length)}s` : '';
-    const freq = (c.freq / 1e6).toFixed(4);
+
+    if (dateStr !== lastDate) {
+      html += `<div class="day-header">${dateStr}</div>`;
+      lastDate = dateStr;
+    }
 
     let text = c.transcript || '(no speech detected)';
     if (query) {
@@ -106,21 +124,22 @@ function render() {
       text = text.replace(re, '<mark>$1</mark>');
     }
 
-    return `<div class="call">
+    html += `<div class="call">
       <div class="call-header">
         <span class="call-tag ${group}">${c.talkgroup_tag || 'TG ' + c.talkgroup}</span>
-        <span class="call-meta">${time} &middot; ${len} &middot; ${freq} MHz</span>
+        <span class="call-meta">
+          ${time} &middot; ${len}
+          <a class="openmhz-link" href="${c.openmhz_url}" target="_blank" title="Listen on OpenMHz">${PLAY_SVG} OpenMHz</a>
+        </span>
       </div>
       <div class="call-transcript">${text}</div>
-      <div class="call-actions">
-        <a href="${c.openmhz_url}" target="_blank">Listen on OpenMHz</a>
-      </div>
     </div>`;
-  }).join('');
+  }
+
+  container.innerHTML = html;
 }
 
 document.getElementById('search').addEventListener('input', render);
-document.getElementById('date-picker').addEventListener('change', loadData);
 
 document.querySelectorAll('.filter-btn').forEach(btn => {
   btn.addEventListener('click', () => {
@@ -131,7 +150,7 @@ document.querySelectorAll('.filter-btn').forEach(btn => {
   });
 });
 
-loadData();
+loadAllData();
 </script>
 </body>
 </html>
