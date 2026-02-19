@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scanner Transcripts - MPKA</title>
+<style>
+  :root { --bg: #0d1117; --surface: #161b22; --border: #30363d; --text: #e6edf3; --muted: #8b949e; --accent: #58a6ff; --green: #3fb950; --yellow: #d29922; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); line-height: 1.5; }
+  .container { max-width: 900px; margin: 0 auto; padding: 16px; }
+  header { padding: 24px 0 16px; border-bottom: 1px solid var(--border); margin-bottom: 16px; }
+  header h1 { font-size: 24px; font-weight: 600; }
+  header p { color: var(--muted); font-size: 14px; margin-top: 4px; }
+  .controls { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
+  .search-box { flex: 1; min-width: 200px; padding: 8px 12px; background: var(--surface); border: 1px solid var(--border); border-radius: 6px; color: var(--text); font-size: 14px; outline: none; }
+  .search-box:focus { border-color: var(--accent); }
+  .filter-btn { padding: 6px 12px; background: var(--surface); border: 1px solid var(--border); border-radius: 6px; color: var(--muted); font-size: 13px; cursor: pointer; }
+  .filter-btn.active { border-color: var(--accent); color: var(--accent); }
+  .stats { color: var(--muted); font-size: 13px; margin-bottom: 12px; }
+  .call { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 16px; margin-bottom: 8px; }
+  .call-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px; flex-wrap: wrap; gap: 4px; }
+  .call-tag { font-weight: 600; font-size: 14px; }
+  .call-tag.menlo-park { color: var(--accent); }
+  .call-tag.atherton { color: var(--green); }
+  .call-tag.east-palo-alto { color: var(--yellow); }
+  .call-meta { color: var(--muted); font-size: 12px; }
+  .call-transcript { font-size: 14px; line-height: 1.6; margin-top: 4px; }
+  .call-transcript mark { background: #d2992244; color: var(--text); border-radius: 2px; padding: 0 2px; }
+  .call-actions { margin-top: 8px; display: flex; gap: 12px; }
+  .call-actions a { color: var(--accent); font-size: 12px; text-decoration: none; }
+  .call-actions a:hover { text-decoration: underline; }
+  .empty { text-align: center; color: var(--muted); padding: 48px 0; }
+  .loading { text-align: center; color: var(--muted); padding: 48px 0; }
+  #date-picker { padding: 6px 10px; background: var(--surface); border: 1px solid var(--border); border-radius: 6px; color: var(--text); font-size: 13px; }
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <h1>Scanner Transcripts</h1>
+    <p>Menlo Park &middot; Atherton &middot; East Palo Alto Police Dispatch</p>
+  </header>
+  <div class="controls">
+    <input type="search" class="search-box" id="search" placeholder="Search transcripts..." autofocus>
+    <input type="date" id="date-picker">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="100">Menlo Park</button>
+    <button class="filter-btn" data-filter="200">Atherton</button>
+    <button class="filter-btn" data-filter="300">E. Palo Alto</button>
+  </div>
+  <div class="stats" id="stats"></div>
+  <div id="calls"><div class="loading">Loading transcripts...</div></div>
+</div>
+<script>
+const GROUPS = { 'Menlo Park': 'menlo-park', 'Atherton': 'atherton', 'East Palo Alto': 'east-palo-alto' };
+let allCalls = [];
+let activeFilter = 'all';
+
+document.getElementById('date-picker').valueAsDate = new Date();
+
+async function loadData() {
+  const dateEl = document.getElementById('date-picker');
+  const d = new Date(dateEl.value + 'T12:00:00');
+  const path = `data/${d.getFullYear()}/${d.getMonth()+1}/${d.getDate()}/calls.json`;
+  try {
+    const res = await fetch(path);
+    if (!res.ok) throw new Error('No data');
+    allCalls = await res.json();
+    allCalls.sort((a, b) => b.start_time - a.start_time);
+  } catch {
+    allCalls = [];
+  }
+  render();
+}
+
+function render() {
+  const query = document.getElementById('search').value.toLowerCase().trim();
+  const container = document.getElementById('calls');
+
+  let filtered = allCalls;
+  if (activeFilter !== 'all') {
+    filtered = filtered.filter(c => String(c.talkgroup) === activeFilter);
+  }
+  if (query) {
+    filtered = filtered.filter(c => c.transcript.toLowerCase().includes(query));
+  }
+
+  document.getElementById('stats').textContent = `${filtered.length} of ${allCalls.length} calls`;
+
+  if (filtered.length === 0) {
+    container.innerHTML = '<div class="empty">No matching transcripts</div>';
+    return;
+  }
+
+  container.innerHTML = filtered.map(c => {
+    const dt = new Date(c.start_time * 1000);
+    const time = dt.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit', second: '2-digit' });
+    const group = GROUPS[c.talkgroup_group] || '';
+    const len = c.call_length ? `${Math.round(c.call_length)}s` : '';
+    const freq = (c.freq / 1e6).toFixed(4);
+
+    let text = c.transcript || '(no speech detected)';
+    if (query) {
+      const re = new RegExp(`(${query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
+      text = text.replace(re, '<mark>$1</mark>');
+    }
+
+    return `<div class="call">
+      <div class="call-header">
+        <span class="call-tag ${group}">${c.talkgroup_tag || 'TG ' + c.talkgroup}</span>
+        <span class="call-meta">${time} &middot; ${len} &middot; ${freq} MHz</span>
+      </div>
+      <div class="call-transcript">${text}</div>
+      <div class="call-actions">
+        <a href="${c.openmhz_url}" target="_blank">Listen on OpenMHz</a>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+document.getElementById('search').addEventListener('input', render);
+document.getElementById('date-picker').addEventListener('change', loadData);
+
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    activeFilter = btn.dataset.filter;
+    render();
+  });
+});
+
+loadData();
+</script>
+</body>
+</html>
