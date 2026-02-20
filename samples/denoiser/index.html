@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html><head><meta charset="UTF-8"><title>Denoiser A/B Comparison</title>
+<html><head><meta charset="UTF-8"><title>DeepFilterNet3 A/B Comparison</title>
 <style>
 body { font-family: system-ui; background: #0d1117; color: #e6edf3; max-width: 900px; margin: 0 auto; padding: 20px; }
 h1 { font-size: 20px; }
@@ -7,45 +7,36 @@ h2 { font-size: 16px; color: #58a6ff; margin-top: 24px; }
 .sample { background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 16px; margin: 12px 0; }
 .label { font-size: 13px; color: #8b949e; margin-bottom: 4px; }
 audio { width: 100%; height: 32px; margin: 4px 0; }
-.note { color: #d29922; font-size: 13px; margin-bottom: 16px; }
+.note { color: #8b949e; font-size: 13px; margin-bottom: 16px; line-height: 1.5; }
+.tag { display: inline-block; font-size: 11px; padding: 2px 6px; border-radius: 4px; margin-left: 6px; }
+.tag-orig { background: #30363d; color: #8b949e; }
+.tag-dfn3 { background: #1f3a2a; color: #3fb950; }
 </style></head><body>
-<h1>Denoiser A/B Comparison v2 (gentler settings)</h1>
-<p class="note">Gentle 50% = reduce noise by half, high threshold. Medium 70% = reduce 70%. NS Gentle = non-stationary at 50%. Previous run killed the voice — these preserve it.</p>
+<h1>DeepFilterNet3 A/B Comparison</h1>
+<p class="note">Original scanner audio vs DeepFilterNet3 enhanced. Same calls, same gain/squelch settings. DeepFilterNet3 operates at 48kHz internally; originals are 16kHz upsampled to 44.1kHz for MP3. Listen for noise floor reduction between speech and clarity of voice.</p>
 
 <div class="sample">
-<h2>TG 100 (Menlo Park) - call_283 (37s)</h2>
-<div class="label">Original</div>
-<audio controls src="100-1771561878_488337500.0-call_283_original.mp3"></audio>
-<div class="label">Gentle 50% (stationary, prop_decrease=0.5, thresh=2.0)</div>
-<audio controls src="100-1771561878_488337500.0-call_283_gentle50.mp3"></audio>
-<div class="label">Medium 70% (stationary, prop_decrease=0.7, thresh=1.5)</div>
-<audio controls src="100-1771561878_488337500.0-call_283_medium70.mp3"></audio>
-<div class="label">Non-stationary gentle 50%</div>
-<audio controls src="100-1771561878_488337500.0-call_283_ns_gentle50.mp3"></audio>
+<h2>TG 100 (Menlo Park PD) &mdash; call_283 (37s)</h2>
+<div class="label">Original <span class="tag tag-orig">raw</span></div>
+<audio controls preload="none" src="100-1771561878_488337500.0-call_283_original.mp3"></audio>
+<div class="label">DeepFilterNet3 <span class="tag tag-dfn3">enhanced</span></div>
+<audio controls preload="none" src="100-1771561878_488337500.0-call_283_deepfilter3.mp3"></audio>
 </div>
 
 <div class="sample">
-<h2>TG 200 (Atherton) - call_462 (17s)</h2>
-<div class="label">Original</div>
-<audio controls src="200-1771566935_489087500.0-call_462_original.mp3"></audio>
-<div class="label">Gentle 50% (stationary, prop_decrease=0.5, thresh=2.0)</div>
-<audio controls src="200-1771566935_489087500.0-call_462_gentle50.mp3"></audio>
-<div class="label">Medium 70% (stationary, prop_decrease=0.7, thresh=1.5)</div>
-<audio controls src="200-1771566935_489087500.0-call_462_medium70.mp3"></audio>
-<div class="label">Non-stationary gentle 50%</div>
-<audio controls src="200-1771566935_489087500.0-call_462_ns_gentle50.mp3"></audio>
+<h2>TG 200 (Atherton PD) &mdash; call_462 (17s)</h2>
+<div class="label">Original <span class="tag tag-orig">raw</span></div>
+<audio controls preload="none" src="200-1771566935_489087500.0-call_462_original.mp3"></audio>
+<div class="label">DeepFilterNet3 <span class="tag tag-dfn3">enhanced</span></div>
+<audio controls preload="none" src="200-1771566935_489087500.0-call_462_deepfilter3.mp3"></audio>
 </div>
 
 <div class="sample">
-<h2>TG 200 (Atherton) - call_464 (11s)</h2>
-<div class="label">Original</div>
-<audio controls src="200-1771566969_489087500.0-call_464_original.mp3"></audio>
-<div class="label">Gentle 50% (stationary, prop_decrease=0.5, thresh=2.0)</div>
-<audio controls src="200-1771566969_489087500.0-call_464_gentle50.mp3"></audio>
-<div class="label">Medium 70% (stationary, prop_decrease=0.7, thresh=1.5)</div>
-<audio controls src="200-1771566969_489087500.0-call_464_medium70.mp3"></audio>
-<div class="label">Non-stationary gentle 50%</div>
-<audio controls src="200-1771566969_489087500.0-call_464_ns_gentle50.mp3"></audio>
+<h2>TG 200 (Atherton PD) &mdash; call_464 (11s)</h2>
+<div class="label">Original <span class="tag tag-orig">raw</span></div>
+<audio controls preload="none" src="200-1771566969_489087500.0-call_464_original.mp3"></audio>
+<div class="label">DeepFilterNet3 <span class="tag tag-dfn3">enhanced</span></div>
+<audio controls preload="none" src="200-1771566969_489087500.0-call_464_deepfilter3.mp3"></audio>
 </div>
 
 </body></html>
