@@ -34,6 +34,11 @@
   .openmhz-link { display: inline-flex; align-items: center; gap: 4px; color: var(--accent); font-size: 12px; text-decoration: none; padding: 2px 8px; border: 1px solid var(--border); border-radius: 4px; margin-left: 4px; }
   .openmhz-link:hover { border-color: var(--accent); background: #58a6ff11; }
   .openmhz-link svg { width: 12px; height: 12px; fill: currentColor; }
+  .play-btn { display: inline-flex; align-items: center; gap: 4px; color: var(--green); font-size: 12px; padding: 2px 8px; border: 1px solid var(--border); border-radius: 4px; cursor: pointer; background: none; }
+  .play-btn:hover { border-color: var(--green); background: #3fb95011; }
+  .play-btn.playing { color: var(--yellow); border-color: var(--yellow); }
+  .play-btn svg { width: 12px; height: 12px; fill: currentColor; }
+  .call audio { width: 100%; margin-top: 6px; height: 32px; }
   .empty { text-align: center; color: var(--muted); padding: 48px 0; }
   .loading { text-align: center; color: var(--muted); padding: 48px 0; }
 </style>
@@ -59,8 +64,10 @@
 <script>
 const GROUPS = { 'Menlo Park': 'menlo-park', 'Atherton': 'atherton', 'East Palo Alto': 'east-palo-alto', 'Sheriff': 'sheriff', 'Transit': 'transit', 'EMS': 'ems' };
 const PLAY_SVG = '<svg viewBox="0 0 16 16"><path d="M6.271 2.147a.5.5 0 0 1 .529.047l7 5a.5.5 0 0 1 0 .812l-7 5A.5.5 0 0 1 6 12.5v-10a.5.5 0 0 1 .271-.353z"/></svg>';
+const STOP_SVG = '<svg viewBox="0 0 16 16"><rect x="4" y="4" width="8" height="8" rx="1"/></svg>';
 let allCalls = [];
 let activeFilter = 'all';
+let currentAudio = null;
 
 async function loadAllData() {
   const now = new Date();
@@ -133,12 +140,20 @@ function render() {
       text = text.replace(re, '<mark>$1</mark>');
     }
 
-    html += `<div class="call">
+    const dt2 = new Date(c.start_time * 1000);
+    const audioPath = c.audio_file ? `audio/${dt2.getFullYear()}/${dt2.getMonth()+1}/${dt2.getDate()}/${c.audio_file}` : '';
+    const playBtn = audioPath
+      ? `<button class="play-btn" onclick="togglePlay(this,'${audioPath}')" title="Play audio">${PLAY_SVG} Play</button>`
+      : '';
+    const mhzLink = `<a class="openmhz-link" href="${c.openmhz_url}" target="_blank" title="Listen on OpenMHz">${PLAY_SVG} OpenMHz</a>`;
+
+    html += `<div class="call" id="call-${c.start_time}">
       <div class="call-header">
         <span class="call-tag ${group}">${c.talkgroup_tag || 'TG ' + c.talkgroup}</span>
         <span class="call-meta">
           ${time} &middot; ${len}
-          <a class="openmhz-link" href="${c.openmhz_url}" target="_blank" title="Listen on OpenMHz">${PLAY_SVG} OpenMHz</a>
+          ${playBtn}
+          ${mhzLink}
         </span>
       </div>
       <div class="call-transcript">${text}</div>
@@ -158,6 +173,40 @@ document.querySelectorAll('.filter-btn').forEach(btn => {
     render();
   });
 });
+
+function togglePlay(btn, src) {
+  // Stop any currently playing audio
+  if (currentAudio) {
+    currentAudio.pause();
+    const oldBtn = document.querySelector('.play-btn.playing');
+    if (oldBtn) { oldBtn.classList.remove('playing'); oldBtn.innerHTML = PLAY_SVG + ' Play'; }
+    const oldEl = currentAudio.parentElement;
+    if (oldEl) oldEl.querySelector('audio')?.remove();
+    if (currentAudio._src === src) { currentAudio = null; return; }
+  }
+  const audio = new Audio(src);
+  audio._src = src;
+  currentAudio = audio;
+  btn.classList.add('playing');
+  btn.innerHTML = STOP_SVG + ' Stop';
+  // Show audio element under the call for scrubbing
+  const callEl = btn.closest('.call');
+  const audioEl = document.createElement('audio');
+  audioEl.src = src;
+  audioEl.controls = true;
+  audioEl.autoplay = true;
+  audioEl.style.width = '100%';
+  audioEl.style.marginTop = '6px';
+  audioEl.style.height = '32px';
+  callEl.appendChild(audioEl);
+  audioEl.onended = () => {
+    btn.classList.remove('playing');
+    btn.innerHTML = PLAY_SVG + ' Play';
+    audioEl.remove();
+    currentAudio = null;
+  };
+  audio.play();
+}
 
 loadAllData();
 </script>
