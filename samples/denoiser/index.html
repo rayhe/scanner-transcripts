@@ -7,69 +7,45 @@ h2 { font-size: 16px; color: #58a6ff; margin-top: 24px; }
 .sample { background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 16px; margin: 12px 0; }
 .label { font-size: 13px; color: #8b949e; margin-bottom: 4px; }
 audio { width: 100%; height: 32px; margin: 4px 0; }
-.note { color: #d29922; font-size: 13px; }
+.note { color: #d29922; font-size: 13px; margin-bottom: 16px; }
 </style></head><body>
-<h1>Denoiser A/B Comparison (noisereduce spectral gating)</h1>
-<p class="note">Stationary = assumes constant noise profile. Non-stationary = adapts to changing noise. Listen for the background hum/buzz reduction.</p>
+<h1>Denoiser A/B Comparison v2 (gentler settings)</h1>
+<p class="note">Gentle 50% = reduce noise by half, high threshold. Medium 70% = reduce 70%. NS Gentle = non-stationary at 50%. Previous run killed the voice — these preserve it.</p>
 
 <div class="sample">
 <h2>TG 100 (Menlo Park) - call_283 (37s)</h2>
 <div class="label">Original</div>
 <audio controls src="100-1771561878_488337500.0-call_283_original.mp3"></audio>
-<div class="label">Stationary spectral gating</div>
-<audio controls src="100-1771561878_488337500.0-call_283_stationary.mp3"></audio>
-<div class="label">Non-stationary spectral gating</div>
-<audio controls src="100-1771561878_488337500.0-call_283_nonstationary.mp3"></audio>
-</div>
-
-<div class="sample">
-<h2>TG 100 (Menlo Park) - call_284 (486s)</h2>
-<div class="label">Original</div>
-<audio controls src="100-1771562017_488337500.0-call_284_original.mp3"></audio>
-<div class="label">Stationary spectral gating</div>
-<audio controls src="100-1771562017_488337500.0-call_284_stationary.mp3"></audio>
-<div class="label">Non-stationary spectral gating</div>
-<audio controls src="100-1771562017_488337500.0-call_284_nonstationary.mp3"></audio>
-</div>
-
-<div class="sample">
-<h2>TG 100 (Menlo Park) - call_295 (183s)</h2>
-<div class="label">Original</div>
-<audio controls src="100-1771562585_488337500.0-call_295_original.mp3"></audio>
-<div class="label">Stationary spectral gating</div>
-<audio controls src="100-1771562585_488337500.0-call_295_stationary.mp3"></audio>
-<div class="label">Non-stationary spectral gating</div>
-<audio controls src="100-1771562585_488337500.0-call_295_nonstationary.mp3"></audio>
+<div class="label">Gentle 50% (stationary, prop_decrease=0.5, thresh=2.0)</div>
+<audio controls src="100-1771561878_488337500.0-call_283_gentle50.mp3"></audio>
+<div class="label">Medium 70% (stationary, prop_decrease=0.7, thresh=1.5)</div>
+<audio controls src="100-1771561878_488337500.0-call_283_medium70.mp3"></audio>
+<div class="label">Non-stationary gentle 50%</div>
+<audio controls src="100-1771561878_488337500.0-call_283_ns_gentle50.mp3"></audio>
 </div>
 
 <div class="sample">
 <h2>TG 200 (Atherton) - call_462 (17s)</h2>
 <div class="label">Original</div>
 <audio controls src="200-1771566935_489087500.0-call_462_original.mp3"></audio>
-<div class="label">Stationary spectral gating</div>
-<audio controls src="200-1771566935_489087500.0-call_462_stationary.mp3"></audio>
-<div class="label">Non-stationary spectral gating</div>
-<audio controls src="200-1771566935_489087500.0-call_462_nonstationary.mp3"></audio>
-</div>
-
-<div class="sample">
-<h2>TG 200 (Atherton) - call_463 (16s)</h2>
-<div class="label">Original</div>
-<audio controls src="200-1771566951_489087500.0-call_463_original.mp3"></audio>
-<div class="label">Stationary spectral gating</div>
-<audio controls src="200-1771566951_489087500.0-call_463_stationary.mp3"></audio>
-<div class="label">Non-stationary spectral gating</div>
-<audio controls src="200-1771566951_489087500.0-call_463_nonstationary.mp3"></audio>
+<div class="label">Gentle 50% (stationary, prop_decrease=0.5, thresh=2.0)</div>
+<audio controls src="200-1771566935_489087500.0-call_462_gentle50.mp3"></audio>
+<div class="label">Medium 70% (stationary, prop_decrease=0.7, thresh=1.5)</div>
+<audio controls src="200-1771566935_489087500.0-call_462_medium70.mp3"></audio>
+<div class="label">Non-stationary gentle 50%</div>
+<audio controls src="200-1771566935_489087500.0-call_462_ns_gentle50.mp3"></audio>
 </div>
 
 <div class="sample">
 <h2>TG 200 (Atherton) - call_464 (11s)</h2>
 <div class="label">Original</div>
 <audio controls src="200-1771566969_489087500.0-call_464_original.mp3"></audio>
-<div class="label">Stationary spectral gating</div>
-<audio controls src="200-1771566969_489087500.0-call_464_stationary.mp3"></audio>
-<div class="label">Non-stationary spectral gating</div>
-<audio controls src="200-1771566969_489087500.0-call_464_nonstationary.mp3"></audio>
+<div class="label">Gentle 50% (stationary, prop_decrease=0.5, thresh=2.0)</div>
+<audio controls src="200-1771566969_489087500.0-call_464_gentle50.mp3"></audio>
+<div class="label">Medium 70% (stationary, prop_decrease=0.7, thresh=1.5)</div>
+<audio controls src="200-1771566969_489087500.0-call_464_medium70.mp3"></audio>
+<div class="label">Non-stationary gentle 50%</div>
+<audio controls src="200-1771566969_489087500.0-call_464_ns_gentle50.mp3"></audio>
 </div>
 
 </body></html>
