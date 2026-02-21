@@ -41,6 +41,13 @@
   .call audio { width: 100%; margin-top: 6px; height: 32px; }
   .empty { text-align: center; color: var(--muted); padding: 48px 0; }
   .loading { text-align: center; color: var(--muted); padding: 48px 0; }
+  /* Radio code annotations */
+  .rc { border-bottom: 1px dotted var(--muted); cursor: help; position: relative; }
+  .rc:hover { color: var(--accent); border-color: var(--accent); }
+  .rc .rc-tip { display: none; position: absolute; bottom: 100%; left: 50%; transform: translateX(-50%); background: #1c2128; border: 1px solid var(--border); border-radius: 6px; padding: 4px 8px; font-size: 12px; color: var(--yellow); white-space: nowrap; z-index: 10; pointer-events: none; margin-bottom: 4px; }
+  .rc .rc-tip::after { content: ''; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); border: 5px solid transparent; border-top-color: var(--border); }
+  .rc:hover .rc-tip { display: block; }
+  .rc-inline { color: var(--yellow); font-size: 12px; font-weight: 500; }
 </style>
 </head>
 <body>
@@ -57,6 +64,7 @@
     <button class="filter-btn" data-filter="100">Menlo Park</button>
     <button class="filter-btn" data-filter="200">Atherton</button>
     <button class="filter-btn" data-filter="300">E. Palo Alto</button>
+    <button class="filter-btn" id="translate-btn" style="margin-left:auto">Translate Codes</button>
   </div>
   <div class="stats" id="stats"></div>
   <div id="calls"><div class="loading">Loading transcripts...</div></div>
@@ -68,11 +76,333 @@ const STOP_SVG = '<svg viewBox="0 0 16 16"><rect x="4" y="4" width="8" height="8
 let allCalls = [];
 let activeFilter = 'all';
 let currentAudio = null;
+let translateMode = false;
+
+// Police radio codes & terms dictionary
+// Each entry: [regex, short meaning]
+// Sorted longest-first to avoid partial matches
+const CODES = [
+  // 10-codes
+  [/\b10-0\b/gi, "Caution"],
+  [/\b10-1\b/gi, "Poor reception"],
+  [/\b10-2\b/gi, "Good reception"],
+  [/\b10-3\b/gi, "Stop transmitting"],
+  [/\b10-4\b/gi, "Acknowledged"],
+  [/\b10-5\b/gi, "Relay message"],
+  [/\b10-6\b/gi, "Busy"],
+  [/\b10-7\b/gi, "Out of service"],
+  [/\b10-8\b/gi, "In service"],
+  [/\b10-9\b/gi, "Repeat last"],
+  [/\b10-10\b/gi, "Off duty"],
+  [/\b10-11\b/gi, "Animal problem"],
+  [/\b10-12\b/gi, "Standby"],
+  [/\b10-14\b/gi, "Prowler report"],
+  [/\b10-15\b/gi, "Civil disturbance"],
+  [/\b10-16\b/gi, "Domestic dispute"],
+  [/\b10-17\b/gi, "Meet complainant"],
+  [/\b10-19\b/gi, "Return to station"],
+  [/\b10-20\b/gi, "Location"],
+  [/\b10-21\b/gi, "Phone call"],
+  [/\b10-22\b/gi, "Disregard"],
+  [/\b10-23\b/gi, "Arrived on scene"],
+  [/\b10-25\b/gi, "Report in person"],
+  [/\b10-26\b/gi, "ETA"],
+  [/\b10-27\b/gi, "License check"],
+  [/\b10-28\b/gi, "Registration check"],
+  [/\b10-29\b/gi, "Warrant check"],
+  [/\b10-30\b/gi, "Unnecessary use of radio"],
+  [/\b10-32\b/gi, "Person with gun"],
+  [/\b10-33\b/gi, "Emergency traffic"],
+  [/\b10-34\b/gi, "Riot"],
+  [/\b10-35\b/gi, "Major crime alert"],
+  [/\b10-36\b/gi, "Correct time"],
+  [/\b10-37\b/gi, "Suspicious vehicle"],
+  [/\b10-38\b/gi, "Stopping suspicious vehicle"],
+  [/\b10-39\b/gi, "Urgent, lights & siren"],
+  [/\b10-40\b/gi, "No lights or siren"],
+  [/\b10-41\b/gi, "Beginning shift"],
+  [/\b10-42\b/gi, "Ending shift"],
+  [/\b10-43\b/gi, "Information"],
+  [/\b10-45\b/gi, "Dead animal"],
+  [/\b10-46\b/gi, "Assist motorist"],
+  [/\b10-48\b/gi, "Detaining subject"],
+  [/\b10-49\b/gi, "En route to assignment"],
+  [/\b10-50\b/gi, "Traffic accident"],
+  [/\b10-51\b/gi, "Tow truck needed"],
+  [/\b10-52\b/gi, "Ambulance needed"],
+  [/\b10-53\b/gi, "Road blocked"],
+  [/\b10-54\b/gi, "Livestock on road"],
+  [/\b10-55\b/gi, "DUI"],
+  [/\b10-56\b/gi, "Intoxicated pedestrian"],
+  [/\b10-57\b/gi, "Hit and run"],
+  [/\b10-59\b/gi, "Escort"],
+  [/\b10-60\b/gi, "Squad in vicinity"],
+  [/\b10-61\b/gi, "Personnel in area"],
+  [/\b10-62\b/gi, "Unable to copy"],
+  [/\b10-66\b/gi, "Suspicious person"],
+  [/\b10-67\b/gi, "Person calling for help"],
+  [/\b10-68\b/gi, "Dispatch info"],
+  [/\b10-70\b/gi, "Fire alarm"],
+  [/\b10-71\b/gi, "Advise nature of fire"],
+  [/\b10-72\b/gi, "Report fire progress"],
+  [/\b10-73\b/gi, "Smoke report"],
+  [/\b10-76\b/gi, "En route"],
+  [/\b10-77\b/gi, "ETA"],
+  [/\b10-78\b/gi, "Need assistance"],
+  [/\b10-79\b/gi, "Notify coroner"],
+  [/\b10-80\b/gi, "Chase in progress"],
+  [/\b10-86\b/gi, "Any traffic?"],
+  [/\b10-87\b/gi, "Pick up"],
+  [/\b10-88\b/gi, "Advise phone number"],
+  [/\b10-91\b/gi, "Pick up prisoner"],
+  [/\b10-95\b/gi, "Subject in custody"],
+  [/\b10-97\b/gi, "Arrived on scene"],
+  [/\b10-98\b/gi, "Available/finished last assignment"],
+  [/\b10-99\b/gi, "Officer needs help"],
+  // California penal codes
+  [/\b1(?: |-)8(?: |-)7\b/gi, "PC 187: Murder"],
+  [/\bPC\s*187\b/gi, "Murder"],
+  [/\b2(?: |-)0(?: |-)7\b/gi, "PC 207: Kidnapping"],
+  [/\bPC\s*207\b/gi, "Kidnapping"],
+  [/\b2(?: |-)1(?: |-)1\b/gi, "PC 211: Robbery"],
+  [/\bPC\s*211\b/gi, "Robbery"],
+  [/\b2(?: |-)1(?: |-)4\b/gi, "PC 214: Robbery, elderly/disabled"],
+  [/\bPC\s*214\b/gi, "Robbery, elderly/disabled"],
+  [/\b2(?: |-)1(?: |-)5\b/gi, "PC 215: Carjacking"],
+  [/\bPC\s*215\b/gi, "Carjacking"],
+  [/\b2(?: |-)2(?: |-)0\b/gi, "PC 220: Assault w/ intent to rape"],
+  [/\bPC\s*220\b/gi, "Assault w/ intent to rape"],
+  [/\b2(?: |-)4(?: |-)0\b/gi, "PC 240: Assault"],
+  [/\bPC\s*240\b/gi, "Assault"],
+  [/\b2(?: |-)4(?: |-)2\b/gi, "PC 242: Battery"],
+  [/\bPC\s*242\b/gi, "Battery"],
+  [/\b2(?: |-)4(?: |-)3\b/gi, "PC 243: Battery on officer"],
+  [/\bPC\s*243\b/gi, "Battery on officer"],
+  [/\b2(?: |-)4(?: |-)5\b/gi, "PC 245: Assault w/ deadly weapon"],
+  [/\bPC\s*245\b/gi, "Assault w/ deadly weapon"],
+  [/\b2(?: |-)6(?: |-)1\b/gi, "PC 261: Rape"],
+  [/\bPC\s*261\b/gi, "Rape"],
+  [/\b2(?: |-)7(?: |-)3\b/gi, "PC 273: Child abuse"],
+  [/\bPC\s*273\.5\b/gi, "Domestic violence"],
+  [/\bPC\s*273\b/gi, "Child abuse"],
+  [/\b2(?: |-)8(?: |-)8\b/gi, "PC 288: Lewd acts w/ minor"],
+  [/\bPC\s*288\b/gi, "Lewd acts w/ minor"],
+  [/\b3(?: |-)1(?: |-)4\b/gi, "PC 314: Indecent exposure"],
+  [/\bPC\s*314\b/gi, "Indecent exposure"],
+  [/\b4(?: |-)1(?: |-)5\b/gi, "PC 415: Disturbing the peace"],
+  [/\bPC\s*415\b/gi, "Disturbing the peace"],
+  [/\b4(?: |-)1(?: |-)7\b/gi, "PC 417: Brandishing weapon"],
+  [/\bPC\s*417\b/gi, "Brandishing weapon"],
+  [/\b4(?: |-)5(?: |-)9\b/gi, "PC 459: Burglary"],
+  [/\bPC\s*459\b/gi, "Burglary"],
+  [/\b4(?: |-)7(?: |-)0\b/gi, "PC 470: Forgery"],
+  [/\bPC\s*470\b/gi, "Forgery"],
+  [/\b4(?: |-)8(?: |-)4\b/gi, "PC 484: Theft/larceny"],
+  [/\bPC\s*484\b/gi, "Theft/larceny"],
+  [/\b4(?: |-)8(?: |-)7\b/gi, "PC 487: Grand theft"],
+  [/\bPC\s*487\b/gi, "Grand theft"],
+  [/\b4(?: |-)8(?: |-)8\b/gi, "PC 488: Petty theft"],
+  [/\bPC\s*488\b/gi, "Petty theft"],
+  [/\b4(?: |-)9(?: |-)6\b/gi, "PC 496: Receiving stolen property"],
+  [/\bPC\s*496\b/gi, "Receiving stolen property"],
+  [/\b5(?: |-)0(?: |-)2\b/gi, "PC 502: Computer crime"],
+  [/\bPC\s*502\b/gi, "Computer crime"],
+  [/\b5(?: |-)3(?: |-)0\b/gi, "PC 530: Identity theft"],
+  [/\bPC\s*530\b/gi, "Identity theft"],
+  [/\b5(?: |-)3(?: |-)7\b/gi, "PC 537: Defrauding innkeeper"],
+  [/\bPC\s*537\b/gi, "Defrauding innkeeper"],
+  [/\b5(?: |-)9(?: |-)4\b/gi, "PC 594: Vandalism"],
+  [/\bPC\s*594\b/gi, "Vandalism"],
+  [/\b6(?: |-)0(?: |-)2\b/gi, "PC 602: Trespassing"],
+  [/\bPC\s*602\b/gi, "Trespassing"],
+  [/\b6(?: |-)4(?: |-)7\b/gi, "PC 647: Disorderly conduct"],
+  [/\bPC\s*647\b/gi, "Disorderly conduct"],
+  [/\bPC\s*832\b/gi, "Arrest & firearms cert"],
+  [/\bPC\s*12020\b/gi, "Prohibited weapon"],
+  // California health & safety codes
+  [/\bH\s*(?:&|and)\s*S\s*113(50|51|52|77|78|79)\b/gi, "Narcotics offense"],
+  [/\b11350\b/gi, "H&S: Possession of controlled substance"],
+  [/\b11351\b/gi, "H&S: Possession for sale"],
+  [/\b11352\b/gi, "H&S: Sale/transport narcotics"],
+  [/\b11357\b/gi, "H&S: Marijuana possession"],
+  [/\b11364\b/gi, "H&S: Drug paraphernalia"],
+  [/\b11377\b/gi, "H&S: Possession of meth"],
+  [/\b11378\b/gi, "H&S: Meth possession for sale"],
+  [/\b11379\b/gi, "H&S: Sale/transport meth"],
+  [/\b5150\b/gi, "Mental health hold"],
+  // California vehicle codes
+  [/\bVC\s*10851\b/gi, "Vehicle theft"],
+  [/\bVC\s*14601\b/gi, "Driving w/ suspended license"],
+  [/\bVC\s*20001\b/gi, "Hit & run w/ injury"],
+  [/\bVC\s*20002\b/gi, "Hit & run, property damage"],
+  [/\bVC\s*23103\b/gi, "Reckless driving"],
+  [/\bVC\s*23110\b/gi, "Throwing object at vehicle"],
+  [/\bVC\s*23152\b/gi, "DUI"],
+  [/\bVC\s*23153\b/gi, "DUI causing injury"],
+  // Code responses
+  [/\bcode\s*1\b/gi, "Respond at convenience"],
+  [/\bcode\s*2\b/gi, "Urgent, no lights/siren"],
+  [/\bcode\s*3\b/gi, "Emergency, lights & siren"],
+  [/\bcode\s*4\b/gi, "No further assistance needed"],
+  [/\bcode\s*5\b/gi, "Stakeout"],
+  [/\bcode\s*6\b/gi, "Out for investigation"],
+  [/\bcode\s*7\b/gi, "Meal break"],
+  [/\bcode\s*8\b/gi, "Fire alarm box pull"],
+  [/\bcode\s*9\b/gi, "Jail break"],
+  [/\bcode\s*10\b/gi, "Bomb threat"],
+  [/\bcode\s*20\b/gi, "Notify news media"],
+  [/\bcode\s*30\b/gi, "Officer needs help"],
+  [/\bcode\s*33\b/gi, "Clear the air, emergency"],
+  [/\bcode\s*99\b/gi, "Emergency, all units respond"],
+  // Phonetic alphabet (police LAPD/APCO style)
+  [/\bAdam\b/g, "A"],
+  [/\bBoy\b/g, "B"],
+  [/\bCharles?\b/g, "C"],
+  [/\bDavid\b/g, "D"],
+  [/\bEdward\b/g, "E"],
+  [/\bFrank\b/g, "F"],
+  [/\bGeorge\b/g, "G"],
+  [/\bHenry\b/g, "H"],
+  [/\bIda\b/g, "I"],
+  [/\bJohn\b/g, "J"],
+  [/\bKing\b/g, "K"],
+  [/\bLincoln\b/g, "L"],
+  [/\bMary\b/g, "M"],
+  [/\bNora\b/g, "N"],
+  [/\bOcean\b/g, "O"],
+  [/\bPaul\b/g, "P"],
+  [/\bQueen\b/g, "Q"],
+  [/\bRobert\b/g, "R"],
+  [/\bSam\b/g, "S"],
+  [/\bTom\b/g, "T"],
+  [/\bUnion\b/g, "U"],
+  [/\bVictor\b/g, "V"],
+  [/\bWilliam\b/g, "W"],
+  [/\bX-?ray\b/gi, "X"],
+  [/\bYellow\b/g, "Y"],
+  [/\bZebra\b/g, "Z"],
+  // Common radio terms & abbreviations
+  [/\bAKA\b/gi, "Also known as"],
+  [/\bAPB\b/gi, "All points bulletin"],
+  [/\bATL\b/gi, "Attempt to locate"],
+  [/\bBOL(?:O)?\b/gi, "Be on the lookout"],
+  [/\bCHP\b/gi, "California Highway Patrol"],
+  [/\bCODE-?\s*FOUR\b/gi, "No further assistance needed"],
+  [/\bCOPY\b/gi, "Understood"],
+  [/\bCOPIED\b/gi, "Understood"],
+  [/\bDB\b/g, "Dead body"],
+  [/\bDOA\b/gi, "Dead on arrival"],
+  [/\bDOB\b/gi, "Date of birth"],
+  [/\bDV\b/g, "Domestic violence"],
+  [/\bETA\b/gi, "Estimated time of arrival"],
+  [/\bFTA\b/gi, "Failure to appear"],
+  [/\bGOA\b/gi, "Gone on arrival"],
+  [/\bGSW\b/gi, "Gunshot wound"],
+  [/\bHBD\b/gi, "Has been drinking"],
+  [/\bJuvenile\b/gi, "Minor/under 18"],
+  [/\bMPD\b/gi, "Missing person"],
+  [/\bOIS\b/gi, "Officer-involved shooting"],
+  [/\bPC\b/g, "Penal code"],
+  [/\bPIT\b/g, "Pursuit intervention technique"],
+  [/\bPOI\b/gi, "Person of interest"],
+  [/\bR(?:\.)?P(?:\.)?(?:\b)/g, "Reporting party"],
+  [/\bR(?:\.)?O(?:\.)?(?:\b)/g, "Registered owner"],
+  [/\bSMCSO\b/gi, "San Mateo County Sheriff's Office"],
+  [/\bSVU\b/gi, "Special victims unit"],
+  [/\bTC\b/g, "Traffic collision"],
+  [/\bUTL\b/gi, "Unable to locate"],
+  [/\bVIC\b/gi, "Victim"],
+  [/\bWA\b/g, "White adult"],
+  [/\bWMA\b/gi, "White male adult"],
+  [/\bWFA\b/gi, "White female adult"],
+  [/\bBMA\b/gi, "Black male adult"],
+  [/\bBFA\b/gi, "Black female adult"],
+  [/\bHMA\b/gi, "Hispanic male adult"],
+  [/\bHFA\b/gi, "Hispanic female adult"],
+  [/\bAMA\b/gi, "Asian male adult"],
+  [/\bAFA\b/gi, "Asian female adult"],
+  [/\bWMJ\b/gi, "White male juvenile"],
+  [/\bWFJ\b/gi, "White female juvenile"],
+  [/\bBMJ\b/gi, "Black male juvenile"],
+  [/\bHMJ\b/gi, "Hispanic male juvenile"],
+  [/\brespond(?:ing)?\b/gi, "En route"],
+  [/\bon\s*scene\b/gi, "Arrived at location"],
+  [/\bclear(?:ed)?\b/gi, "Available/finished"],
+  [/\bdisposition\b/gi, "How call was resolved"],
+  [/\badvised?\b/gi, "Informed/told"],
+  [/\bsubject\b/gi, "Person"],
+  [/\bcomplainant\b/gi, "Person who called"],
+  [/\bwants?\s*(?:&|and)\s*warrants?\b/gi, "Outstanding warrants check"],
+  [/\brolled?\s*over\b/gi, "Vehicle overturned"],
+  [/\bshots?\s*fired\b/gi, "Gunshots reported"],
+  [/\bfoot\s*pursuit\b/gi, "Chasing suspect on foot"],
+  [/\bvehicle\s*pursuit\b/gi, "Car chase"],
+  [/\bin\s*custody\b/gi, "Arrested/detained"],
+  [/\bat\s*large\b/gi, "Suspect not caught"],
+  [/\bfelony\s*stop\b/gi, "High-risk traffic stop"],
+  [/\btraffic\s*stop\b/gi, "Vehicle pulled over"],
+  [/\bwelfare\s*check\b/gi, "Check on person's safety"],
+  [/\bsuspicious\s*(?:person|subject|individual|male|female)\b/gi, "Unknown person acting oddly"],
+  [/\bsuspicious\s*(?:vehicle|car|van|truck)\b/gi, "Unknown vehicle, possibly criminal"],
+  [/\bsuspicious\s*(?:activity|circumstances)\b/gi, "Possible criminal activity"],
+  [/\bmental\s*health\b/gi, "Psychiatric emergency"],
+  [/\b(?:un)?armed\b/gi, m => m.toLowerCase().startsWith('un') ? "No weapon" : "Has weapon"],
+  [/\bflag(?:ged)?\b/gi, "Alert/warning on record"],
+  [/\bpriors?\b/gi, "Previous criminal record"],
+  [/\bprobation\b/gi, "Supervised release"],
+  [/\bparole\b/gi, "Conditional release from prison"],
+  [/\bno\s*contact\s*order\b/gi, "Restraining order"],
+  [/\brestraining\s*order\b/gi, "Court order to stay away"],
+  [/\bTRO\b/g, "Temporary restraining order"],
+  [/\bEPO\b/g, "Emergency protective order"],
+];
+
+function annotateText(text) {
+  // First, find all matches and their positions
+  const annotations = []; // {start, end, original, meaning}
+
+  // We need to work on the plain text, not HTML
+  for (const [regex, meaning] of CODES) {
+    const re = new RegExp(regex.source, regex.flags);
+    let m;
+    while ((m = re.exec(text)) !== null) {
+      const resolved = typeof meaning === 'function' ? meaning(m[0]) : meaning;
+      // Check overlap with existing annotations
+      const start = m.index, end = m.index + m[0].length;
+      const overlaps = annotations.some(a => start < a.end && end > a.start);
+      if (!overlaps) {
+        annotations.push({ start, end, original: m[0], meaning: resolved });
+      }
+    }
+  }
+
+  if (annotations.length === 0) return text;
+
+  // Sort by position
+  annotations.sort((a, b) => a.start - b.start);
+
+  // Build annotated string
+  let result = '';
+  let pos = 0;
+  for (const a of annotations) {
+    result += escHtml(text.slice(pos, a.start));
+    if (translateMode) {
+      result += `<span class="rc" title="${escAttr(a.meaning)}">${escHtml(a.original)}<span class="rc-tip">${escHtml(a.meaning)}</span></span> <span class="rc-inline">[${escHtml(a.meaning)}]</span>`;
+    } else {
+      result += `<span class="rc" title="${escAttr(a.meaning)}">${escHtml(a.original)}<span class="rc-tip">${escHtml(a.meaning)}</span></span>`;
+    }
+    pos = a.end;
+  }
+  result += escHtml(text.slice(pos));
+  return result;
+}
+
+function escHtml(s) { return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+function escAttr(s) { return s.replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;'); }
 
 async function loadAllData() {
   const now = new Date();
   const calls = [];
-  // Load last 7 days of data
   for (let i = 0; i < 7; i++) {
     const d = new Date(now);
     d.setDate(d.getDate() - i);
@@ -135,6 +465,8 @@ function render() {
     }
 
     let text = c.transcript || '(no speech detected)';
+    // Annotate with radio codes first, then apply search highlight
+    text = annotateText(text);
     if (query) {
       const re = new RegExp(`(${query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
       text = text.replace(re, '<mark>$1</mark>');
@@ -165,17 +497,24 @@ function render() {
 
 document.getElementById('search').addEventListener('input', render);
 
-document.querySelectorAll('.filter-btn').forEach(btn => {
+document.querySelectorAll('.filter-btn:not(#translate-btn)').forEach(btn => {
   btn.addEventListener('click', () => {
-    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.filter-btn:not(#translate-btn)').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
     activeFilter = btn.dataset.filter;
     render();
   });
 });
 
+document.getElementById('translate-btn').addEventListener('click', () => {
+  translateMode = !translateMode;
+  const btn = document.getElementById('translate-btn');
+  btn.classList.toggle('active', translateMode);
+  btn.textContent = translateMode ? 'Hide Translations' : 'Translate Codes';
+  render();
+});
+
 function togglePlay(btn, src) {
-  // Stop any currently playing audio
   if (currentAudio) {
     currentAudio.pause();
     const oldBtn = document.querySelector('.play-btn.playing');
@@ -189,7 +528,6 @@ function togglePlay(btn, src) {
   currentAudio = audio;
   btn.classList.add('playing');
   btn.innerHTML = STOP_SVG + ' Stop';
-  // Show audio element under the call for scrubbing
   const callEl = btn.closest('.call');
   const audioEl = document.createElement('audio');
   audioEl.src = src;
