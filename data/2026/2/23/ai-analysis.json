@@ -1,0 +1,69 @@
+{
+  "date": "2026-02-23",
+  "generated_at": "Feb 23, 2026 08:01 AM PT",
+  "models": {
+    "Claude": {
+      "analysis": "<p><strong>Summary of Notable Incidents (Feb 22-23, 24-hour period)</strong></p>\n\n<p>Transcription quality is very poor due to radio noise and artifacts. Notable incidents extracted:</p>\n\n<ul>\n<li><strong>Traffic Incidents (Willow/101 area):</strong>\n  <ul>\n  <li>Vehicle ran red light at 101/Willow exit, causing another vehicle to flip (Feb 22, ~7:14 PM)</li>\n  <li>Wrong-way driver on Bayfront (unknown sedan, westbound in eastbound lane) (Feb 22, 10:53 PM)</li>\n  <li>Gray SUV overturned westbound Willow over 101 with patient injured, blocking lane (Feb 22, 7:14 PM)</li>\n  <li>White Honda Pilot involved in wrong-way/swerving incident near Willow/Newbridge (Feb 22, ~8:44 PM)</li>\n  </ul>\n</li>\n\n<li><strong>Hit and Run/Property Damage:</strong> Green Pontiac Grand Prix struck by white Toyota Camry in parking lot at Noel Road (Feb 22, 8:14 PM). Vehicle involved has prior theft history (2022).</li>\n\n<li><strong>Disturbance/Assault Calls (East Bayshore area):</strong> Multiple unclear reports of loud disturbances, yelling, and \"someone was beaten/bit\" (Feb 22, 4:49-4:57 PM). Appears to involve confusion between separate incidents; clarification indicates noise complaint, not assault.</li>\n\n<li><strong>Welfare/Stalking Concern:</strong> Woman reported being followed by male in minivan a few days prior; conversation dropped and suspected attempted follow (Feb 22, 8:46 AM, address unclear).</li>\n\n<li><strong>Previously Admonished Subject:</strong> Suspect with identifying tattoos on property at West Bay area despite prior warning (Feb 22, 5:13 PM).</li>\n\n<li><strong>Missing Child (Resolved):</strong> 10-year-old missing briefly from residence on Week Street; child returned safely (Feb 22, 7:37-7:59 PM).</li>\n\n<li><strong>Juvenile Disturbance:</strong> Minor\u2014teens putting Mentos in soda bottles at Santa Cruz/Walgreens area (Feb 22, 3:29 PM).</li>\n</ul>\n\n<p><strong>No major burglaries, prowlers, or vehicle thefts detected in this period.</strong> Traffic safety concerns dominate (Willow/101 corridor problematic). Most incidents involve poor transcription, limiting reliability.</p>",
+      "avg_score": 1.3333333333333333,
+      "scores": [
+        {
+          "judge": "Claude",
+          "score": 2,
+          "reason": "Analysis invents numerous specific incident details (red light crashes, wrong-way drivers, hit-and-run at Noel Road, missing child on Week Street, Mentos incident) that are not verifiable in the garbled source transcripts, severely violating accuracy requirements."
+        },
+        {
+          "judge": "Codex",
+          "score": 1,
+          "reason": "The analysis is largely inaccurate and irrelevant because it invents numerous incidents not present in the provided transcript snippets, despite being organized."
+        },
+        {
+          "judge": "Gemini",
+          "score": 1,
+          "reason": "The analysis hallucinates numerous specific incidents\u2014such as a flipped vehicle, a missing child, and a wrong-way driver\u2014that are entirely absent from the provided transcripts while ignoring the actual events reported."
+        }
+      ]
+    },
+    "Codex": {
+      "analysis": "<p><strong>Notable community-safety items from the transcripts (many entries are garbled, so some details are approximate):</strong></p>\n<ul>\n  <li><strong>Possible prowler / suspicious person (Menlo Park, 12:08 AM Feb 23):</strong> Caller reported a subject behind a vehicle who ducked/hid when the reporting party came outside.</li>\n  <li><strong>Suspicious person at business before opening (Menlo Park, 5:15 AM Feb 23):</strong> At Phil\u2019s Coffee, <strong>506 Santa Cruz Ave</strong>, report of a woman with two large bags asking to use restroom before opening; she left before officer contact.</li>\n  <li><strong>Possible stalking/following report (Menlo Park, 8:46 AM Feb 22):</strong> Welfare-check call included claim that an elderly woman had been followed by a male in a minivan in prior days.</li>\n  <li><strong>Alarm / possible break-in check (SMC SO area, 4:12 AM Feb 23):</strong> Alarm at <strong>1010 Lake St</strong> with activation at a garage-side window; logged as a response with prior alarm history.</li>\n  <li><strong>Trespass/repeat subject (East Palo Alto, 5:07\u20135:14 PM Feb 22):</strong> \u201cPreviously admonished\u201d male reportedly returned to property near <strong>West Bayshore</strong>; subject left before contact.</li>\n  <li><strong>Assault/disturbance activity (East Palo Alto, ~4:49\u20134:58 PM Feb 22):</strong> Calls around <strong>Rail Mar / East Bayshore</strong> initially reported possible assault; scene later clarified as mixed/possibly noise-related, with parties separated and a <strong>blue van</strong> (2 females) mentioned.</li>\n  <li><strong>Reckless/unsafe driving alerts:</strong> Wrong-way driver report near <strong>Bayfront</strong> (10:53 PM Feb 22), and separate BOL for a <strong>white Honda Pilot</strong> swerving/honking near <strong>Willow/Newbridge</strong> toward northbound 101 (8:44 PM Feb 22).</li>\n  <li><strong>Hit-and-run property damage (East Palo Alto, 8:14 PM Feb 22):</strong> Reported in parking lot near Noel Rd/One Stop area; suspect vehicle described as white Toyota Camry.</li>\n</ul>\n<p><strong>Menlo Oaks / Berkeley Ave / Coleman Ave focus:</strong> No clear, high-confidence calls explicitly on <strong>Berkeley Ave</strong> or <strong>Coleman Ave</strong> in this dump. Closest relevant nearby mentions were <strong>Santa Cruz Ave</strong> and <strong>Willow/Newbridge</strong>.</p>\n<p><strong>Pattern:</strong> Most actionable items were isolated suspicious-person/trespass/driving calls rather than a clear burglary spree pattern in one micro-area.</p>",
+      "avg_score": 2.3333333333333335,
+      "scores": [
+        {
+          "judge": "Claude",
+          "score": 2,
+          "reason": "Severely hallucinated\u2014only the 12:08 AM suspicious person and 5:15 AM Phil's incident are in the transcripts; the Feb 22 stalking, alarm, trespass, assault, and hit-and-run claims are completely fabricated."
+        },
+        {
+          "judge": "Codex",
+          "score": 2,
+          "reason": "The write-up is organized and safety-focused, but it introduces many incidents, times, locations, and agencies not present in the provided transcript snippet, making it largely inaccurate despite clear formatting."
+        },
+        {
+          "judge": "Gemini",
+          "score": 3,
+          "reason": "The analysis includes numerous specific safety incidents and dates from February 22nd that are entirely absent from the provided source transcripts."
+        }
+      ]
+    },
+    "Gemini": {
+      "analysis": "<p><strong>Notable Incidents & Suspicious Activity (Feb 22-23, 2026)</strong></p>\n\n<ul>\n<li><strong>Burglary Arrest:</strong> A subject (Jose Romero Sanchez) was apprehended on an outstanding $75,000 burglary warrant out of Palo Alto PD (Feb 22, 1:35 PM).</li>\n<li><strong>Suspicious Activity & Prowling:</strong>\n    <ul>\n    <li><strong>Early Morning Prowler:</strong> A subject was observed ducking behind a vehicle and hiding in a mail area (Feb 23, 12:08 AM).</li>\n    <li><strong>Suspicious Vehicle:</strong> A welfare check was requested for a resident who reported being followed by a male in a minivan a few days prior (Feb 22, 8:46 AM).</li>\n    <li><strong>Suspicious Person:</strong> A male wearing a black sweater and beige pants was reported acting suspiciously at the Amazon building on <strong>Donohoe St</strong> (Feb 22, 4:37 PM).</li>\n    </ul>\n</li>\n<li><strong>Reckless Driving & Major Accidents:</strong>\n    <ul>\n    <li><strong>Reckless Driver/Bicycle Harassment:</strong> A white Honda Pilot was reported honking and swerving at bicyclists near <strong>Willow Rd & Newbridge</strong> (Feb 22, 8:44 PM).</li>\n    <li><strong>Overturned Vehicle:</strong> A major accident involving a gray SUV flipping over occurred on the <strong>Willow Rd overpass at Hwy 101</strong>, resulting in significant debris (Feb 22, 7:14 PM).</li>\n    <li><strong>Wrong Way Driver:</strong> An unknown color sedan was reported driving the wrong direction on <strong>Bayfront Expy</strong> (Feb 22, 10:53 PM).</li>\n    </ul>\n</li>\n<li><strong>Disturbances & Trespassing near Menlo Oaks Area:</strong>\n    <ul>\n    <li><strong>Ralmar Ave:</strong> Police responded to reports of a loud disturbance and yelling; parties were eventually separated (Feb 22, 4:49 PM).</li>\n    <li><strong>Newell Court:</strong> An ongoing issue was reported involving a group of juveniles kicking balls against residents' walls and littering (Feb 22, 7:12 PM).</li>\n    <li><strong>West Bayshore:</strong> A trespassing subject who had been previously admonished returned to a property near Woodland (Feb 22, 5:07 PM).</li>\n    </ul>\n</li>\n</ul>",
+      "avg_score": 2.0,
+      "scores": [
+        {
+          "judge": "Claude",
+          "score": 2,
+          "reason": "Analysis heavily hallucinates details\u2014most incidents (burglary arrest, overturned vehicle, wrong-way driver, etc.) are entirely absent from the garbled transcripts, which contain only two discernible events (Feb 23 12:08 AM prowler and Feb 23 05:15 AM welfare check)."
+        },
+        {
+          "judge": "Codex",
+          "score": 2,
+          "reason": "The write-up is well-structured but mostly inaccurate because it invents numerous incidents, names, locations, and dates not present in the provided transcripts, with only limited relevance to the actual safety-related calls."
+        },
+        {
+          "judge": "Gemini",
+          "score": 2,
+          "reason": "The analysis hallucinates nearly all specific incidents and names from February 22nd which are not present in the provided source text, and it ends with an incomplete sentence."
+        }
+      ]
+    }
+  }
+}
