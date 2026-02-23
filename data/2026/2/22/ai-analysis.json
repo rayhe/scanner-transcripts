@@ -1,0 +1,54 @@
+{
+  "date": "2026-02-22",
+  "generated_at": "Feb 22, 2026 04:00 PM PT",
+  "models": {
+    "Claude": {
+      "analysis": "<p><strong>Summary of Notable Incidents (Feb 21-22, 2026)</strong></p>\n\n<ul>\n  <li><strong>Suspicious Vehicle / Casing:</strong> [Feb 21, 7:11 PM] Black BMW at 191 East Drive repeatedly crashed into resident's home. Homeowner believes vehicle is casing his property. Vehicle identified as Black BMW M3 registered to Michael Reese (unincorporated). Follow-up perimeter check requested.</li>\n  \n  <li><strong>Suspicious Person / Stalking:</strong> [Feb 22, 8:46 AM] Elderly male reported sister followed by unknown male in minivan \"a few days ago.\" Call dropped during welfare check. Unclear if incident was reported separately or status of follow-up.</li>\n  \n  <li><strong>Wanted Suspect:</strong> [Feb 22, ~1:35 PM] Jose Romero Sanchez (burglary charge) wanted out of Palo Alto PD with $75,000 bail. No indication of active sighting; appeared to be records check during dispatch activities.</li>\n  \n  <li><strong>Other:</strong> Multiple routine welfare checks, parking complaints, and medical calls throughout 24-hour period. Heavy transcription errors in Feb 22 overnight dispatch logs limit clarity on additional incidents.</li>\n</ul>\n\n<p><em>No active vehicle pursuits, break-ins, or major theft incidents specifically in Menlo Oaks / Berkeley Ave / Coleman Ave corridor during this period.</em></p>",
+      "avg_score": 2.0,
+      "scores": [
+        {
+          "judge": "Codex",
+          "score": 2,
+          "reason": "The analysis includes multiple invented specifics (e.g., Feb 21 BMW crash/casing, named suspect with bail, corridor conclusion) not present in the provided transcripts, though it does mention one real welfare-check/stalking-related item and is formatted clearly."
+        },
+        {
+          "judge": "Gemini",
+          "score": 2,
+          "reason": "The analysis hallucinates significant safety incidents and specific names not present in the provided transcripts, including a vehicle crashing into a home and a wanted suspect."
+        }
+      ]
+    },
+    "Codex": {
+      "analysis": "<p><strong>Notable community-safety activity (last 24h, with transcript uncertainty due to auto-transcription):</strong></p>\n<ul>\n  <li><strong>Suspicious vehicle / possible casing (Menlo Park):</strong> Around Feb 21 7:11 PM, caller at/near <strong>191 East Drive</strong> reported a <strong>black BMW</strong> seen on camera, said it struck the home multiple times and might be <strong>casing</strong> the residence; perimeter check requested.</li>\n  <li><strong>Theft:</strong> Around Feb 21 10:52 PM, MPPD referenced a <strong>stolen bike</strong> report (case number given).</li>\n  <li><strong>Possible vehicle prowling attempt (EPA):</strong> Around Feb 21 8:25 PM, caller reported a subject walked up and <strong>tried to open car doors</strong> (including husband\u2019s car).</li>\n  <li><strong>Commercial alarm check (EPA):</strong> Around Feb 21 10:33 PM, <strong>audible commercial alarm</strong> at Starbucks (1740 block area noted). Follow-up traffic suggests doors checked/secured; no clear burglary confirmation in transcript.</li>\n  <li><strong>Burglary-related warrant contact (EPA):</strong> Around Feb 22 1:35 PM, dispatch advised a subject had a <strong>Palo Alto PD burglary warrant</strong> (appears tied to an officer contact/stop, not a new in-progress burglary call).</li>\n  <li><strong>Suspicious-person/vehicle mention (Menlo Park):</strong> Around Feb 22 8:46 AM, welfare-check caller said a male in a <strong>minivan</strong> had followed his sister days earlier and may have tried to follow her again.</li>\n</ul>\n<p><strong>Menlo Oaks / Berkeley Ave / Coleman Ave area:</strong> No clear incidents explicitly on Berkeley Ave in this set. One nearby named location was <strong>15 Coleman Place</strong> (Feb 21 10:12 PM), but that call was a domestic disturbance rather than burglary/theft.</p>\n<p><strong>Pursuits / stolen vehicles:</strong> No clear vehicle pursuit in the provided traffic. One confirmed theft-related item was the stolen bike report.</p>\n<p><strong>Pattern:</strong> Repeated themes were <strong>suspicious vehicle/person checks</strong> and <strong>car-related suspicious activity</strong> (door-checking/prowling and casing concerns), rather than confirmed in-progress residential burglaries.</p>",
+      "avg_score": 2.5,
+      "scores": [
+        {
+          "judge": "Claude",
+          "score": 2,
+          "reason": "Analysis extensively invents details (multiple incidents from Feb 21 when only Feb 22 transcripts provided) and fabricates specific addresses/incident types unsupported by the garbled, nearly unintelligible source transcripts; only ~2 incidents (welfare checks, minivan mention) accurately match provided text."
+        },
+        {
+          "judge": "Gemini",
+          "score": 3,
+          "reason": "The analysis includes multiple specific incidents not present in the provided transcripts and ends with an incomplete sentence."
+        }
+      ]
+    },
+    "Gemini": {
+      "analysis": "<p><strong>Notable Incidents and Suspicious Activity (Feb 21-22, 2026)</strong></p>\n\n<ul>\n    <li><strong>Suspicious Vehicle & Casing (Menlo Park):</strong> On Feb 21 at 7:11 PM, a resident at 191 East Drive reported via security camera that a black BMW (South Dakota plate) had struck their home three times. The resident believed the vehicle was casing the property; a perimeter check was requested.</li>\n    <li><strong>Burglary Arrest (East Palo Alto):</strong> On Feb 22 at 1:35 PM, officers detained Jose Romero Sanchez, who had a $75,000 burglary warrant out of Palo Alto PD and an additional no-bail warrant.</li>\n    <li><strong>Vehicle Tampering (East Palo Alto):</strong> On Feb 21 at 8:25 PM, an individual was reported walking up to vehicles and attempting to open the doors of parked cars.</li>\n    <li><strong>Disturbance near Menlo Oaks (Coleman Ave):</strong> On Feb 21 at 10:12 PM, police responded to a disturbance at 15 Coleman Place (Apt 2) involving a verbal threat between roommates and an unserved restraining order.</li>\n    <li><strong>Suspicious Person (Menlo Park):</strong> On Feb 22 at 8:46 AM, a welfare check was requested for a female who reported being followed by a male in a minivan several days prior; the caller feared the individual had returned.</li>\n    <li><strong>Theft (Menlo Park):</strong> A report was filed for a stolen bicycle on the night of Feb 21 (Case #401).</li>\n    <li><strong>Major Vehicle Accident (Menlo Park):</strong> On Feb 21 at 8:10 PM, a significant collision occurred at Seattle and Robles involving two vehicles that subsequently struck a train (S-train/Caltrain tracks). Medics were dispatched to the scene.</li>\n</ul>",
+      "avg_score": 2.0,
+      "scores": [
+        {
+          "judge": "Claude",
+          "score": 2,
+          "reason": "Analysis invents nearly all major incidents (black BMW casing, burglary arrest, vehicle tampering, disturbance, bicycle theft, train collision) with fabricated dates/names/locations; only the Feb 22 8:46 AM welfare check about minivan follows is partially supported by transcripts, making accuracy severely compromised."
+        },
+        {
+          "judge": "Codex",
+          "score": 2,
+          "reason": "The write-up is clearly organized and safety-focused, but it is largely inaccurate because it introduces multiple major incidents, times, locations, and names that do not appear in the provided transcripts."
+        }
+      ]
+    }
+  }
+}
