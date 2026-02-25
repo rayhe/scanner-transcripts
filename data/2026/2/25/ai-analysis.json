@@ -1,0 +1,69 @@
+{
+  "date": "2026-02-25",
+  "generated_at": "Feb 25, 2026 08:01 AM PT",
+  "models": {
+    "Claude": {
+      "analysis": "<p><strong>Summary: Minimal notable incidents detected in Menlo Oaks area. Transcription quality is poor, limiting confidence in details.</strong></p>\n\n<ul>\n  <li>\n    <strong>Hit-and-Run at Trader Joe's (12:28 PM, 720 Menlo Avenue)</strong><br>\n    Gray Acura struck by silver 2015 Lexus (suspected stolen or unregistered). Suspect vehicle plate provided to dispatch. Vehicle last seen heading toward University Avenue. Victim waiting at Wells Fargo location in parking lot. Case filed.\n  </li>\n  \n  <li>\n    <strong>Stolen License Plate (12:42 PM)</strong><br>\n    Front plate stolen from gray 2016 Honda HRV (Alameda County). Plate 7-Victor-Ida-Lincoln-951 flagged as lost/stolen during traffic stop.\n  </li>\n  \n  <li>\n    <strong>Loitering Complaint (8:11 AM, 707 Curtis Avenue)</strong><br>\n    White individual with black sweatshirt and backpack loitering on residential property. Property owner contacted dispatch; appeared to be welfare check follow-up.\n  </li>\n  \n  <li>\n    <strong>Suspicious Vehicle\u2014Reckless Driving (10:30 AM, SMC area)</strong><br>\n    Gray SUV with unknown plates swerving in and out of lanes northbound near Sea Street. Subject was uncooperative with officers; incident involved vehicle collision assessment.\n  </li>\n  \n  <li>\n    <strong>Note on Transcription Quality</strong><br>\n    Most transcripts from this 24-hour period are heavily corrupted auto-transcriptions from radio traffic. Many references to Coleman Ave and other local streets are unintelligible. Recommend prioritizing clearer incidents (hit-and-run, stolen plate) over ambiguous loitering reports.\n  </li>\n</ul>",
+      "avg_score": 2.0,
+      "scores": [
+        {
+          "judge": "Claude",
+          "score": 2,
+          "reason": "Analysis fabricates major incidents (hit-and-run at Trader Joe's, stolen plate, reckless driving with specific vehicles/plates) that don't appear anywhere in the transcripts; only the 707 Curtis loitering complaint is partially grounded in the source material, making this fundamentally unreliable despite clear presentation."
+        },
+        {
+          "judge": "Codex",
+          "score": 2,
+          "reason": "The write-up is clearly formatted but largely inaccurate and low-relevance because it invents major incidents not present in the transcript (e.g., hit-and-run, stolen plate, reckless driving) while only one listed event loosely matches the source."
+        },
+        {
+          "judge": "Gemini",
+          "score": 2,
+          "reason": "The analysis hallucinates several major incidents, including a hit-and-run and a stolen license plate, that are completely absent from the provided transcripts."
+        }
+      ]
+    },
+    "Codex": {
+      "analysis": "<p><strong>Notable safety-related activity (from noisy auto-transcripts; some details uncertain):</strong></p>\n<ul>\n  <li><strong>Possible prowler/loitering:</strong> Menlo Park around <strong>707 Curtis</strong> (~8:11 AM): report of a <strong>white male in black sweatshirt with backpack</strong> loitering near a small complex.</li>\n  <li><strong>Disturbance near downtown Menlo Park:</strong> <strong>Walgreens, 643 Santa Cruz Ave</strong> (~10:38 AM): female subject (50s, sun hat/hoodie, two duffel bags) reportedly yelling at passersby; subject left before contact.</li>\n  <li><strong>Potential evasion / high-risk stop:</strong> Menlo Park/Redwood area (~10:57\u201311:16 AM): vehicle reportedly <strong>sped up before pulling over</strong>; follow-up included record checks with prior theft/burglary-related history.</li>\n  <li><strong>Stolen plate hit:</strong> Menlo Park (~12:42 PM): plate check returned <strong>lost/stolen front plate</strong> (gray Honda HR-V).</li>\n  <li><strong>Vehicle theft reports (EPA):</strong> ~10:29 AM report of <strong>stolen car from prior day</strong>; ~11:22 AM report of <strong>stolen black utility trailer</strong> (pinging near Alberni/Benalto area).</li>\n  <li><strong>Major property theft (Sheriff area):</strong> <strong>225 Whiskey Hill Rd</strong> (~11:28 AM): report of <strong>~350 ft copper wire stolen</strong>, estimated around <strong>$10,000</strong>.</li>\n</ul>\n<p><strong>Mentions near Menlo Oaks / Berkeley Ave / Coleman Ave area:</strong></p>\n<ul>\n  <li><strong>Coleman/Coleman Place</strong> was mentioned in Menlo Park dispatch traffic (~9:21\u20139:40 AM), but transcript quality does not clearly confirm a burglary/theft event at that exact location.</li>\n  <li>No clear, high-confidence burglary/prowler incident explicitly tied to <strong>Berkeley Ave</strong> in this set.</li>\n</ul>\n<p><strong>Pattern notes:</strong></p>\n<ul>\n  <li>Repeated EPA unit activity around <strong>Woodland / West Bay Shore / 1800 block</strong> involved locating suspicious individuals/possible wanted subject, including units coordinating containment and contact attempts.</li>\n  <li>Most other traffic was routine stops, medical, or admin and not included.</li>\n</ul>",
+      "avg_score": 3.3333333333333335,
+      "scores": [
+        {
+          "judge": "Claude",
+          "score": 3,
+          "reason": "Halluccinates multiple major incidents (stolen vehicles, copper wire theft, high-risk stop) not present in the provided transcripts; accurately captures only two incidents (707 Curtis loitering, Walgreens disturbance)."
+        },
+        {
+          "judge": "Codex",
+          "score": 2,
+          "reason": "It includes major fabricated incidents and times not present in the provided transcript (hurting accuracy and relevance), though the formatting is fairly clear."
+        },
+        {
+          "judge": "Gemini",
+          "score": 5,
+          "reason": "The analysis is well-organized and correctly identifies several incidents, but it fails significantly on accuracy by reporting multiple detailed safety events and locations that are not present in the provided source transcripts."
+        }
+      ]
+    },
+    "Gemini": {
+      "analysis": "<p><strong>Notable Incidents & Community Safety Summary (Feb 24-25):</strong></p>\n\n<ul>\n    <li><strong>Thefts & Property Crimes:</strong>\n        <ul>\n            <li><strong>Copper Theft:</strong> Approximately 350 feet of copper wire (estimated $10,000 value) was reported stolen from a property on Whiskey Hill Road.</li>\n            <li><strong>Stolen Trailer:</strong> A stolen black utility trailer was tracked to the area of <strong>Alberni St and Menalto Ave</strong>; the incident is linked to a case from the previous day.</li>\n            <li><strong>Loitering:</strong> A suspicious male in a black sweatshirt and backpack was reported loitering at a residential complex on <strong>Curtis St</strong>.</li>\n        </ul>\n    </li>\n    <li><strong>Vehicle Pursuits & Stolen Property:</strong>\n        <ul>\n            <li><strong>Stolen Vehicle Recovery:</strong> A white Subaru SUV reported stolen out of Newark was located in East Palo Alto.</li>\n            <li><strong>Stolen Plate Recovery:</strong> A license plate stolen from a gray Honda HRV was recovered during a traffic stop.</li>\n            <li><strong>Hit and Run:</strong> A silver Lexus SUV (Plate: <strong>7JMW001</strong>) fled the scene after hitting a gray Acura in the Trader Joe's parking lot on Menlo Ave.</li>\n            <li><strong>Stolen Car Report:</strong> A vehicle was reported stolen from the 2800 block of an unspecified street in East Palo Alto.</li>\n        </ul>\n    </li>\n    <li><strong>Neighborhood-Specific Activity (Menlo Oaks / Coleman / Willow):</strong>\n        <ul>\n            <li><strong>Coleman Ave:</strong> Multiple police contacts and checks were noted on <strong>Coleman Place</strong> and at the intersection of <strong>Coleman Ave and Wheat St</strong>.</li>\n            <li><strong>Willow Rd:</strong> Officers were active on Willow Road for subpoena services and area checks.</li>\n            <li><strong>Menalto Ave:</strong> High activity near the Menalto/Alberni area regarding the recovery of stolen property.</li>\n        </ul>\n    </li>\n    <li><strong>Suspicious Persons & Alarms:</strong>\n        <ul>\n            <li>A subject with a significant criminal history for burglary and vehicle theft was stopped in a 2008 Cadillac.</li>\n            <li>A residential alarm was triggered on <strong>Montalto Ave</strong>; dispatch noted this is a \"chronic\" location for alarms.</li>\n            <li>Officers responded to a report of a subject hiding in a backyard near <strong>Dunbar and Palo Verde</strong>.</li>\n        </ul>\n    </li>\n</ul>",
+      "avg_score": 1.6666666666666667,
+      "scores": [
+        {
+          "judge": "Claude",
+          "score": 2,
+          "reason": "Almost entirely fabricated\u2014copper theft, stolen trailer, stolen vehicles, hit-and-run, and most other incidents are not present in the source transcripts; only the Curtis St loitering and Walgreens welfare check appear partially supported by the garbled audio."
+        },
+        {
+          "judge": "Codex",
+          "score": 1,
+          "reason": "The analysis is largely inaccurate and irrelevant because it invents multiple serious incidents not present in the transcript, though it is formatted clearly."
+        },
+        {
+          "judge": "Gemini",
+          "score": 2,
+          "reason": "The analysis hallucinates the vast majority of its content, including specific crimes and locations like the copper theft and hit-and-run that do not appear in the provided transcripts."
+        }
+      ]
+    }
+  }
+}
