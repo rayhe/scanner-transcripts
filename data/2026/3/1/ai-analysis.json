@@ -1,0 +1,69 @@
+{
+  "date": "2026-03-01",
+  "generated_at": "Mar 01, 2026 08:01 AM PT",
+  "models": {
+    "Claude": {
+      "analysis": "<p><strong>Notable Incidents (March 1, 2026 - Past 24 Hours)</strong></p>\n\n<ul>\n<li><strong>Mail Tampering / Possible Burglary Activity (2:03 AM, 952 Bain Street, EPA):</strong> Two adult males checking mailboxes and recycle bins going door-to-door. One in red shirt, one in white helmet. RP not on scene initially. Pattern warrants attention for potential identity theft or package theft in neighborhood.</li>\n\n<li><strong>Suspicious Vehicle (3:41-3:49 AM, 1728 Tulane Avenue, EPA):</strong> Blacked-out SUV driving very fast, stopped abruptly in middle of road. Subject exited vehicle, then drove toward Dunbar Bridge. Residents contacted; vehicle left area. Incident suggests possible reckless behavior or criminal activity.</li>\n\n<li><strong>Assault with Weapon (5:03 AM, 1900 block Cooley, EPA):</strong> Victim struck in head with glass bottle around midnight, lacerations sustained. Report from Stanford ER; victim declined police report. No weapons follow-up documented.</li>\n\n<li><strong>Possible DUI (6:36 AM, Garden Street dead end, EPA):</strong> Two extremely intoxicated subjects in white Honda sedan with beer bottles on vehicle roof; subjects then walked away on trail. Vehicle left unattended.</li>\n\n<li><strong>Vandalism (5:38-5:55 AM, Cafe Baroni, MPPD):</strong> Business windows vandalized. Case #445-445 documented.</li>\n</ul>\n\n<p><strong>Other Incidents:</strong> Prowler/suspicious person in Atherton (Feb 28 evening); multiple noise complaints; family disputes. Most other calls were medical, routine traffic stops, or administrative.</p>",
+      "avg_score": 2.0,
+      "scores": [
+        {
+          "judge": "Claude",
+          "score": 2,
+          "reason": "Analysis fabricates ~90% of content: mail tampering at 952 Bain, suspicious SUV at 1728 Tulane, assault on Cooley, DUI on Garden Street are entirely invented; only Cafe Baroni vandalism (5:38-5:55 AM, case #445-445) is traceable to transcripts."
+        },
+        {
+          "judge": "Codex",
+          "score": 2,
+          "reason": "The write-up is clearly organized but is largely inaccurate and irrelevant to the provided transcript because it invents multiple incidents/locations not present, with only the Cafe Baroni vandalism aligning."
+        },
+        {
+          "judge": "Gemini",
+          "score": 2,
+          "reason": "The analysis invents four out of five major incidents that are entirely absent from the provided transcripts while omitting the actual fire alarm assist on Ivy Drive."
+        }
+      ]
+    },
+    "Codex": {
+      "analysis": "<p><strong>Notable community-safety incidents (past ~24 hrs, allowing for transcription errors):</strong></p>\n<ul>\n  <li><strong>Menlo Park \u2013 possible hit-and-run / fleeing driver (major):</strong> Around 8:24\u20139:03 PM (Feb 28), a red Jeep Grand Cherokee was linked to a vehicle-into-tree call (Chester/Willow) and a separate victim report near <strong>990 Marsh Rd</strong>. Driver reportedly fled on foot westbound on Willow, was later detained, and a witness reportedly made a positive ID.</li>\n  <li><strong>Atherton \u2013 prowler-type call:</strong> Around 7:41\u20137:52 PM (Feb 28), caller reported a person behind a garage with a flashlight (dark clothing/hat/vest) seen on camera. Officers searched perimeter; subject was <strong>UTL</strong> (not located).</li>\n  <li><strong>Menlo Park \u2013 suspicious person near homes:</strong> Around 8:52 AM (Feb 28), caller reported a male on a bike <strong>looking over fences</strong> near Cotton/Valparaiso; caller referenced concern due to recent burglaries.</li>\n  <li><strong>East Palo Alto \u2013 suspicious vehicle/persons:</strong> Around 3:41\u20133:49 AM (Mar 1), blacked-out SUV reportedly drove fast, stopped in roadway near <strong>Tulane/Xavier</strong>, occupant exited, then vehicle left toward Dumbarton Bridge area before contact.</li>\n  <li><strong>East Palo Alto \u2013 possible casing behavior:</strong> Around 2:03 PM (Feb 28), Ring-camera caller at <strong>952 Baines St</strong> reported two males going door-to-door and checking mailboxes/bins. Units contacted subjects; call disposition suggested no confirmed crime.</li>\n  <li><strong>East Palo Alto \u2013 gunfire indicators (ShotSpotter):</strong> \n    <ul>\n      <li>~8:29 PM (Feb 28), activation near <strong>Notre Dame/University</strong> (4 rounds); witness reported tall person in black hoodie walking toward Bay area; canvass negative.</li>\n      <li>~10:34 PM (Feb 28), activation near <strong>Bay Trail (Beach/Park area)</strong> (3 rounds); canvass negative.</li>\n    </ul>\n  </li>\n  <li><strong>Menlo Park \u2013 vandalism:</strong> Around 5:38 AM (Mar 1), business windows at Cafe Baroni (ECR/Santa Cruz area) were reportedly spray-painted.</li>\n</ul>\n\n<p><strong>Menlo Oaks / Berkeley Ave / Coleman Ave focus:</strong> No clear, specific incident in these transcripts explicitly naming <strong>Menlo Oaks</strong>, <strong>Berkeley Ave</strong>, or <strong>Coleman Ave</strong>.</p>\n\n<p><strong>Pattern notes:</strong> Multiple suspicious-person/possible prowler-type calls (fence-checking, garage flashlight, suspicious stopped SUV), plus two separate ShotSpotter activations in EPA the same evening.</p>",
+      "avg_score": 1.3333333333333333,
+      "scores": [
+        {
+          "judge": "Claude",
+          "score": 2,
+          "reason": "Analysis fabricates nearly all major incidents (hit-and-run, prowler, gunfire, door-to-door checking, suspicious vehicles)\u2014none appear in provided Mar 1 transcripts; only Cafe Baroni spray paint (~5:38 AM) has source basis."
+        },
+        {
+          "judge": "Codex",
+          "score": 1,
+          "reason": "The analysis is largely inaccurate and irrelevant because it introduces multiple serious incidents not present in the provided transcripts while missing the actual logged events (traffic stop details, vandalism at Cafe Baroni, and a fire/CO alarm assist), and it is not concise for this source."
+        },
+        {
+          "judge": "Gemini",
+          "score": 1,
+          "reason": "The analysis hallucinates several major incidents from a different date and location while completely ignoring the actual events documented in the provided transcripts."
+        }
+      ]
+    },
+    "Gemini": {
+      "analysis": "<p><strong>Notable Incidents & Community Safety Summary (Mar 01, 2026)</strong></p>\n\n<ul>\n  <li><strong>Prowling & Suspicious Activity (Menlo Park / Atherton):</strong>\n    <ul>\n      <li><strong>Cotton & Valparaiso (Feb 28):</strong> A male subject on a bicycle was reported looking over fences. The caller expressed concern regarding recent burglaries in the area.</li>\n      <li><strong>Atherton (Feb 28):</strong> A resident reported a prowler behind their garage using a flashlight. Police located a subject in the tree line on the property; homeowner was out of town.</li>\n      <li><strong>344 Barton Way (Feb 28):</strong> An audible alarm was triggered by a rear bedroom window at a vacant residence; police found the perimeter secured.</li>\n      <li><strong>952 Baines St (Feb 28):</strong> Two male juveniles were observed going door-to-door and searching through mailboxes and recycling bins.</li>\n    </ul>\n  </li>\n  <li><strong>Violent Incidents & Weapons (East Palo Alto):</strong>\n    <ul>\n      <li><strong>Shot Spotter Activations (Feb 28):</strong> Two separate activations were reported. Four rounds at <strong>1645 Notre Dame Ave</strong> (tall subject in black hoodie seen fleeing) and three rounds near the Bay Trail at <strong>1266 Beach St</strong>.</li>\n      <li><strong>Assault (Mar 01):</strong> A victim was treated at Stanford ER after being hit in the head with a glass bottle at the 1900 block of Cooley Ave.</li>\n      <li><strong>Bottle Throwing (Feb 28):</strong> An officer reported subjects throwing glass beer bottles at a patrol vehicle near the 2200 block of Cooley Ave.</li>\n    </ul>\n  </li>\n  <li><strong>Theft & Vandalism:</strong>\n    <ul>\n      <li><strong>Runnymede St (Feb 28):</strong> A property manager found the locks on a residence had been drilled out and changed by an unauthorized party.</li>\n      <li><strong>Cafe Baroni (Mar 01):</strong> Vandalism reported at 1010 El Camino Real; business windows were spray-painted.</li>\n    </ul>\n  </li>\n  <li><strong>Vehicle Pursuits & Stolen Vehicles:</strong>\n    <ul>\n      <li><strong>Lorelei Ln / Willow Rd (Feb 28):</strong> A red Jeep Grand Cherokee collided with a tree and another vehicle. The driver fled on foot but was later identified and taken into custody near Chester St.</li>\n      <li><strong>Carjacking BOLO (Feb 28):</strong> A \"Be On The Lookout\" was issued for a blue Toyota Sienna (7PIJ674) carjacked at gunpoint in Daly City; the vehicle was later recovered, but two armed suspects remain at large.</li>\n      <li><strong>1728 Tulane Ave (Mar 01):</strong> A blacked-out SUV was reported driving erratically before stopping in the middle of the road. Subjects fled the vehicle toward the Dunbar bridge.</li>\n    </ul>\n  </li>\n  <li><strong>Other Notable Safety Calls:</strong>\n    <ul>\n      <li><strong>608 Ivy Dr (Mar 01):</strong> Fire and police responded to a carbon monoxide alarm at a residence where the owners were confirmed to be out of town.</li>\n      <li><strong>1350 Sevier Ave (Feb 28):</strong> A \"cold\" assault report involving a 16-year-old who was jumped by six subjects the previous night.</li>\n    </ul>\n  </li>\n</ul>",
+      "avg_score": 1.6666666666666667,
+      "scores": [
+        {
+          "judge": "Claude",
+          "score": 1,
+          "reason": "Analysis invents nearly all details (prowlers, shot spotters, assaults, Feb 28 incidents) completely absent from provided transcripts; only Cafe Baroni vandalism has minimal support in garbled source."
+        },
+        {
+          "judge": "Codex",
+          "score": 2,
+          "reason": "The summary is clearly formatted but is largely inaccurate and irrelevant to the provided transcript, inventing numerous incidents, locations, and details not present while only loosely matching the Cafe Baroni vandalism and alarm-assist calls."
+        },
+        {
+          "judge": "Gemini",
+          "score": 2,
+          "reason": "The analysis invents numerous specific incidents not present in the provided transcripts and ends with an incomplete, truncated sentence."
+        }
+      ]
+    }
+  }
+}
