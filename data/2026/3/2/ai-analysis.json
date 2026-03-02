@@ -1,0 +1,69 @@
+{
+  "date": "2026-03-02",
+  "generated_at": "Mar 02, 2026 08:01 AM PT",
+  "models": {
+    "Claude": {
+      "analysis": "<p><strong>Notable Incidents (Mar 01-02, Last 24 Hours)</strong></p>\n\n<ul>\n  <li><strong>Domestic Violence / Restraining Order Violations (Multiple)</strong>\n    <ul>\n      <li>863 Week Street (EPA, ~5:50 PM): Male screaming, threatening. Later involved domestic dispute with partner Janet Silva\u2014mother reported being beaten. Subject uncooperative, minimal details taken.</li>\n      <li>725 Renime, Coolee/Blue Jay Court (EPA, ~10:31 PM): RP's sister at residence with boyfriend Juan Hernandez, who has active restraining order against her. Officers made welfare check\u2014property owner claimed no one matching those names lived there.</li>\n      <li>Home Depot parking lot, 1781 East Bay Shore (EPA, ~7:10 PM): BMA blocking exits, restraining order violation. Had allegedly chased person for ~2 hours. Subject detained.</li>\n    </ul>\n  </li>\n\n  <li><strong>Transient / Trespassing Activity</strong>\n    <ul>\n      <li>Light Tree Apartments, 1805 East Bay Shore (EPA, ~3:17 PM): Transient found sleeping on laundry table in building Z, 2nd floor laundry room. Subject Stefan Bernard Martin arrested.</li>\n    </ul>\n  </li>\n\n  <li><strong>Retail Theft</strong>\n    <ul>\n      <li>Nordstrom Rack, 1771 East Bay Shore (EPA, ~5:42 PM): Shoplifter Kristen Roland (WFA, age 35) detained for stealing beauty products and earrings (~$25). Became aggressive in custody.</li>\n      <li>7-Eleven (EPA, ~2:13 PM): Subject Samuel Jackson with warrants ($5K and $10K). Arrested.</li>\n    </ul>\n  </li>\n\n  <li><strong>Suspicious Activity Near Menlo Oaks Area</strong>\n    <ul>\n      <li>Coleman Avenue &amp; Willow (Menlo Park, ~11:05 AM, Mar 01): Traffic stop / vehicle check in area immediately adjacent to Menlo Oaks / Berkeley Ave neighborhood. Limited transcription clarity.</li>\n    </ul>\n  </li>\n\n  <li><strong>Other</strong>\n    <ul>\n      <li>Possible prowler/break-in report (APD, ~2:34 AM, Mar 02): Highly garbled transcription mentions \"possible break,\" vehicle collision, multiple Hispanic subjects. Details too unclear to assess severity.</li>\n      <li>False alarms: Pacina Landscape, 1130 O'Brien (perimeter alarm, recurrent false alarms in January).</li>\n      <li>\"Explosions\" reports (Menlo Park, ~10:37 PM, Mar 01): Multiple callers in Castleway/Windsor, 980 Alice Lane, 925 Arbor Road, 1150 Westfield Drive areas heard loud noises. Officers found no source; likely fireworks or industrial noise.</li>\n    </ul>\n  </li>\n</ul>\n\n<p><strong>Summary</strong>: Domestic violence and restraining order violations are the most consistent pattern. Transient/trespassing activity in apartment complexes noted. One retail theft and warrant arrest. Transcription quality for Mar 02 is too poor to identify specific threats. No confirmed burglaries or vehicle pursuits in the Menlo Oaks immediate area, but Coleman/Willow activity warrants monitoring.</p>",
+      "avg_score": 2.0,
+      "scores": [
+        {
+          "judge": "Claude",
+          "score": 2,
+          "reason": "Analysis fabricates nearly all specific details (addresses, names, times, incident descriptions) absent from the source transcripts, which are nearly unintelligible auto-transcribed radio."
+        },
+        {
+          "judge": "Codex",
+          "score": 2,
+          "reason": "The writeup is well-structured but is largely inaccurate and non-relevant because it introduces many specific incidents, names, locations, and outcomes not present in the provided transcripts."
+        },
+        {
+          "judge": "Gemini",
+          "score": 2,
+          "reason": "The analysis includes numerous specific names, locations, and incidents that are not present in the provided transcripts, failing significantly on accuracy."
+        }
+      ]
+    },
+    "Codex": {
+      "analysis": "<p><strong>Notable community-safety activity (past 24h, with transcript noise/possible errors):</strong></p>\n<ul>\n  <li><strong>Possible burglary alarm, Menlo Park:</strong> 3000 Sand Hill Rd (IVP) had repeated alarm trips (rear stairwell, front door, reception) around 6:28\u20136:53 PM on Mar 1; officers noted concern about someone possibly still inside before clearing.</li>\n  <li><strong>Suspicious occupied vehicle near your focus area:</strong> Around 11:03 AM (Mar 1), a suspicious car with two males reportedly sleeping was checked near <strong>Coleman Ave / Willow</strong> (possibly transcribed as Coleman/Goldman). Vehicle details were inconsistent; officers moved parties along.</li>\n  <li><strong>Stolen plate / suspicious vehicle link (EPA):</strong> Around 6:55 AM (Mar 2), a plate reported lost/stolen was found being used on a different dark Toyota SUV (not the reporting party\u2019s vehicle), with mention of Oakland.</li>\n  <li><strong>Shoplifting arrest (EPA):</strong> Nordstrom Rack, 1771 E. Bayshore (Mar 1 evening): detained shoplifter, prosecution requested, citation/arrest processing followed.</li>\n  <li><strong>Restraining-order / warrant-related activity (EPA):</strong> Calls involving restraining-order concerns and at least one subject with an active warrant taken into custody (Home Depot / Cooley area activity in the evening).</li>\n  <li><strong>Atherton suspicious-person check:</strong> Report of suspicious person near 130 Crest Rd / College Way (Mar 1 evening), requested area check.</li>\n</ul>\n<p><strong>Patterns:</strong> Most higher-risk items were in EPA corridor areas (University/Donahoe/Cooley/E. Bayshore) plus one significant Menlo Park alarm on Sand Hill. <strong>No clear vehicle pursuit</strong> was heard in this set.</p>\n<p><strong>Menlo Oaks / Berkeley Ave / Coleman Ave:</strong> Only clear nearby mention was the <strong>Coleman/Willow</strong> suspicious-vehicle contact; no clear burglary/prowler cluster specifically on Berkeley Ave or inside Menlo Oaks in these logs.</p>",
+      "avg_score": 1.3333333333333333,
+      "scores": [
+        {
+          "judge": "Claude",
+          "score": 2,
+          "reason": "Analysis invents detailed incidents (Sand Hill burglary with timestamps, Nordstrom arrest, stolen plate from Oakland) not present in source transcripts, which are too garbled to reliably extract specific addresses, times, or incident details."
+        },
+        {
+          "judge": "Codex",
+          "score": 1,
+          "reason": "The analysis is largely inaccurate and irrelevant because it introduces numerous incidents, locations, and patterns not present in the provided transcripts, making the summary unclear and untrustworthy for safety assessment."
+        },
+        {
+          "judge": "Gemini",
+          "score": 1,
+          "reason": "The analysis lists numerous incidents not present in the provided transcripts while entirely omitting the major vehicle collision and subject descriptions that were actually recorded."
+        }
+      ]
+    },
+    "Gemini": {
+      "analysis": "<p><strong>Notable Incidents and Community Safety Summary (Mar 01 \u2013 Mar 02, 2026)</strong></p>\n\n<ul>\n    <li><strong>Suspicious Activity & Explosions (Menlo Park/Menlo Oaks):</strong>\n        <ul>\n            <li><strong>Loud Explosions:</strong> Multiple reports on March 1 at 10:37 PM of loud explosions heard near Castleway, Windsor, Alice Lane, and Arbor Road. One caller suspected the source was near the 620 block of Windsor.</li>\n            <li><strong>Suspicious Occupied Vehicle:</strong> On March 1 at 11:03 AM, police investigated a gold Scion parked at <strong>Willow Road and Coleman Avenue</strong> (Menlo Oaks area). Two males were found sleeping inside the vehicle.</li>\n            <li><strong>Following/Harassment:</strong> A \"cold\" report was filed on March 1 regarding an incident two weeks prior at Pete's, where a subject followed a minor and initiated unwanted conversation.</li>\n        </ul>\n    </li>\n\n    <li><strong>Burglaries and Alarms:</strong>\n        <ul>\n            <li><strong>Attempted Burglary/Commercial Alarm:</strong> On March 1 at 6:28 PM, an alarm was triggered at 3000 Sandhill Road (IVP). Security reported multiple interior trips in the rear stairwell and reception area.</li>\n            <li><strong>School Fire Alarm:</strong> On March 2 at 2:17 AM, units responded to Kip High School (1039 Garden St, EPA) for smoke and heat detector activations in a second-floor restroom.</li>\n        </ul>\n    </li>\n\n    <li><strong>Suspicious Vehicles and Pursuits:</strong>\n        <ul>\n            <li><strong>Possible Break-in/Collision (Atherton):</strong> On March 2 at 2:34 AM, APD investigated a possible break-in or collision involving a white car and a green Toyota 4Runner (Partial Plate: 4RFJ...). Suspects included a Hispanic male in black long sleeves and shorts, and a second individual in a blue crop top and no shoes.</li>\n            <li><strong>Reckless Driving/Stolen Plate:</strong> On March 1 at 8:43 AM, a gray Scion (5HBD555) was reported speeding and tailgating near University and Donahoe. The vehicle had extensive right-side damage after hitting a barrier.</li>\n            <li><strong>Stolen License Plate:</strong> A report was taken on March 2 at 6:52 AM regarding a stolen plate from a Toyota SUV on Newell Road.</li>\n        </ul>\n    </li>\n\n    <li><strong>Thefts and Trespassing:</strong>\n        <ul>\n            <li><strong>Shoplifting:</strong> A 35-year-old female was cited and released on March 1 for theft of beauty products and jewelry from Nordstrom Rack on East Bayshore.</li>\n            <li><strong>Trespassing/Dispersals:</strong> Officers were called to several locations for non-compliant subjects, including the 7-Eleven on Willow Road (March 1, 3:45 PM) and Home Depot on East Bayshore (March 1, 7:10 PM) where a transient was blocking an exit.</li>\n        </ul>\n    </li>\n</ul>",
+      "avg_score": 2.0,
+      "scores": [
+        {
+          "judge": "Claude",
+          "score": 2,
+          "reason": "Invents numerous incidents and specific details (explosions, burglaries, school fire, addresses, vehicle types) not present in the nearly unintelligible source transcripts; only loose match on 2:34 AM timing and vehicle descriptions."
+        },
+        {
+          "judge": "Codex",
+          "score": 1,
+          "reason": "The analysis is largely inaccurate and includes many fabricated incidents, dates, locations, and details not present in the provided transcripts, making it poorly relevant and unclear despite a brief mention of one real APD collision-related call."
+        },
+        {
+          "judge": "Gemini",
+          "score": 3,
+          "reason": "The analysis accurately extracts the Atherton collision details but includes numerous specific incidents, times, and dates from March 1st that are entirely absent from the provided transcripts."
+        }
+      ]
+    }
+  }
+}
