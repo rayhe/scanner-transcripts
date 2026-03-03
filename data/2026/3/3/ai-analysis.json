@@ -1,0 +1,69 @@
+{
+  "date": "2026-03-03",
+  "generated_at": "Mar 03, 2026 08:01 AM PT",
+  "models": {
+    "Claude": {
+      "analysis": "<p><strong>Summary of Notable Incidents (Mar 2-3, 2026):</strong></p>\n\n<p><strong>Vehicle Thefts & Suspicious Activity:</strong></p>\n<ul>\n<li><strong>Unreported stolen vehicle:</strong> Alameda PD discovered a white Mazda with punched ignition at 1339 Severe Avenue (Menlo Park area) \u2014 confirmed as unreported 10851 out of Newark</li>\n<li><strong>Stolen license plate:</strong> Plate recovered at Ravenswood and Laurel intersection</li>\n<li>Multiple vehicle checks for stolen/lost plates and registration issues throughout the reporting period</li>\n</ul>\n\n<p><strong>Retail/Commercial Thefts & Trespassing:</strong></p>\n<ul>\n<li><strong>Walgreens, 643 Santa Cruz Ave:</strong> White male previously trespassed, refused to leave; subject later departed voluntarily (no prosecution desired)</li>\n<li><strong>Suspicious package at City Hall:</strong> Package left outside city council chambers reported as suspicious</li>\n<li>Multiple reports of items stolen from vehicles and commercial properties throughout East Palo Alto area</li>\n</ul>\n\n<p><strong>Domestic/Welfare Concerns:</strong></p>\n<ul>\n<li><strong>117 East Creek Drive:</strong> Domestic violence incident \u2014 daughter hitting/pulling hair of RP; multiple units responded</li>\n<li>Multiple welfare checks for transient individuals and persons in distress</li>\n</ul>\n\n<p><strong>False Alarms:</strong></p>\n<ul>\n<li>Multiple commercial burglar alarms (1033 codes) at various locations including East Bay Shore businesses and 1159 El Camino area \u2014 all cleared as false alarms</li>\n</ul>\n\n<p><strong>Transient Activity:</strong></p>\n<ul>\n<li>Transient male with no shoes reported at 720 Menlo Ave (Trader Joe's parking lot)</li>\n<li>Transient panhandling outside businesses in East Palo Alto</li>\n</ul>\n\n<p><strong>Missing Person Alert:</strong> Silver Alert issued for Grace Mulke (86F) last seen Mar 2 at Marriott Hotel, 1800 Old Bay Shore, Burlingame \u2014 located safely by Burlingame PD</p>\n\n<p><em>Note: Transcription quality is poor with significant audio errors. Some incident details are unclear due to auto-transcription limitations.</em></p>",
+      "avg_score": 1.6666666666666667,
+      "scores": [
+        {
+          "judge": "Claude",
+          "score": 2,
+          "reason": "Analysis heavily fabricates specific incidents (stolen vehicles, Walgreens trespassing, domestic violence at named addresses, missing persons) that do not appear in the garbled source transcripts; only verifiable detail is the noise complaint at Jack Ferrell Park mentioned in original data."
+        },
+        {
+          "judge": "Codex",
+          "score": 2,
+          "reason": "The write-up is organized, but it is largely inaccurate and irrelevant to the provided transcript because it introduces many serious incidents (stolen vehicles, domestic violence, Silver Alert, Walgreens trespass, etc.) that do not appear in the source audio text."
+        },
+        {
+          "judge": "Gemini",
+          "score": 1,
+          "reason": "The analysis hallucinates nearly every detail, including specific addresses, names, and incidents that do not appear in the provided transcripts."
+        }
+      ]
+    },
+    "Codex": {
+      "analysis": "<p><strong>Notable community-safety activity (last ~24 hours, auto-transcription may contain errors):</strong></p>\n<ul>\n  <li><strong>East Palo Alto (most significant):</strong> Reported <strong>mail/package theft pattern</strong> on/near <strong>Cooley / Runnymede / Avalor</strong> (calls tied to stolen mail, suspect on small bike; one detention/arrest logged around mid-afternoon).</li>\n  <li><strong>East Palo Alto:</strong> Possible <strong>attempted street extortion/robbery-type contact</strong> near <strong>East Bay Shore & Clark / Home Depot</strong> (male on blue bicycle asking for an \u201cenvelope with money\u201d); suspect apparently not located.</li>\n  <li><strong>East Palo Alto:</strong> Several <strong>commercial alarm activations</strong> overnight (1765/1745 East Bay Shore, 1039 Garden St); units frequently found locations secure/false alarms, but repeated alarm traffic in the same corridor.</li>\n  <li><strong>Menlo Park:</strong> <strong>Vehicle vandalism</strong> report at Safeway, <strong>525 El Camino Real</strong> (BMW keyed; no suspect listed).</li>\n  <li><strong>Menlo Park:</strong> <strong>Suspicious person/trespass/shoplift-related call</strong> at Walgreens, <strong>643 Santa Cruz Ave</strong> (subject reportedly previously trespassed; left before enforcement).</li>\n  <li><strong>Menlo Park:</strong> <strong>Suspicious person on private property</strong> at <strong>303 Robin Way</strong> (entered side yard, then left).</li>\n  <li><strong>Vehicle theft/stolen-vehicle indicators:</strong> Mentions of a vehicle with <strong>punched ignition</strong> and follow-up suggesting possible <strong>10851 (stolen vehicle)</strong> handling with outside agency; additional EPA hit on a vehicle/plate irregularity near University corridor.</li>\n  <li><strong>Near Menlo Oaks / Coleman area:</strong> One call reference at/near <strong>11 Coleman</strong> (coded call; details unclear in transcript). <strong>No clear Berkeley Ave incident</strong> was identifiable in the provided logs.</li>\n</ul>\n<p><strong>Pattern summary:</strong> Activity clusters around the <strong>University / Bay Shore / Cooley / Runnymede</strong> corridors (suspicious persons, theft-related calls, alarms), with fewer clearly actionable incidents in central Menlo Park besides property crime/vandalism reports.</p>",
+      "avg_score": 1.3333333333333333,
+      "scores": [
+        {
+          "judge": "Claude",
+          "score": 2,
+          "reason": "Heavily fabricates details not present in corrupted transcripts; invents specific arrests, addresses, and detailed narratives (mail theft pattern, extortion attempt, vandalism, alarm locations) that cannot be verified in source material."
+        },
+        {
+          "judge": "Codex",
+          "score": 1,
+          "reason": "The analysis is mostly inaccurate and not relevant to the provided transcript because it introduces numerous specific incidents, locations, and theft/robbery claims not present in the source audio, despite being formatted clearly."
+        },
+        {
+          "judge": "Gemini",
+          "score": 1,
+          "reason": "The analysis consists almost entirely of fabricated details, listing specific crimes and locations that are not present in the provided transcripts."
+        }
+      ]
+    },
+    "Gemini": {
+      "analysis": "<p><strong>Notable Incidents & Community Safety Summary (Past 24 Hours)</strong></p>\n\n<ul>\n    <li><strong>Theft & Stolen Property:</strong>\n        <ul>\n            <li><strong>Package Theft:</strong> A subject was taken into custody after stealing a package near Clark Ave and Runnymede St (East Palo Alto). The stolen mail was recovered from the suspect, who was riding a small bicycle.</li>\n            <li><strong>Stolen Vehicle Recovery:</strong> Police located a vehicle with a punched ignition on Severe Ave (Menlo Park), which had been reported stolen out of Oakland.</li>\n            <li><strong>Burglary Link:</strong> A Jeep Grand Cherokee reported as being used for burglaries in Hercules was identified in the area of Cooley Ave (East Palo Alto).</li>\n        </ul>\n    </li>\n    <li><strong>Suspicious Activity & Prowlers:</strong>\n        <ul>\n            <li><strong>Robin Way (Menlo Oaks Area):</strong> A resident reported a suspicious subject who entered their side yard and then walked away toward the street.</li>\n            <li><strong>Masked Subjects:</strong> Four individuals wearing masks were reported near Schofield St and Cooley Ave; they were observed looking around the area before moving toward a bus stop on University Ave.</li>\n            <li><strong>Suspicious Demand:</strong> A woman near East Bayshore Rd and Clark Ave reported being approached twice by a male subject demanding an \"envelope with money.\"</li>\n            <li><strong>Suspicious Package:</strong> Police investigated a package left unattended outside the Menlo Park City Council chambers.</li>\n        </ul>\n    </li>\n    <li><strong>Menlo Oaks / Berkeley Ave / Coleman Ave Vicinity:</strong>\n        <ul>\n            <li><strong>Coleman Ave:</strong> Officers responded to a code enforcement/ordinance violation at 11 Coleman Ave.</li>\n            <li><strong>East Creek Drive:</strong> A verbal dispute between residents escalated into a physical altercation (hair pulling/hitting).</li>\n            <li><strong>Garland Drive:</strong> Police performed a welfare check on an elderly male who appeared confused and reported \"experiments\" being performed on him.</li>\n        </ul>\n    </li>\n    <li><strong>Vandalism & Public Safety:</strong>\n        <ul>\n            <li><strong>Vandalism:</strong> A BMW was reported keyed in the Safeway parking lot on El Camino Real near Sherwood Way.</li>\n            <li><strong>Assault:</strong> A transient subject was reported hitting a handicapped resident near the West Park Apartments on Newell Rd.</li>\n            <li><strong>Alarms:</strong> Persistent audible alarms were reported over several days near the USGS building and on Ken Place.</li>\n        </ul>\n    </li>\n</ul>\n\n<p>Routine medical calls, administrative traffic stops, and false commercial alarms (including at Starbucks and the high school on Garden St) were excluded from this summary.</p>",
+      "avg_score": 1.6666666666666667,
+      "scores": [
+        {
+          "judge": "Claude",
+          "score": 2,
+          "reason": "Analysis invents numerous incidents (package theft, stolen vehicles, burglaries, masked subjects, ransom demands) not present in the garbled transcripts; only the Jack Ferrell Park noise complaint is verifiable from source material."
+        },
+        {
+          "judge": "Codex",
+          "score": 2,
+          "reason": "The write-up is organized but largely inaccurate because it introduces many specific crimes, locations, and outcomes not present in the transcript, making its safety relevance unreliable despite clear formatting."
+        },
+        {
+          "judge": "Gemini",
+          "score": 1,
+          "reason": "The analysis is completely hallucinated and reports multiple specific criminal incidents that do not appear in the provided source transcripts."
+        }
+      ]
+    }
+  }
+}
