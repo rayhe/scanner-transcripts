@@ -1,0 +1,69 @@
+{
+  "date": "2026-03-04",
+  "generated_at": "Mar 04, 2026 08:01 AM PT",
+  "models": {
+    "Claude": {
+      "analysis": "<p><strong>24-Hour Scanner Summary (Mar 3-4, 2026) \u2013 San Mateo County</strong></p>\n\n<p><strong>Notable Incidents by Jurisdiction:</strong></p>\n\n<ul>\n  <li><strong>East Palo Alto (EPAPD) \u2013 High Activity Zone:</strong>\n    <ul>\n      <li><strong>Vehicle Break-In Spree (01:40\u201302:50 AM, Mar 4)</strong> \u2013 Multiple 459 auto reports in coordinated incidents. White sedan/Camry spotted with 3 suspects loading items. Targets included: landscaping vehicle (~$3000 loss), sedan at 2109 Zurich Martin (video available), vehicle at 466 Bell Street. Suspects fled in white 4-door sedan heading toward/through Bay Area bridge; units unable to intercept.</li>\n      <li><strong>Vacant Home Burglary (05:10 AM, Mar 4) \u2013 2318 Palo Verde</strong> \u2013 Subjects breaking windows and forcing entry with stick/shovel. RP (neighbor) reported hearing items breaking inside. Prior incident Feb 27 at same address: male subject (~5'5\", HMA, dark clothing) pushing wheelbarrow to gain access\u2014subject went UTL at that time. Police cleared interior; several exterior windows broken. No responsible party on scene to secure residence.</li>\n      <li><strong>Shooting Incident (19:02 PM, Mar 3) \u2013 1285 Cypress Street</strong> \u2013 <strong>19 rounds fired</strong>. Three male subjects observed shooting weapons; fled southbound toward Bayland. Officers located shell casings and rifle magazine. Case: 0641. Search for 2 weapons (9mm, 45 caliber) ongoing; drone requested for area scan to check for injured parties.</li>\n      <li><strong>Sexual Battery (20:00 PM, Mar 3) \u2013 Bay/University area</strong> \u2013 Male suspect (~40, possibly intoxicated) grabbed/assaulted female victim. Incident confirmed at El Roadshow location. Victim transported to hospital for evaluation; suspect also medically evaluated. Case: 0642. Victim provided photos confirming location.</li>\n      <li><strong>Stolen Dog (20:51 PM, Mar 3) \u2013 1918 Capital, Apt 6</strong> \u2013 Neighbor took RP's dog.</li>\n    </ul>\n  </li>\n\n  <li><strong>Menlo Park (MPPD):</strong>\n    <ul>\n      <li><strong>Suspicious Vehicle (18:56 PM, Mar 3) \u2013 Lassen Court/Lassen Drive</strong> \u2013 Vehicle parked with headlights on, facing Lassen Drive, ~10 min duration. Unknown occupants; unfamiliar to area. Officers checked location.</li>\n      <li><strong>Vehicle Accident (15:14 PM, Mar 3) \u2013 Bayfront (west of Willow, near Facebook building)</strong> \u2013 Gray sedan into embankment. Victim unresponsive; CPR required. Driver: Danica Miller (Union City). Prior traffic suspensions on record. (Medical/accident call, not criminal).</li>\n    </ul>\n  </li>\n\n  <li><strong>Other Agencies:</strong>\n    <ul>\n      <li><strong>Bicycle Theft Report (01:38 AM, Mar 4, EPAPD) \u2013 1926 Bay Road</strong> \u2013 Two bicycles stolen Sunday; RP tracking location, requested civil standby for recovery.</li>\n    </ul>\n  </li>\n</ul>\n\n<p><strong>Patterns & Concerns:</strong></p>\n<ul>\n  <li>Organized vehicle break-in activity (EPApd, Mar 4 early AM) \u2013 coordinated group in white sedan targeting multiple vehicles across East Palo Alto; ~$3000+ in items/equipment stolen.</li>\n  <li>Vacant property vulnerability \u2013 Palo Verde address burglarized twice (Feb 27, Mar 4); same MO (prying with tools).</li>\n  <li>Armed incident (shooting) in EPAPD area; weapons still outstanding.</li>\n  <li>Sexual assault in public area during evening hours (EPAPD).</li>\n</ul>\n\n<p><strong>Also Noted:</strong> Silver alert (re-broadcast multiple times) for missing 68-year-old female (Elizabeth Thompson) last seen Mar 2 in San Leandro, Alameda County\u2014not local to Menlo Oaks area but circulated to all county units.</p>",
+      "avg_score": 1.0,
+      "scores": [
+        {
+          "judge": "Claude",
+          "score": 1,
+          "reason": "Analysis is almost entirely fabricated\u2014it describes East Palo Alto incidents (vehicle break-ins, shooting, sexual battery, burglary) with specific case numbers and details that do not appear anywhere in the garbled Menlo Park PD transcripts, which contain only fragmented dispatch chatter and radio testing messages."
+        },
+        {
+          "judge": "Codex",
+          "score": 1,
+          "reason": "The analysis is largely fabricated and off-topic relative to the provided MPPD transcript, introducing numerous unsupported incidents despite being formatted clearly."
+        },
+        {
+          "judge": "Gemini",
+          "score": 1,
+          "reason": "The analysis hallucinates a lengthy series of incidents in East Palo Alto that are completely absent from the provided Menlo Park transcripts."
+        }
+      ]
+    },
+    "Codex": {
+      "analysis": "<p><strong>Notable community-safety incidents (past ~24 hrs, transcription may contain errors):</strong></p>\n<ul>\n  <li><strong>East Palo Alto (high priority pattern):</strong> Cluster of suspected auto burglaries/attempts around <strong>Michigan Ave / University Ave</strong> between about 1:42\u20132:48 AM (Mar 4). Reports include 3 males in a <strong>white 4-door sedan (possibly white Camry)</strong>, smashed vehicle window(s), and stolen landscaping tools (~$3,000 reported). Related call at/near <strong>2109 W. Bayshore area / Martin</strong> with video of a similar break-in.</li>\n  <li><strong>East Palo Alto:</strong> Possible residential burglary at <strong>2318 Palo Verde</strong> (Mar 4, ~5:07 AM). Caller reported a male entering a vacant house (possibly with stick/shovel), glass breaking heard. Officers found broken exterior windows and open rear door; house cleared, no suspect located.</li>\n  <li><strong>East Palo Alto:</strong> Shots-fired investigation near <strong>Cypress / Pulgas / Bayland area</strong> (Mar 3 evening). Multiple units responded; reports of casings and a rifle magazine found, suspect(s) reportedly fled. Ongoing canvass/video checks noted.</li>\n  <li><strong>Menlo Park:</strong> Suspicious-person call near <strong>FedEx Kinko\u2019s, 1184 El Camino</strong> (Mar 4 ~4:07 AM), male seen near dumpsters walking toward Oak Grove; area checked, <strong>UTL/code 4</strong>.</li>\n  <li><strong>Atherton:</strong> Audible burglary alarm at <strong>135 Karen Way</strong> (Mar 4 ~1:42 AM), follow-up indicated resident said no one should be there; appears handled without confirmed intrusion in the traffic provided.</li>\n</ul>\n\n<p><strong>Menlo Oaks / Berkeley Ave / Coleman Ave relevance:</strong> No clear, confirmed burglary/prowler incident specifically on <strong>Berkeley Ave</strong> or <strong>Coleman Ave</strong> in this transcript set. Closest meaningful activity was in nearby Menlo Park corridors (El Camino/Oak Grove) and a larger series in East Palo Alto (University/Michigan/Palo Verde).</p>\n\n<p><strong>Pattern summary:</strong> Most significant trend is a <strong>repeat vehicle-burglary pattern in East Palo Alto</strong> with similar suspect/vehicle description and geographically close calls in a short time window.</p>",
+      "avg_score": 2.0,
+      "scores": [
+        {
+          "judge": "Claude",
+          "score": 3,
+          "reason": "Analysis fabricates specific burglary locations (Michigan Ave, 2318 Palo Verde), vehicle details (white Camry, $3k stolen tools), and shots-fired incidents with casings\u2014none discernible in these garbled transcripts; only the FedEx Kinko's/1184 El Camino suspicious-person call (4:07 AM) is clearly supported."
+        },
+        {
+          "judge": "Codex",
+          "score": 1,
+          "reason": "The analysis is largely fabricated and irrelevant to the provided transcript (inventing multiple East Palo Alto/Atherton incidents and details not present), with only a partial match to the FedEx suspicious-person call despite otherwise clear formatting."
+        },
+        {
+          "judge": "Gemini",
+          "score": 2,
+          "reason": "The analysis includes several detailed incidents that are completely absent from the provided transcripts while failing to mention the actual alarm and vehicle stop events that were present."
+        }
+      ]
+    },
+    "Gemini": {
+      "analysis": "<p><strong>Menlo Park & Menlo Oaks Area</strong></p>\n<ul>\n<li><strong>Potential Burglary (Ambar Way):</strong> On March 3 at 9:25 AM, a Nest alarm reported a glass break at a residence in the 300 block of Ambar Way. The homeowner was out of town; officers checked the exterior but the status of the interior was unclear.</li>\n<li><strong>Stolen License Plate (Coleman Ave):</strong> A stolen rear license plate was reported on a vehicle in the area of Coleman Ave and O'Connor St on March 3.</li>\n<li><strong>Suspicious Vehicle (Lassen Court):</strong> A vehicle was reported idling with headlights on for over 10 minutes on Lassen Court at Lassen Drive (near Bay Rd) on the evening of March 3. The reporting party noted the vehicle was unfamiliar to the neighborhood.</li>\n<li><strong>Suspicious Person (El Camino Real):</strong> Early on March 4 (4:07 AM), a middle-aged male in a dark jacket was reported acting suspiciously near dumpsters at the FedEx Kinkos at 1184 El Camino Real, walking toward Oak Grove.</li>\n<li><strong>Theft (Menlo Park Library):</strong> A laptop theft was reported on March 3. The suspect was described as a white male adult in a black shirt and blue jeans with a black backpack.</li>\n</ul>\n\n<p><strong>East Palo Alto (Major Incidents)</strong></p>\n<ul>\n<li><strong>Shots Fired (Cypress Street):</strong> A significant \"ShotSpotter\" activation occurred on March 3 at 7:03 PM in the 1200 block of Cypress Street. 19 rounds were detected. Officers located 9mm and .45 caliber casings and a rifle magazine. Three suspects were seen fleeing toward the Baylands.</li>\n<li><strong>Auto Burglary Spree (Michigan / Dunbar / Bell):</strong> Between 1:40 AM and 3:00 AM on March 4, multiple vehicles were targeted. At Michigan Ave and University Ave, three suspects in a white Toyota Camry smashed windows and stole approximately $3,000 in landscaping equipment. Similar reports involving a white sedan occurred on Dunbar Way and Bell Street.</li>\n<li><strong>Residential Burglary (Palo Verde):</strong> At 5:07 AM on March 4, subjects were reported breaking into a vacant home in the 2300 block of Palo Verde Ave using a stick or shovel. Officers found multiple broken windows; the suspects fled prior to arrival.</li>\n<li><strong>Mail Theft (Runnymede Street):</strong> On March 3, two suspects (one white male with long curly blonde hair and one Hispanic male in a black baseball cap) in a silver Honda were seen rifling through mailboxes in the 1000 block of Runnymede.</li>\n<li><strong>Sexual Battery (Bay & University):</strong> A Polynesian male was detained following a report of a physical assault/groping near the intersection of Bay Road and University Ave on the evening of March 3.</li>\n</ul>\n\n<p><strong>Atherton</strong></p>\n<ul>\n<li><strong>Burglary Alarm (Caronway):</strong> An audible alarm was triggered at a residence in the 100 block of Caronway on March 4 at 1:42 AM; however, the resident subsequently contacted the alarm company to cancel.</li>\n</ul>\n\n<p><strong>General Safety Note</strong></p>\n<ul>\n<li><strong>Silver Alert:</strong> Authorities are looking for Elizabeth Thompson, a 68-year-old white female, 5'2\", 150 lbs, brown hair/eyes, last seen in San Leandro on March 2. She is believed to be on foot and may be disoriented.</li>\n</ul>",
+      "avg_score": 1.3333333333333333,
+      "scores": [
+        {
+          "judge": "Claude",
+          "score": 2,
+          "reason": "Analysis fabricates nearly all incidents (Ambar Way, Coleman Ave, Lassen Court, library theft, East Palo Alto shooting, auto burglaries); only the FedEx Kinkos suspicious person at El Camino has any basis in the provided transcripts."
+        },
+        {
+          "judge": "Codex",
+          "score": 1,
+          "reason": "The analysis is largely inaccurate and irrelevant because it invents multiple incidents and locations not present in the transcript, with only the FedEx suspicious-person call loosely matching, despite being clearly formatted."
+        },
+        {
+          "judge": "Gemini",
+          "score": 1,
+          "reason": "The analysis hallucinates nearly every incident listed, including a shooting and a burglary spree, which are completely absent from the provided transcripts."
+        }
+      ]
+    }
+  }
+}
