@@ -1,0 +1,69 @@
+{
+  "date": "2026-03-05",
+  "generated_at": "Mar 05, 2026 08:01 AM PT",
+  "models": {
+    "Claude": {
+      "analysis": "<p><strong>March 4-5, 2026 \u2014 Notable Incidents Summary</strong></p>\n\n<ul>\n<li><strong>Domestic Violence (Active)</strong> \u2014 Mar 5, 12:16 AM, 1805 East Bay Shore Road, Apt 132: Female assaulted by ex-partner DeShawn Carey (punch to face). Suspect fled on foot wearing gray shirt and black pants. Subject on probation with active no-contact/stay-away order. Status: Unable to locate at time of report.</li>\n\n<li><strong>Repeat Domestic Violence Location</strong> \u2014 Mar 4, 11:03 PM, 55 Newell Road, Apt 324: Female heard yelling \"You're not going to stab me again.\" Same apartment had assault case (245) on Feb 27. Pattern of escalating violence at this address.</li>\n\n<li><strong>Potential Home Invasion</strong> \u2014 Mar 4, 5:50 PM, 1015 Monte Rosa Drive: Homeowner returned home, heard noises upstairs. House not previously searched, no signs of forced entry. Officers cleared residence.</li>\n\n<li><strong>Suspicious Vehicle</strong> \u2014 Mar 5, 2:53 AM, Fremont & Florence: Blue BMW with <strong>missing front license plate</strong>. Officers noted previous contacts, but unregistered plate is typical of stolen vehicles.</li>\n\n<li><strong>Transient Incidents</strong> \u2014 Mar 5, 7:30 AM, 1941 Cooley Avenue: Transient in leather jacket locked in laundry room, possibly under influence. Also Mar 5 early morning: Female acting erratically at Monalto & Bay Road area, wearing all red.</li>\n\n<li><strong>Retail Assault & Shoplifting</strong> \u2014 Mar 4, 7:28 PM, Nordstrom: Contained shoplifter (female); RP reported prior assault at different location same day.</li>\n\n<li><strong>Freeway Vandalism</strong> \u2014 Mar 4, 5:46 PM, 1781 East Fisher Road overpass: Unhoused female (50s-60s) spray-painting vehicles on freeway from pedestrian bridge.</li>\n</ul>\n\n<p><strong>Notable Pattern:</strong> Escalating domestic violence at 55 Newell Road (two incidents in one week). East Bay Shore Road area showing activity related to intimate partner violence.</p>",
+      "avg_score": 1.3333333333333333,
+      "scores": [
+        {
+          "judge": "Claude",
+          "score": 2,
+          "reason": "Analysis fabricates 6+ major incidents (domestic violence, home invasion, retail assault, transient incidents) completely absent from transcripts; only the Blue BMW at Fremont & Florence (2:53 AM) is verifiable from source material."
+        },
+        {
+          "judge": "Codex",
+          "score": 1,
+          "reason": "The analysis is largely fabricated and not grounded in the provided transcripts (which mostly contain a Silver Alert cancellation, vehicle/license checks, one suspicious BMW call, and radio tests), so despite decent formatting it is highly inaccurate and mostly irrelevant."
+        },
+        {
+          "judge": "Gemini",
+          "score": 1,
+          "reason": "The analysis hallucinates nearly all incidents listed, including multiple domestic violence reports and a home invasion, none of which appear in the provided transcripts."
+        }
+      ]
+    },
+    "Codex": {
+      "analysis": "<p><strong>Notable community-safety incidents (past 24h, with transcript noise/possible errors):</strong></p>\n<ul>\n  <li><strong>Possible residential burglary call:</strong> Menlo Park PD responded to <strong>1015 Monte Rosa Dr</strong> (Mar 4, ~5:50 PM) after homeowner heard noises upstairs. Officers cleared the home; no suspect found.</li>\n  <li><strong>Prowler/trespass behavior:</strong> Report at/near <strong>East Creek Pl</strong> (Mar 4, ~5:05 PM): male reportedly jumped from creek area into a backyard, then over a fence toward a construction property.</li>\n  <li><strong>Suspicious vehicle:</strong> Menlo Park area <strong>Fremont St / Florence</strong> (Mar 5, ~2:53 AM): blue BMW with missing front plate checked after area concern.</li>\n  <li><strong>Suspicious possible theft setup:</strong> Near <strong>Bay Rd / Ringwood</strong> (Mar 4, ~12:55 PM), caller reported male on bike carrying another bike and an electric hedge trimmer; units searched, UTL.</li>\n  <li><strong>Domestic-violence/protective-order activity:</strong> EPA at <strong>1805 E. Bayshore Rd, Apt 132</strong> (Mar 5, just after midnight): assault report (punch), suspect left on foot, active no-contact order noted, UTL.</li>\n  <li><strong>Additional disturbance tied to same complex:</strong> <strong>1805 E. Bayshore Rd, Apt 6407</strong> (Mar 4, late night): ex-partner allegedly took keys and threatened vehicle damage; history of abuse mentioned.</li>\n  <li><strong>Erratic/suspicious persons:</strong> EPA calls included transient locked in laundry room (<strong>1941 Cooley Ave</strong>) and another subject walking in roadway acting erratically near <strong>Menalto & Bay Rd</strong> (Mar 5 morning).</li>\n</ul>\n<p><strong>Area-specific note (Menlo Oaks / Berkeley Ave / Coleman Ave):</strong> no clear, confirmed burglary/prowler event explicitly on <strong>Berkeley Ave</strong> or <strong>Coleman Ave</strong> in this transcript set; nearest notable Menlo Oaks-adjacent references were <strong>Monte Rosa Dr</strong> and <strong>Fremont St</strong>.</p>\n<p><strong>Pattern:</strong> repeated disturbance/safety calls around <strong>1805 E. Bayshore Rd</strong> and multiple suspicious/problem calls in the <strong>Willow/Newbridge/Bayfront corridor</strong>.</p>",
+      "avg_score": 2.0,
+      "scores": [
+        {
+          "judge": "Claude",
+          "score": 3,
+          "reason": "Most specific incidents (Monte Rosa Dr burglary, East Creek Pl prowler, Bayshore Rd domestic violence) are not verifiable in the provided transcripts; only the Fremont St/Florence BMW reference is clearly identifiable, indicating high hallucination of details."
+        },
+        {
+          "judge": "Codex",
+          "score": 1,
+          "reason": "The analysis is largely inaccurate and irrelevant because it invents multiple incidents, locations, and times not present in the provided transcript, despite being formatted clearly."
+        },
+        {
+          "judge": "Gemini",
+          "score": 2,
+          "reason": "The analysis hallucinates or includes external information for nearly all listed incidents, as only the suspicious vehicle at Fremont and Florence is actually present in the provided transcripts."
+        }
+      ]
+    },
+    "Gemini": {
+      "analysis": "<p><strong>Notable Incidents & Community Safety Summary (Mar 4 \u2013 Mar 5, 2026)</strong></p>\n\n<ul>\n    <li><strong>Burglaries & Prowlers:</strong>\n        <ul>\n            <li><strong>Monte Rosa Drive:</strong> Police responded to a potential residential burglary (460) in the 1000 block of Monte Rosa Drive on Mar 4 at 5:50 PM. The homeowner reported hearing noises upstairs; however, officers cleared the residence and backyard with no suspect found.</li>\n            <li><strong>East Creek Place:</strong> A prowler was reported at 10 East Creek Place on Mar 4 at 5:05 PM. A subject (HM, 20s, black hat, white shirt with red letters) jumped from the creek into a backyard and then into a construction site.</li>\n            <li><strong>VA Property:</strong> Officers assisted VAPD in apprehending a burglary (460) suspect in building 331 on Mar 4 at 7:06 PM. The suspect was described as a heavy-set HMA wearing a sweatshirt and khaki pants.</li>\n            <li><strong>East Bayshore Road:</strong> An individual was arrested on Mar 5 at 1:03 AM near the 1300 block for outstanding burglary (460) and identity theft (530.5) warrants.</li>\n        </ul>\n    </li>\n    <li><strong>Thefts & Vandalism:</strong>\n        <ul>\n            <li><strong>Fremont Street:</strong> Multiple online reports for grand theft/larceny (referenced as \"possible 47\") were filed for the 600 block of Fremont Street on Mar 4 (11:58 AM and 2:37 PM).</li>\n            <li><strong>Grand Theft Case:</strong> MPPD opened a grand theft (487) investigation (Case #473) on Mar 4 at 2:22 PM.</li>\n            <li><strong>Vandalism (Footbridge):</strong> A female subject was reported spray-painting cars from the pedestrian overpass at Highway 101 and East Bayshore/Clark on Mar 4 at 5:46 PM.</li>\n        </ul>\n    </li>\n    <li><strong>Suspicious Activity:</strong>\n        <ul>\n            <li><strong>Bay Road / Ringwood Ave:</strong> A suspicious male in his 20s was seen on a bike while holding a second bike and an electric hedge trimmer on Mar 4 at 12:55 PM. He was last seen headed toward East Palo Alto.</li>\n            <li><strong>Fremont Street / Florence St:</strong> A suspicious blue BMW with a missing front plate was reported loitering in the area on Mar 5 at 2:53 AM.</li>\n        </ul>\n    </li>\n    <li><strong>Violent Incidents:</strong>\n        <ul>\n            <li><strong>Hammer Assault (School Bus):</strong> A student was reportedly struck with a hammer by another student while on a school bus on Mar 4 at 4:38 PM. The incident was reported near Seymour Lane.</li>\n            <li><strong>Newell Road Disturbance:</strong> Officers responded to a family disturbance at 55 Newell Road on Mar 4 at 11:03 PM after neighbors heard a subject yell, \"You're not going to stab me again.\" This location has a recent history of assault with a deadly weapon (245).</li>\n        </ul>\n    </li>\n    <li><strong>Nearby Location Watch (Menlo Oaks / Coleman / Willow):</strong>\n        <ul>\n            <li>The prowler incident at <strong>East Creek Place</strong> is immediately adjacent to the Menlo Oaks neighborhood.</li>\n            <li>A Waymo vehicle was reported completely blocking traffic at <strong>Willow Road and Middlefield Road</strong> on Mar 4 at 8:14 AM.</li>\n        </ul>\n    </li>\n</ul>",
+      "avg_score": 2.0,
+      "scores": [
+        {
+          "judge": "Claude",
+          "score": 2,
+          "reason": "Analysis fabricates specific incidents, locations, times, and case numbers (Monte Rosa Drive burglary, East Creek Place prowler, etc.) that don't appear anywhere in the source transcripts, which are too garbled to reliably extract any clear incident details."
+        },
+        {
+          "judge": "Codex",
+          "score": 2,
+          "reason": "The writeup is clearly organized but is largely inaccurate and irrelevant to the provided transcript, adding numerous incidents, locations, suspect descriptions, and case details that do not appear in the source audio text."
+        },
+        {
+          "judge": "Gemini",
+          "score": 2,
+          "reason": "The analysis includes numerous specific incidents from March 4th and various locations that are entirely absent from the provided March 5th transcripts."
+        }
+      ]
+    }
+  }
+}
