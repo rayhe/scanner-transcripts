@@ -1,0 +1,69 @@
+{
+  "date": "2026-03-06",
+  "generated_at": "Mar 06, 2026 08:01 AM PT",
+  "models": {
+    "Claude": {
+      "analysis": "<p><strong>Summary of Notable Incidents (March 5-6, 2026)</strong></p>\n\n<ul>\n<li><strong>Stolen Vehicle Component:</strong> Front license plate taken from a Subaru at <strong>Coleman Place area</strong> (Mar 5, 12:10 PM) \u2014 relevant to Menlo Oaks community.</li>\n\n<li><strong>Suspicious Juvenile Activity:</strong> Two to three juveniles on BMX bikes opened a fence surrounding a vacant lot at <strong>620 Olive</strong> (Mar 5, 3:46 PM). Owner was overseas; property gate left unsecured. Possible lock break-in; no forced entry confirmed.</li>\n\n<li><strong>Vehicle Alarm Activations:</strong> Multiple audible alarms at commercial/residential properties (272 Hedge Row, Tavares Orthodontics, Broadway Commercial areas) \u2014 standard responses, mostly false alarms.</li>\n\n<li><strong>Traffic Collision:</strong> Vehicle accident with airbags deployed on Bayfront at Meta on Mar 6 (~7:00 AM) \u2014 occupants refused medics initially but treatment provided per policy.</li>\n\n<li><strong>Welfare Checks:</strong> Several 5150-related calls for individuals in distress or psychiatric crisis; routine police response with no public safety threat identified.</li>\n</ul>\n\n<p><strong>Assessment:</strong> Transcription quality is poor, limiting clarity. No significant burglaries, prowlers, or vehicle pursuits detected. Most activity consists of routine traffic enforcement and administrative chatter. The stolen license plate and juvenile lot intrusion warrant noting but appear isolated incidents.</p>",
+      "avg_score": 1.3333333333333333,
+      "scores": [
+        {
+          "judge": "Claude",
+          "score": 2,
+          "reason": "Analysis invents major incidents (stolen license plate, juvenile activity, traffic collision, welfare checks) completely absent from the provided transcripts, indicating severe hallucination rather than faithful summarization."
+        },
+        {
+          "judge": "Codex",
+          "score": 1,
+          "reason": "The analysis is mostly inaccurate and hallucinates multiple incidents not present in the provided transcript (wrong dates/times/locations/events), so despite decent formatting it is not relevant to the actual safety-significant content."
+        },
+        {
+          "judge": "Gemini",
+          "score": 1,
+          "reason": "The analysis describes incidents from different dates and times that are completely absent from the provided transcripts while ignoring the actual events recorded."
+        }
+      ]
+    },
+    "Codex": {
+      "analysis": "<p><strong>Notable community-safety activity (last ~24 hrs, based on noisy auto-transcripts):</strong></p>\n<ul>\n  <li><strong>Possible prowler/casing behavior (Menlo Park):</strong> Around <strong>611/1177 Johnson St</strong>, callers reported two males in vests knocking on doors and claiming \u201cconstruction\u201d (evening Mar 5). Officers contacted them; this reads as suspicious door-to-door activity.</li>\n  <li><strong>Suspicious property entry (Menlo Park):</strong> Caller near <strong>620 Olive</strong> reported 2\u20133 juveniles on BMX bikes entering a fenced vacant lot and possibly breaking/opening a lock (Mar 5 afternoon).</li>\n  <li><strong>Commercial/residential alarm checks:</strong> \n    <ul>\n      <li><strong>272 Hedgerow Rd</strong> side-garage alarm (early Mar 6): units searched garage/backyard; no suspect found.</li>\n      <li><strong>64 Willow Pl</strong> silent alarm (early Mar 6): report of movement inside; officers found possible construction activity.</li>\n      <li><strong>800 Menlo Ave</strong> rear-door alarm (late Mar 5): cover units sent; no clear suspect info.</li>\n    </ul>\n  </li>\n  <li><strong>Vehicle/plate-related theft indicators (Menlo Park):</strong> one call noted a <strong>stolen front plate on a Subaru</strong> (Mar 5 midday), and another noted a <strong>rear plate taken from a VW Golf</strong> (Mar 5 evening).</li>\n  <li><strong>East Palo Alto suspicious/crime activity:</strong> Nordstrom Rack theft call (suspect fled by bike), and later a separate bike-related enforcement event near <strong>University / West Bayshore / Cooley / Woodland</strong> with a subject detained after evasive riding (Mar 5 evening).</li>\n  <li><strong>Menlo Oaks / Berkeley Ave / Coleman Ave area:</strong> No clearly confirmed burglary/break-in in these transcripts. Closest mentions were activity at/near <strong>Coleman Place</strong> (vehicle-related calls) and <strong>Willow/Coleman</strong> (welfare-type call, non-criminal).</li>\n</ul>\n<p><strong>Pattern:</strong> Multiple calls involve suspicious persons on bikes, odd door/contact behavior, and alarm activations with no confirmed forced-entry arrest in this window.</p>",
+      "avg_score": 1.6666666666666667,
+      "scores": [
+        {
+          "judge": "Claude",
+          "score": 3,
+          "reason": "Analysis invents numerous specific addresses, incident details, and suspects (prowlers at Johnson St, juveniles at Olive St, Nordstrom Rack theft) that do not appear in the garbled source transcripts, severely compromising accuracy despite good clarity."
+        },
+        {
+          "judge": "Codex",
+          "score": 1,
+          "reason": "The analysis is largely inaccurate and irrelevant because it invents numerous incidents, locations, and details not present in the provided transcript, despite being formatted clearly."
+        },
+        {
+          "judge": "Gemini",
+          "score": 1,
+          "reason": "The analysis describes a completely different set of events, locations, and dates than those found in the provided transcripts, failing all accuracy and relevance checks."
+        }
+      ]
+    },
+    "Gemini": {
+      "analysis": "<p><strong>Notable Incidents and Community Safety Summary (March 5-6, 2026)</strong></p>\n\n<p><strong>Suspicious Activity and Prowling</strong></p>\n<ul>\n    <li><strong>Johnson St (Menlo Park):</strong> Multiple calls regarding suspicious activity. At 7:17 PM (Mar 5), a resident at 1111 Johnson reported someone knocking on their door twice and leaving. Shortly after, another resident at 1177 Johnson reported two males in vests claiming to be there for \"construction/area check\" before fleeing. Officers made contact near Johnson and Andrews.</li>\n    <li><strong>Olive St (Menlo Park):</strong> At 3:46 PM (Mar 5), two to three juveniles on BMX bikes were reported entering a fenced vacant lot near 620 Olive St, possibly breaking a lock to walk around the property.</li>\n    <li><strong>Hedge Road (Menlo Park/Atherton):</strong> At 1:49 AM (Mar 6), a residential alarm was triggered by a side garage door. Units checked the perimeter and backyard; the garage was found secure.</li>\n    <li><strong>Bay Laurel (Menlo Park):</strong> At 6:47 PM (Mar 5), a resident reported a \"weird\" encounter with a subject claiming to be a construction worker asking for a vehicle jump-start. A license plate theft was reported in the same vicinity around this time.</li>\n    <li><strong>Oak Grove (Menlo Park):</strong> At 8:34 AM (Mar 5), a male subject was reported exposing himself and urinating on a property at 550 Oak Grove.</li>\n</ul>\n\n<p><strong>Thefts and Property Crimes</strong></p>\n<ul>\n    <li><strong>License Plate Thefts:</strong> Multiple reports of stolen plates, including a front plate from a Subaru at 428 University/Constitution area (12:08 PM, Mar 5) and a rear plate from a VW Golf at 1445 Bay Laurel (6:59 PM, Mar 5).</li>\n    <li><strong>Shoplifting:</strong> A shoplifter was taken into custody at an unspecified Menlo Park business at 2:32 PM (Mar 5). Later, at 3:05 PM, a suspect (HMA, 30s, black hoodie) stole Nike shoes from Nordstrom Rack and fled on a white bike toward O'Connor St.</li>\n    <li><strong>Fraud:</strong> A fraud report was taken involving a victim in Tampa, FL, with local ties (3:51 PM, Mar 5).</li>\n</ul>\n\n<p><strong>Vehicle Pursuits and Traffic Safety</strong></p>\n<ul>\n    <li><strong>Coleman Place (Menlo Oaks):</strong> At 9:51 AM (Mar 5), a silver Toyota Sienna was reported parked over a sidewalk. By 10:08 AM, it was determined the vehicle had struck a pole.</li>\n    <li><strong>Bicycle Pursuit (East Palo Alto/Menlo Border):</strong> At 9:35 PM (Mar 5), officers pursued a warrant subject on a bicycle through Crescent St, University Ave, and Woodland Ave. The subject dropped bags (green and white) during the chase before being tracked to an alleyway near Schofield and West Bayshore.</li>\n    <li><strong>Mismatched Plates:</strong> At 2:23 PM (Mar 5), a dark green BMW was stopped on Willow Road near Hwy 101 after being spotted with plates registered to a Porsche.</li>\n    <li><strong>Minibikes:</strong> At 8:24 PM (Mar 5), three juveniles on minibikes were reported riding without lights or helmets near East O'Keefe.</li>\n</ul>\n\n<p><strong>Notable Locations Near Menlo Oaks / Berkeley Ave</strong></p>\n<ul>\n    <li><strong>Coleman Place:</strong> Vehicle collision with a pole.</li>\n    <li><strong>Johnson St:</strong> Suspicious persons in vests knocking on doors.</li>\n    <li><strong>Olive St:</strong> Prowling/trespassing on vacant lots.</li>\n    <li><strong>Willow Road:</strong> Significant traffic stops involving mismatched/stolen plates.</li>\n</ul>",
+      "avg_score": 1.3333333333333333,
+      "scores": [
+        {
+          "judge": "Claude",
+          "score": 2,
+          "reason": "Appears to fabricate nearly all details\u2014specific addresses, suspect descriptions, and detailed incidents are not present in the garbled source transcripts, which contain mostly dispatch codes and vehicle checks."
+        },
+        {
+          "judge": "Codex",
+          "score": 1,
+          "reason": "The analysis is largely inaccurate because it introduces many specific incidents, times, locations, and suspects not present in the provided transcript, making relevance to the actual safety events very low despite clear formatting."
+        },
+        {
+          "judge": "Gemini",
+          "score": 1,
+          "reason": "The analysis is entirely hallucinated, failing to reflect any of the actual events in the provided transcripts while inventing numerous unrelated incidents and locations."
+        }
+      ]
+    }
+  }
+}
