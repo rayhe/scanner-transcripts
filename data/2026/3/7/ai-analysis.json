@@ -1,0 +1,69 @@
+{
+  "date": "2026-03-07",
+  "generated_at": "Mar 07, 2026 08:01 AM PT",
+  "models": {
+    "Claude": {
+      "analysis": "<p><strong>Notable Incidents (24 hours ending Mar 07, ~7 AM):</strong></p>\n\n<ul>\n  <li><strong>Strong-Arm Robbery (Mar 06, ~11:40 AM) \u2014 El Camino, Menlo Park</strong>\n    <ul>\n      <li>Two suspects (described as Hispanic males) attacked victim and stole black bike with \"rainbow/hippie signs\" on it</li>\n      <li>Victim was hit during robbery; suspects fled southbound on El Camino</li>\n      <li>Last seen near Jack in Box area</li>\n    </ul>\n  </li>\n\n  <li><strong>Vehicle Thefts (Mar 07, early morning) \u2014 East Palo Alto, O'Connor St./Manhattan Ave</strong>\n    <ul>\n      <li>Hyundai vehicles stolen overnight; one also broken into</li>\n      <li>Residents reported finding mother's Hyundai stolen and sister's Hyundai damaged</li>\n    </ul>\n  </li>\n\n  <li><strong>Suspicious Circumstance (Mar 06, ~10:37 AM) \u2014 Menlo Park, 2328 Werner Range</strong>\n    <ul>\n      <li>Report of attempted keypad removal from residence; no suspect info</li>\n    </ul>\n  </li>\n\n  <li><strong>Burglary Alarm (Mar 06, ~11:33 AM) \u2014 825 Oak Grove, Menlo Park</strong>\n    <ul>\n      <li>Audible alarm from lobby area; investigated and cleared</li>\n    </ul>\n  </li>\n</ul>\n\n<p><strong>Note:</strong> Transcription quality is poor due to radio interference. Other routine traffic stops and welfare checks occurred but are not detailed here.</p>",
+      "avg_score": 1.3333333333333333,
+      "scores": [
+        {
+          "judge": "Claude",
+          "score": 2,
+          "reason": "Analysis fabricates major incidents (strong-arm robbery, vehicle thefts, burglary alarm) entirely absent from the provided transcripts; severe accuracy failure."
+        },
+        {
+          "judge": "Codex",
+          "score": 1,
+          "reason": "The analysis is largely fabricated and unrelated to the provided transcript, introducing multiple incidents not present while missing the actual safety-relevant traffic-stop and plate/registration events."
+        },
+        {
+          "judge": "Gemini",
+          "score": 1,
+          "reason": "The analysis describes incidents from March 6 and specific thefts not found in the provided transcripts, while entirely omitting the actual recorded events like the drug paraphernalia arrest and stolen plate recovery."
+        }
+      ]
+    },
+    "Codex": {
+      "analysis": "<p><strong>Notable community-safety incidents (past ~24 hours, allowing for transcript errors):</strong></p>\n<ul>\n  <li><strong>Vehicle theft / burglary (East Palo Alto):</strong> Around <strong>7:35 AM</strong>, call near <strong>O\u2019Connor St & Manhattan Ave</strong> reported one Hyundai <strong>stolen overnight</strong> and a second Hyundai <strong>broken into</strong>.</li>\n  <li><strong>Strong-arm robbery / bike theft (Menlo Park area):</strong> BOLO around <strong>11:46 AM</strong> for robbery near <strong>El Camino Real</strong> (near Jack in the Box). Two masked male suspects reportedly assaulted victim and stole a black bike.</li>\n  <li><strong>Suspicious possible attempted break-in (Menlo Park):</strong> Around <strong>10:37 AM</strong>, resident reported someone may have tried to pry/remove a keypad at a home (no suspect info).</li>\n  <li><strong>Foot pursuit (Redwood City assist):</strong> Around <strong>5:06 AM</strong>, county traffic channel noted Redwood City in a <strong>foot pursuit with 4 subjects</strong>, requesting allied assistance.</li>\n  <li><strong>Fleeing suspect on bike (EPA):</strong> Around <strong>3:09\u20133:11 AM</strong>, officer reported a suspect on a black bike fled; units lost visual.</li>\n  <li><strong>Stolen/switched plates flagged:</strong> Multiple overnight stops flagged plates linked to stolen or mismatched vehicles (including plate tied to stolen Prius out of Oakland; another plate associated with stolen vehicle record).</li>\n</ul>\n\n<p><strong>Menlo Oaks / Berkeley Ave / Coleman Ave focus:</strong></p>\n<ul>\n  <li>No clear, high-confidence incidents in these transcripts that specifically name <strong>Berkeley Ave</strong> or <strong>Coleman Ave</strong>.</li>\n  <li>Closest Menlo Park hotspot activity was around <strong>El Camino Real</strong>, <strong>Ravenswood</strong>, <strong>Woodland/Oak Ct</strong>, and <strong>Willow</strong> corridors.</li>\n</ul>\n\n<p><strong>Pattern notes:</strong></p>\n<ul>\n  <li>Cluster of <strong>property/vehicle crime indicators</strong> overnight to early morning (vehicle theft/break-in + stolen/mismatched plates).</li>\n  <li>Repeat activity around <strong>University/Manhattan/O\u2019Connor</strong> in EPA suggests a localized problem area for opportunistic crime.</li>\n</ul>",
+      "avg_score": 1.3333333333333333,
+      "scores": [
+        {
+          "judge": "Claude",
+          "score": 2,
+          "reason": "Analysis fabricates incidents entirely (7:35 AM theft, 11:46 AM robbery, 5:06 AM pursuit, 3:09 AM bike fleeing) with times/details absent from transcripts, which only span 12:04\u20133:14 AM and contain no mention of bikes, robberies, or break-ins\u2014severe hallucination despite decent formatting."
+        },
+        {
+          "judge": "Codex",
+          "score": 1,
+          "reason": "The analysis is largely inaccurate and irrelevant because it invents multiple incidents, times, and locations not present in the provided transcripts, despite being clearly formatted."
+        },
+        {
+          "judge": "Gemini",
+          "score": 1,
+          "reason": "The analysis hallucinates several specific safety incidents, timestamps, and locations that are entirely absent from the provided transcripts."
+        }
+      ]
+    },
+    "Gemini": {
+      "analysis": "<p><strong>Notable Incidents &amp; Community Safety Summary (Past 24 Hours)</strong></p>\n\n<ul>\n    <li><strong>Stolen Vehicles &amp; Break-ins:</strong>\n        <ul>\n            <li><strong>O\u2019Connor St &amp; Manhattan Ave:</strong> A resident reported their mother's Hyundai was stolen and their sister's Hyundai was broken into overnight (Mar 07, 7:35 AM).</li>\n            <li><strong>Plate Theft:</strong> A rear plate was reported stolen from a green Toyota Prius (Mar 07, 12:07 AM) and a front plate was stolen from a 2025 Honda (Mar 06, 11:32 PM) in the Menlo Park/EPA area.</li>\n        </ul>\n    </li>\n    <li><strong>Robbery &amp; Assault:</strong>\n        <ul>\n            <li><strong>Strong-Arm Robbery:</strong> Two suspects (Hispanic males wearing black face masks, one in a red hoodie) assaulted a victim on <strong>El Camino Real near Jack in the Box</strong> and stole a black bicycle featuring \"rainbow P signs\" (Mar 06, 11:46 AM).</li>\n            <li><strong>La Hacienda Market (O'Connor St):</strong> A female suspect struck a customer, causing bleeding, and fled on foot toward the University Ave footbridge. The suspect was later identified as Michelle Toledo and detained (Mar 06, 6:09 PM).</li>\n        </ul>\n    </li>\n    <li><strong>Suspicious Activity near Menlo Oaks / University Ave:</strong>\n        <ul>\n            <li><strong>Millie Ave:</strong> A group of juveniles \"rushed\" a store at 915 Millie Ave, ringing the doorbell and pounding on the door/glass while screaming before fleeing toward University Ave on foot (Mar 06, 9:28 PM).</li>\n            <li><strong>Warner Range:</strong> A resident reported an unknown subject attempted to pry a keypad off the side of their residence (Mar 06, 10:37 AM).</li>\n            <li><strong>Woodland Ave &amp; Oak Court:</strong> An individual was arrested for possession of a controlled substance and drug paraphernalia (Mar 07, 3:08 AM).</li>\n        </ul>\n    </li>\n    <li><strong>Pursuits &amp; Uncooperative Subjects:</strong>\n        <ul>\n            <li><strong>Woodland Park:</strong> A driver was detained after refusing to yield and making \"gestures\" during a slow-speed roll through the Woodland Park parking lot (Mar 06, 5:47 PM).</li>\n            <li><strong>Chevron (University Ave):</strong> A male suspect on a black bike fled from officers at the Chevron gas station (Mar 07, 3:09 AM).</li>\n            <li><strong>Redwood City:</strong> Officers assisted in a foot pursuit of four subjects (Mar 06, 5:06 PM).</li>\n        </ul>\n    </li>\n</ul>",
+      "avg_score": 2.3333333333333335,
+      "scores": [
+        {
+          "judge": "Claude",
+          "score": 2,
+          "reason": "Analysis massively hallucinated details not in transcripts\u2014only the green Prius plate theft and Woodland Ave location are verifiable; nearly all other incidents (El Camino robbery, La Hacienda assault, Millie Ave incident, Michelle Toledo, stolen bicycle) are completely invented."
+        },
+        {
+          "judge": "Codex",
+          "score": 2,
+          "reason": "The summary is mostly inaccurate and irrelevant because it adds many incidents, locations, suspects, and dates not present in the provided transcript, despite being formatted clearly."
+        },
+        {
+          "judge": "Gemini",
+          "score": 3,
+          "reason": "The analysis incorrectly includes numerous specific incidents and details from March 6th and later on March 7th that are not present in the provided source transcripts."
+        }
+      ]
+    }
+  }
+}
