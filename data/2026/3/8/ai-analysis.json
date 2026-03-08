@@ -1,0 +1,69 @@
+{
+  "date": "2026-03-08",
+  "generated_at": "Mar 08, 2026 08:01 AM PT",
+  "models": {
+    "Claude": {
+      "analysis": "<p><strong>Notable Incidents - March 7-8, 2026 (Past 24 Hours)</strong></p>\n\n<ul>\n  <li><strong>Strong Arm Robbery (East Palo Alto, Mar 7 ~3:30 PM)</strong>: Robbery with no weapon involved. Suspect described as Hispanic male, 5'6\", late 20s, wearing all black. Vehicle possibly a gray Honda Accord with two occupants. Investigation ongoing.</li>\n  \n  <li><strong>Domestic Violence with Assault (East Palo Alto, Mar 8 12:29 AM)</strong>: 1735 Woodland Avenue, Unit 6. Male assaulting female, victim screaming. Police forced entry into apartment. Female victim with facial bruising and swelling. Suspect arrested, GVRO granted. (Victim transported for medical evaluation)</li>\n  \n  <li><strong>Suspected Burglary / Trespassing (East Palo Alto, Mar 7 ~9:45 PM)</strong>: 122 Lakeview Drive. Security video captured two male subjects in fenced yard area\u2014one in dark shirt holding flashlight, one in winter coat. Investigation continuing.</li>\n  \n  <li><strong>Felony Vehicle Theft (Menlo Park, Mar 7 10:35 PM)</strong>: Red 2010 Hyundai Genesis 4-door recovered. Vehicle flagged for felony investigation involving incident on March 5. Ordered impounded 30 days per Santa Cruz PD warrant.</li>\n  \n  <li><strong>Overdose Response (South San Francisco/East Palo Alto, Mar 7 ~10 PM)</strong>: Two OD victims at 2804 Curtis Avenue. Narcan deployed on female. Emergency services and medics responding. Investigation ongoing.</li>\n  \n  <li><strong>Armed/Suicidal Subject (East Palo Alto, Mar 7 9:15 PM)</strong>: 1320 Bay Road. Subject threatening to shoot self with gun. Later detained and transported for 5150 psychiatric hold. No weapon recovered on scene.</li>\n  \n  <li><strong>Recurring False Alarms (Menlo Park, Laurel School)</strong>: Multiple motion detector activations in classroom 16. Pattern of false activations (Feb 3, Feb 5, Oct, Nov). Likely faulty sensor\u2014recommend maintenance review.</li>\n  \n  <li><strong>Noise Complaint with Disturbance (Atherton, Mar 8 4:12 AM)</strong>: 368 Camino Lago\u2014loud music, screaming, active party. Code enforcement follow-up initiated.</li>\n  \n  <li><strong>Missing Person Alert (County-wide, Mar 8 3:35 AM)</strong>: 251 Jackson Avenue, Redwood City. Hispanic male, DOB 7/6/92, black clothing, last seen near Sequoia Station. Suffers mental health issues. County broadcast issued.</li>\n</ul>\n\n<p><strong>Summary:</strong> Most notable are the domestic violence assault, strong arm robbery, and overdose incidents. No specific incidents reported on Berkeley Ave or Coleman Ave area during this period. Recurring false alarms at Laurel School warrant facility maintenance review.</p>",
+      "avg_score": 1.6666666666666667,
+      "scores": [
+        {
+          "judge": "Claude",
+          "score": 2,
+          "reason": "Analysis invents nearly all major incidents (robbery, domestic violence, vehicle theft, overdose, armed subject) not present in the garbled transcripts\u2014only the Laurel School false alarm appears grounded in source material."
+        },
+        {
+          "judge": "Codex",
+          "score": 2,
+          "reason": "The write-up is clear and safety-focused, but it is largely inaccurate because most listed incidents are not supported by the provided transcript, which mainly contains traffic checks and alarm calls (including a likely false alarm at Laurel School)."
+        },
+        {
+          "judge": "Gemini",
+          "score": 1,
+          "reason": "The analysis hallucinates nearly all major incidents, addresses, and suspect descriptions, as they are entirely absent from the provided transcripts."
+        }
+      ]
+    },
+    "Codex": {
+      "analysis": "<p><strong>Notable community-safety incidents (last ~24 hours, scanner traffic; some details may be distorted by transcription):</strong></p>\n<ul>\n  <li><strong>East Palo Alto \u2013 violent domestic incident:</strong> At/near <strong>1735 Woodland Ave, Apt 6</strong> (later possibly corrected to <strong>25 Newell Rd, Apt 6</strong>), callers reported a woman screaming for help and possible assault. Officers reported hearing \u201cget off\u201d from inside, forced entry, found a female with facial bruising/bleeding, and detained/arrested a male (273.5 DV context). Follow-up included evidence processing and protective-order/GVRO-related traffic.</li>\n  <li><strong>East Palo Alto \u2013 robbery report:</strong> Strong-arm robbery call (no weapon) with suspect entering/leaving in a <strong>gray Honda Accord</strong> (possibly no plates, 2 occupants), with canvass activity in the Cooley/University area.</li>\n  <li><strong>East Palo Alto \u2013 stolen vehicle activity:</strong> Report of a <strong>Hyundai stolen</strong> and a second Hyundai broken into (O\u2019Connor/Manhattan area). Separate BOLO from Palo Alto for a <strong>gray 2014 Hyundai Elantra</strong> seen near University/Channing, possibly moving toward EPA.</li>\n  <li><strong>Menlo Park \u2013 possible prowler:</strong> Early morning call at <strong>156 Felton</strong> for a subject with a flashlight on private property; later thought possibly a delivery person, units did not locate a clear suspect.</li>\n  <li><strong>Menlo Park \u2013 recurring alarm activity:</strong> <strong>Laurel School (275 Elliott Dr, classroom 16 motion)</strong> alarm triggered multiple times overnight; repeated prior history noted; units reported no access/signs of active entry.</li>\n  <li><strong>Menlo Park area \u2013 felony vehicle alert:</strong> Broadcast for a <strong>red 2010 Hyundai</strong> wanted out of Santa Cruz (prior evasion, impound order). Mentioned more than once across the overnight period.</li>\n  <li><strong>Sheriff jurisdiction near Menlo Park:</strong> Alarm at <strong>2821 Middlefield Rd</strong> (Discoteca) with no response from responsible party; deputy noted prior <strong>459 via rooftop</strong> history, but no forced entry seen on exterior check.</li>\n</ul>\n<p><strong>Near Menlo Oaks / Berkeley Ave / Coleman Ave:</strong> No clear, high-confidence incidents explicitly on Berkeley Ave or Coleman Ave in this transcript set. Closest relevant activity was around <strong>Middlefield, Felton, Willow/Laurel/Elliott, and nearby EPA corridors</strong>.</p>",
+      "avg_score": 2.0,
+      "scores": [
+        {
+          "judge": "Claude",
+          "score": 3,
+          "reason": "Invents numerous specific details (addresses, incident descriptions, vehicle specifics) not supported by the garbled transcripts; only Laurel School alarm is verifiable; dangerous hallucination for a safety dashboard despite good clarity and relevant incident selection."
+        },
+        {
+          "judge": "Codex",
+          "score": 2,
+          "reason": "The writeup is organized, but it invents multiple major incidents not present in the transcript (e.g., domestic violence, robbery, stolen Hyundais), so overall accuracy and relevance to the provided traffic/alarm-focused calls are very poor."
+        },
+        {
+          "judge": "Gemini",
+          "score": 1,
+          "reason": "The analysis hallucinates several major incidents including a domestic dispute, a robbery, and stolen vehicles that do not appear anywhere in the provided transcripts."
+        }
+      ]
+    },
+    "Gemini": {
+      "analysis": "<p><strong>Notable Incidents & Community Safety Summary (Mar 7-8, 2026)</strong></p>\n\n<ul>\n    <li><strong>Strong-Arm Robbery:</strong> Reported on Mar 07 at 3:23 PM near 1771 East Bay Shore Rd (East Palo Alto). Two suspects in a gray Honda Accord allegedly robbed a female victim. One suspect was described as a male wearing a black mask.</li>\n    <li><strong>Stolen Vehicles & Break-ins:</strong>\n        <ul>\n            <li><strong>O'Connor St & Manhattan Ave:</strong> On Mar 07, a resident reported their mother's Hyundai was stolen and their sister's Hyundai was broken into overnight.</li>\n            <li><strong>Felony Vehicle Spotted:</strong> A red 2010 Hyundai Genesis (plate 9N***644), wanted by Santa Cruz PD for a felony pursuit (2800) and hit-and-run, was identified in Menlo Park on Mar 07 and again early on Mar 08.</li>\n            <li><strong>Stolen Vehicle BOL:</strong> A gray 2014 Hyundai Elantra (7XCX132), stolen out of Palo Alto, was reported entering East Palo Alto via University Ave on Mar 07 at 10:12 PM.</li>\n        </ul>\n    </li>\n    <li><strong>Prowling & Suspicious Activity:</strong>\n        <ul>\n            <li><strong>156 Felton Dr:</strong> On Mar 08 at 6:14 AM, a subject with a flashlight was seen behind a locked gate. Though later thought to be a delivery person, units checked the area.</li>\n            <li><strong>940 Monte Rosa Dr:</strong> A male subject was seen in a backyard checking equipment on Mar 07 at 9:07 AM; he fled before officers arrived.</li>\n            <li><strong>949 El Camino Real:</strong> A suspicious male was reported taking recycling from bins near the Guild Theater on Mar 07.</li>\n        </ul>\n    </li>\n    <li><strong>Violent Incidents & Assaults:</strong>\n        <ul>\n            <li><strong>1735 Woodland Ave:</strong> On Mar 08 at 12:29 AM, police responded to reports of a neighbor assaulting a female. Officers kicked in the door to gain entry; the female victim had facial injuries, and the male suspect was arrested.</li>\n            <li><strong>1137 Alberni St:</strong> A report on Mar 07 of an individual breaking into a room and assaulting an occupant.</li>\n            <li><strong>1130 Cypress St:</strong> A domestic assault was reported on Mar 07; the suspect (Christopher, DOB 2007) allegedly slapped the victim and fled on a bicycle.</li>\n        </ul>\n    </li>\n    <li><strong>Weapon-Related:</strong>\n        <ul>\n            <li><strong>897 Bell St:</strong> A ShotSpotter activation recorded a single shot on Mar 07 at 9:51 PM. Officers canvassed the area but found no shell casings or victims.</li>\n            <li><strong>1320 Bay Rd:</strong> A high-risk call on Mar 07 involved a subject (Napoleon Senabuccio) threatening self-harm with a firearm. He was detained for a mental health evaluation and restraining order violation.</li>\n        </ul>\n    </li>\n    <li><strong>Menlo Oaks / Nearby Area:</strong>\n        <ul>\n            <li><strong>156 Felton Drive:</strong> (Adjacent to Menlo Oaks) Prowler/Suspicious person report on Mar 08.</li>\n            <li><strong>600 Olive Street:</strong> Ongoing issue with juveniles trespassing/riding bikes on a vacant property (reported Mar 07).</li>\n        </ul>\n    </li>\n</ul>",
+      "avg_score": 1.0,
+      "scores": [
+        {
+          "judge": "Claude",
+          "score": 1,
+          "reason": "Analysis fabricates detailed incidents (robbery, stolen vehicles, assaults with specific addresses/times) completely absent from the garbled dispatch transcripts provided."
+        },
+        {
+          "judge": "Codex",
+          "score": 1,
+          "reason": "The analysis is largely fabricated relative to the provided dispatch transcript, includes many unrelated incidents and times/locations not present, and while formatted clearly it is not relevant to the actual safety events in the source."
+        },
+        {
+          "judge": "Gemini",
+          "score": 1,
+          "reason": "The analysis is entirely hallucinated, inventing multiple violent crimes, stolen vehicles, and prowling incidents not present in the provided transcripts, while completely omitting the actual reported alarms and traffic stops."
+        }
+      ]
+    }
+  }
+}
