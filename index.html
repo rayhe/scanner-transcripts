@@ -48,6 +48,8 @@
   .call audio { width: 100%; margin-top: 6px; height: 32px; }
   .empty { text-align: center; color: var(--muted); padding: 48px 0; }
   .loading { text-align: center; color: var(--muted); padding: 48px 0; }
+  .load-more { display: block; width: 100%; padding: 12px; margin: 12px 0; background: var(--surface); border: 1px solid var(--border); border-radius: 6px; color: var(--accent); font-size: 14px; cursor: pointer; text-align: center; }
+  .load-more:hover { border-color: var(--accent); background: #58a6ff11; }
   /* Radio code annotations */
   .rc { border-bottom: 1px dotted var(--muted); cursor: help; position: relative; }
   .rc:hover { color: var(--accent); border-color: var(--accent); }
@@ -111,6 +113,9 @@ let activeFilter = 'all';
 let currentAudio = null;
 let hoverMode = true;
 let inlineMode = false;
+let renderLimit = 100;
+let searchTimer = null;
+const annotationCache = new Map(); // start_time -> annotated text
 
 const AI_COLORS = {
   'Claude': { color: '#d2a8ff', border: '#3b2360', bg: '#1e1535' },
@@ -562,7 +567,18 @@ async function loadAllData() {
   render();
 }
 
-function render() {
+function getAnnotated(c) {
+  const key = c.start_time;
+  const mode = (hoverMode ? 'h' : '') + (inlineMode ? 'i' : '');
+  const cacheKey = key + ':' + mode;
+  if (annotationCache.has(cacheKey)) return annotationCache.get(cacheKey);
+  const text = annotateText(c.transcript || '(no speech detected)');
+  annotationCache.set(cacheKey, text);
+  return text;
+}
+
+function render(resetLimit) {
+  if (resetLimit) renderLimit = 100;
   const query = document.getElementById('search').value.toLowerCase().trim();
   const container = document.getElementById('calls');
 
@@ -581,11 +597,15 @@ function render() {
     );
   }
 
+  const total = filtered.length;
+  const showing = Math.min(total, renderLimit);
+
   document.getElementById('stats').textContent =
-    `Showing ${filtered.length} of ${allCalls.length} calls` +
+    `Showing ${showing} of ${total} calls` +
+    (total < allCalls.length ? ` (${allCalls.length} total)` : '') +
     (query ? ` matching "${query}"` : '');
 
-  if (filtered.length === 0) {
+  if (total === 0) {
     container.innerHTML = query
       ? '<div class="empty">No calls matching your search</div>'
       : '<div class="empty">No transcripts available</div>';
@@ -594,8 +614,9 @@ function render() {
 
   let html = '';
   let lastDate = '';
+  const visible = filtered.slice(0, renderLimit);
 
-  for (const c of filtered) {
+  for (const c of visible) {
     const dt = new Date(c.start_time * 1000);
     const dateStr = dt.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' });
     const time = dt.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit', second: '2-digit' });
@@ -608,9 +629,7 @@ function render() {
       lastDate = dateStr;
     }
 
-    let text = c.transcript || '(no speech detected)';
-    // Annotate with radio codes first, then apply search highlight
-    text = annotateText(text);
+    let text = getAnnotated(c);
     if (query) {
       const re = new RegExp(`(${query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
       text = text.replace(re, '<mark>$1</mark>');
@@ -636,28 +655,38 @@ function render() {
     </div>`;
   }
 
+  if (total > renderLimit) {
+    const remaining = total - renderLimit;
+    html += `<button class="load-more" onclick="renderLimit += 100; render();">Load ${Math.min(remaining, 100)} more (${remaining} remaining)</button>`;
+  }
+
   container.innerHTML = html;
 }
 
-document.getElementById('search').addEventListener('input', render);
+document.getElementById('search').addEventListener('input', () => {
+  clearTimeout(searchTimer);
+  searchTimer = setTimeout(() => render(true), 200);
+});
 
 document.querySelectorAll('.filter-btn:not(#translate-btn)').forEach(btn => {
   btn.addEventListener('click', () => {
     document.querySelectorAll('.filter-btn:not(#translate-btn)').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
     activeFilter = btn.dataset.filter;
-    render();
+    render(true);
   });
 });
 
 document.getElementById('opt-hover').addEventListener('change', (e) => {
   hoverMode = e.target.checked;
   document.getElementById('translate-btn').classList.toggle('active', hoverMode || inlineMode);
+  annotationCache.clear();
   render();
 });
 document.getElementById('opt-inline').addEventListener('change', (e) => {
   inlineMode = e.target.checked;
   document.getElementById('translate-btn').classList.toggle('active', hoverMode || inlineMode);
+  annotationCache.clear();
   render();
 });
 
