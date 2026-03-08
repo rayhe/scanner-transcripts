@@ -47,6 +47,8 @@
   .play-btn svg { width: 12px; height: 12px; fill: currentColor; }
   .call audio { width: 100%; margin-top: 6px; height: 32px; }
   .empty { text-align: center; color: var(--muted); padding: 48px 0; }
+  .live-dot { display: inline-block; width: 6px; height: 6px; background: #3fb950; border-radius: 50%; margin-right: 5px; animation: pulse 2s infinite; }
+  @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
   .loading { text-align: center; color: var(--muted); padding: 48px 0; }
   .load-more { display: block; width: 100%; padding: 12px; margin: 12px 0; background: var(--surface); border: 1px solid var(--border); border-radius: 6px; color: var(--accent); font-size: 14px; cursor: pointer; text-align: center; }
   .load-more:hover { border-color: var(--accent); background: #58a6ff11; }
@@ -100,7 +102,7 @@
       </div>
     </div>
   </div>
-  <div class="stats" id="stats"></div>
+  <div class="stats" id="stats"><span id="liveIndicator"></span></div>
   <div id="calls"><div class="loading">Loading transcripts...</div></div>
 </div>
 <script>
@@ -538,9 +540,64 @@ function annotateText(text) {
 function escHtml(s) { return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
 function escAttr(s) { return s.replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;'); }
 
+// ─── Firebase Realtime DB ─────────────────────────────────────
+const FIREBASE_CONFIG = {
+  apiKey: "AIzaSyBvYn0woOQljwWzXYtbQ4x-xHGYthuanlw",
+  databaseURL: "https://rayhenet-default-rtdb.firebaseio.com",
+  projectId: "rayhenet",
+};
+let fbDb = null;
+let fbListening = false;
+const seenKeys = new Set(); // dedupe between JSON and Firebase
+
+async function initFirebase() {
+  try {
+    const v = '10.12.2';
+    const base = `https://www.gstatic.com/firebasejs/${v}`;
+    await loadScript(`${base}/firebase-app-compat.js`);
+    await loadScript(`${base}/firebase-database-compat.js`);
+    if (!firebase.apps.length) firebase.initializeApp(FIREBASE_CONFIG);
+    fbDb = firebase.database();
+    return true;
+  } catch (e) {
+    console.warn('[firebase] Init failed, using JSON only:', e);
+    return false;
+  }
+}
+
+function loadScript(src) {
+  return new Promise((resolve, reject) => {
+    if (document.querySelector(`script[src="${src}"]`)) return resolve();
+    const s = document.createElement('script');
+    s.src = src; s.onload = resolve; s.onerror = reject;
+    document.head.appendChild(s);
+  });
+}
+
+function listenFirebase() {
+  if (!fbDb || fbListening) return;
+  fbListening = true;
+  // Listen for new calls added after page load (last 1 hour as buffer, then realtime)
+  const cutoff = Math.floor(Date.now() / 1000) - 3600;
+  const ref = fbDb.ref('scanner/calls').orderByChild('start_time').startAt(cutoff);
+  ref.on('child_added', snap => {
+    const call = snap.val();
+    if (!call || !call.start_time) return;
+    const key = call.start_time + '_' + (call.talkgroup || '');
+    if (seenKeys.has(key)) return;
+    seenKeys.add(key);
+    // Insert in sorted position
+    const idx = allCalls.findIndex(c => c.start_time < call.start_time);
+    if (idx === -1) allCalls.push(call);
+    else allCalls.splice(idx, 0, call);
+    render();
+  });
+}
+
 async function loadAllData() {
   const now = new Date();
   const calls = [];
+  // Load JSON files (archive)
   for (let i = 0; i < 7; i++) {
     const d = new Date(now);
     d.setDate(d.getDate() - i);
@@ -557,14 +614,24 @@ async function loadAllData() {
       const res = await fetch(`${dir}/ai-analysis.json`);
       if (res.ok) {
         const data = await res.json();
-        // Key by the localized date string to match day headers
         const dateStr = d.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' });
         aiAnalyses[dateStr] = data;
       }
     } catch {}
   }
+  // Dedupe keys for JSON calls
+  for (const c of calls) {
+    seenKeys.add(c.start_time + '_' + (c.talkgroup || ''));
+  }
   allCalls = calls.sort((a, b) => b.start_time - a.start_time);
   render();
+  // Start Firebase realtime listener for new calls
+  const fbOk = await initFirebase();
+  if (fbOk) {
+    listenFirebase();
+    const li = document.getElementById('liveIndicator');
+    if (li) li.innerHTML = '<span class="live-dot"></span>Live';
+  }
 }
 
 function getAnnotated(c) {
