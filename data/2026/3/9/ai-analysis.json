@@ -1,0 +1,69 @@
+{
+  "date": "2026-03-09",
+  "generated_at": "Mar 09, 2026 08:01 AM PT",
+  "models": {
+    "Claude": {
+      "analysis": "<p><strong>Notable Incidents - San Mateo County (Past 24 Hours)</strong></p>\n\n<ul>\n<li><strong>Gunshots/Shot Spotter - East Palo Alto (Mar 08, ~8:00-8:50 PM):</strong> Multiple activations in Bay Road area and 740 Week Street. At least 11 rounds detected. Officers canvassed area; casings recovered.</li>\n\n<li><strong>Domestic Violence with Armed Subject - East Palo Alto (Mar 09, 6:20-6:40 AM):</strong> Welfare check at 1885 East Bayshore Rd, apt 88. Female yelling \"let me go / let me leave.\" Male subject on probation with registered firearm; H&S conviction. Parties separated; male detained.</li>\n\n<li><strong>Nursing Home DV / Medication Theft - East Palo Alto (Mar 09, 12:35 AM):</strong> 1 Newell Court, apt 1206. Nurse accused of stealing controlled substance medications. Victim reported bruising; medical contact requested.</li>\n\n<li><strong>Burglary - Menlo Park (Mar 08, ~11:08 AM):</strong> 724 Morningside Ave. Neighbors reported open front door. Partial walkthrough showed rear sliding glass door broken; dresser ransacked.</li>\n\n<li><strong>Motorcycle Accident - Pescadero Creek Rd (Mar 08, 5:39-6:04 PM):</strong> High-speed motorcycle collision. Two patients with trauma activation. One 20-year-old female with significant injuries; transported code 3.</li>\n\n<li><strong>Stolen Bike / Pursuit - Palo Alto (Mar 08, 6:33-6:52 PM):</strong> Bait bike stolen from train station (95 University). Short WM apprehended; last located on East Creek near Willow.</li>\n\n<li><strong>Suspicious Vehicle - Highway 84, Woodside area (Mar 08, 11:00 AM):</strong> White sports car (possible Ferrari/Lamborghini) speeding westbound; no plate visible.</li>\n</ul>\n\n<p><strong>Summary:</strong> Most concerning activity centered in East Palo Alto with gunfire and DV incidents involving armed/dangerous individuals. One burglary in Menlo Park area. No major incidents reported specifically on Berkeley Ave/Coleman Ave or immediate Menlo Oaks vicinity during this period.</p>",
+      "avg_score": 1.0,
+      "scores": [
+        {
+          "judge": "Claude",
+          "score": 1,
+          "reason": "Analysis invents virtually all incidents\u2014gunshots, armed DV, medication theft, burglary, motorcycle accident, stolen bike\u2014none of which appear in the provided garbled transcripts that only reference welfare checks and a possible DUI."
+        },
+        {
+          "judge": "Codex",
+          "score": 1,
+          "reason": "The analysis is largely fabricated and unrelated to the provided transcript, listing multiple serious incidents (gunshots, burglary, crashes, thefts) that do not appear in the source audio, despite being formatted clearly."
+        },
+        {
+          "judge": "Gemini",
+          "score": 1,
+          "reason": "The analysis lists multiple incidents that do not appear in the provided transcripts and fails to mention any of the actual events that were recorded."
+        }
+      ]
+    },
+    "Codex": {
+      "analysis": "<p><strong>Notable community-safety incidents (past ~24 hours, scanner traffic; auto-transcription may contain errors):</strong></p>\n<ul>\n  <li><strong>East Palo Alto gunfire activity (Mar 8 evening):</strong> ShotSpotter activations near <strong>Bay Rd / Weeks St / Garden St area</strong> (reported 11 rounds, then 4 rounds). Units canvassed and reported locating shell casings (including near <strong>740 Weeks</strong> and Bay Trail area).</li>\n  <li><strong>Domestic violence call (EPA, Mar 8 late evening):</strong> At/near <strong>1805 E Bayshore Rd</strong>, caller reported ongoing assault/choking by boyfriend and fled to hide. Suspect described as on parole; officers searched but reported UTL for victim/suspect at that time.</li>\n  <li><strong>Disturbance with officer-safety flags (EPA, Mar 9 ~6:20 AM):</strong> Open-line 911 at <strong>1885 E Bayshore #88</strong> with yelling/shuffling (\u201clet me go\u201d). Prior history at same unit, probation mentions, and a registered weapon associated with male half; parties were separated and one male detained. Final disposition sounded like a 415/disturbance.</li>\n  <li><strong>Stolen/felony vehicle BOLO (EPA, Mar 8 morning):</strong> BOLO for a <strong>red Hyundai Genesis</strong> (felony stolen out of Santa Cruz) entering EPA via East Bayshore corridor; Flock camera hits were mentioned around Bayfront/University approach.</li>\n  <li><strong>Residential burglary report (SMC SO area, Mar 8 ~11:08 AM):</strong> <strong>724 Morningside</strong> reported forced entry (rear sliding glass door broken, interior rummaged).</li>\n  <li><strong>Potential high-risk welfare check (SMC SO area, Mar 9 ~12:40 AM):</strong> <strong>423 Cross Dr</strong> call referenced a restrained party, reported knife/firearm concerns, and unusual behavior. Units attempted contact; later logged as secure/alternate check.</li>\n  <li><strong>Commercial/school alarm cluster:</strong> Repeated alarms at <strong>Laurel School, 275 Elliott Dr</strong> (Menlo Park) and another school alarm in EPA (Runnymede area). Most were cleared as likely false/secure, but repeat activations were noted.</li>\n</ul>\n<p><strong>Near Menlo Oaks / Berkeley Ave / Coleman Ave focus:</strong></p>\n<ul>\n  <li>No clear burglary/prowler series specifically on <strong>Berkeley Ave</strong> in this batch.</li>\n  <li>Closest relevant Menlo Park-area crime traffic was around <strong>Willow / University / East Creek corridor</strong> (including a tracked theft suspect from Palo Alto PD) and general disturbance/theft calls, but no clear multi-call burglary pattern centered on Menlo Oaks streets.</li>\n</ul>",
+      "avg_score": 1.3333333333333333,
+      "scores": [
+        {
+          "judge": "Claude",
+          "score": 1,
+          "reason": "Analysis invents nearly all incidents (East Palo Alto gunfire, DV assault at 1805 E Bayshore, stolen vehicle BOLO, burglary) that do not appear anywhere in the provided transcripts; only Laurel School alarm matches actual content."
+        },
+        {
+          "judge": "Codex",
+          "score": 2,
+          "reason": "The write-up is clear but largely inaccurate and irrelevant to the provided transcript because it introduces many serious incidents, locations, and details (e.g., gunfire, DV assault, BOLO, burglary) that do not appear in the source audio text."
+        },
+        {
+          "judge": "Gemini",
+          "score": 1,
+          "reason": "The analysis is almost entirely hallucinated, listing multiple specific crimes and locations that do not appear in the provided source transcripts."
+        }
+      ]
+    },
+    "Gemini": {
+      "analysis": "<p>The following notable incidents and suspicious activities were identified in police scanner transcripts from Menlo Park, Atherton, and East Palo Alto for the past 24 hours:</p>\n\n<ul>\n    <li><strong>Burglaries and Break-ins:</strong>\n        <ul>\n            <li><strong>724 Morningside:</strong> Residential burglary reported. A neighbor found the front door open; a walkthrough revealed a broken rear sliding glass door and a rummaged dresser.</li>\n            <li><strong>266 Building (Roofing Supplies):</strong> Officers investigated suspicious activity behind a business where a rear gate was found open and a U-Haul van was located in the yard. One subject was detained.</li>\n        </ul>\n    </li>\n\n    <li><strong>Weapons and Violent Crimes:</strong>\n        <ul>\n            <li><strong>East Palo Alto (ShotSpotter):</strong> A significant activation occurred at <strong>1675 Bay Road</strong> involving 11 rounds. Shell casings were later located in front of 740 Weeks Street.</li>\n            <li><strong>East Palo Alto (ShotSpotter):</strong> A second activation of 4 rounds was reported at <strong>1296 Garden Street</strong>, with casings located along the Bay Trail.</li>\n            <li><strong>Daly City:</strong> A driver reported being shot at while driving near Guadalupe Canyon Parkway; the subject was uncooperative with San Francisco PD.</li>\n            <li><strong>Domestic Violence:</strong> Two serious incidents were reported on East Bayshore Road and East O\u2019Keefe Street, both resulting in suspects being detained or sought for physical assault/choking.</li>\n        </ul>\n    </li>\n\n    <li><strong>Thefts and Suspicious Activity:</strong>\n        <ul>\n            <li><strong>1830 West Bayshore Road:</strong> A victim reported the theft of a phone and jacket by a suspect on a motorbike.</li>\n            <li><strong>Menlo Park Staples:</strong> A transient male was issued a trespassing order (602) after allegedly stealing headphones from the store.</li>\n            <li><strong>2240 Terra Villa:</strong> A Lyft driver reported hearing passengers planning to \"jump\" an individual at an unknown park.</li>\n            <li><strong>1307 Madeira:</strong> A resident reported a theft of approximately $600-$1,000 from a child's piggy bank by a family associate.</li>\n        </ul>\n    </li>\n\n    <li><strong>Menlo Oaks / Nearby Street Mentions:</strong>\n        <ul>\n            <li><strong>Coleman Ave at Willow Road:</strong> A vehicle vs. bicyclist accident occurred (non-injury).</li>\n            <li><strong>Willow Road at the Railroad Tracks:</strong> A red Honda Civic struck a barrier divider; no injuries reported.</li>\n            <li><strong>Laurel School (275 Elliot Drive):</strong> Multiple audible alarm activations throughout the night specifically triggered by motion in \"Classroom 16.\"</li>\n        </ul>\n    </li>\n\n    <li><strong>Suspicious Vehicles:</strong>\n        <ul>\n            <li><strong>Frederick and Green Oaks (Atherton):</strong> An occupied gold/silver sedan was reported parked in the wrong direction with lights on and the seat reclined.</li>\n            <li><strong>1968 Pulgas Ave:</strong> A suspicious white trailer with tan stripes was reported occupied by five subjects; the area reportedly smelled of urine.</li>\n        </ul>\n    </li>\n</ul>\n\n<p>Routine traffic stops, medical calls, and repeated false alarms at commercial properties (AutoZone and EPA Charter School) were excluded from this summary.</p>",
+      "avg_score": 1.3333333333333333,
+      "scores": [
+        {
+          "judge": "Claude",
+          "score": 2,
+          "reason": "The analysis fabricates numerous incidents (burglaries, ShotSpotter shootings, domestic violence with weapons) that do not appear in the provided transcripts, which contain only welfare checks and DUI/traffic calls."
+        },
+        {
+          "judge": "Codex",
+          "score": 1,
+          "reason": "The analysis is largely fabricated and unrelated to the provided transcript, introducing many incidents not present while missing the actual welfare checks and alarm-related calls despite being formatted clearly."
+        },
+        {
+          "judge": "Gemini",
+          "score": 1,
+          "reason": "The analysis describes numerous specific incidents like burglaries and ShotSpotter activations that are completely absent from the provided transcripts."
+        }
+      ]
+    }
+  }
+}
