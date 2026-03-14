@@ -35,6 +35,7 @@
   .call-tag.sheriff { color: var(--red); }
   .call-tag.transit { color: var(--purple); }
   .call-tag.ems { color: var(--green); }
+  .call-tag.gmrs { color: var(--purple); }
   .call-meta { color: var(--muted); font-size: 12px; display: flex; align-items: center; gap: 6px; }
   .call-transcript { font-size: 14px; line-height: 1.6; }
   .call-transcript mark { background: #d2992244; color: var(--text); border-radius: 2px; padding: 0 2px; }
@@ -84,7 +85,7 @@
 <div class="container">
   <header>
     <h1>Scanner Transcripts</h1>
-    <p>Menlo Park &middot; Atherton &middot; East Palo Alto &middot; San Mateo County Sheriff</p>
+    <p>Menlo Park &middot; Atherton &middot; East Palo Alto &middot; San Mateo County Sheriff &middot; GMRS/FRS</p>
   </header>
   <div class="controls">
     <input type="search" class="search-box" id="search" placeholder="Search transcripts..." autofocus>
@@ -94,6 +95,7 @@
     <button class="filter-btn" data-filter="100">Menlo Park</button>
     <button class="filter-btn" data-filter="200">Atherton</button>
     <button class="filter-btn" data-filter="300">E. Palo Alto</button>
+    <button class="filter-btn" data-filter="gmrs">GMRS/FRS</button>
     <div class="toggle-wrap">
       <button class="toggle-btn" id="translate-btn">Translate Codes &#9662;</button>
       <div class="toggle-menu">
@@ -106,7 +108,7 @@
   <div id="calls"><div class="loading">Loading transcripts...</div></div>
 </div>
 <script>
-const GROUPS = { 'Menlo Park': 'menlo-park', 'Atherton': 'atherton', 'East Palo Alto': 'east-palo-alto', 'Sheriff': 'sheriff', 'Transit': 'transit', 'EMS': 'ems' };
+const GROUPS = { 'Menlo Park': 'menlo-park', 'Atherton': 'atherton', 'East Palo Alto': 'east-palo-alto', 'Sheriff': 'sheriff', 'Transit': 'transit', 'EMS': 'ems', 'GMRS': 'gmrs' };
 const PLAY_SVG = '<svg viewBox="0 0 16 16"><path d="M6.271 2.147a.5.5 0 0 1 .529.047l7 5a.5.5 0 0 1 0 .812l-7 5A.5.5 0 0 1 6 12.5v-10a.5.5 0 0 1 .271-.353z"/></svg>';
 const STOP_SVG = '<svg viewBox="0 0 16 16"><rect x="4" y="4" width="8" height="8" rx="1"/></svg>';
 let allCalls = [];
@@ -650,12 +652,14 @@ function render(resetLimit) {
   const container = document.getElementById('calls');
 
   let filtered = allCalls;
-  if (activeFilter !== 'all') {
-    if (activeFilter === 'mpka' || activeFilter === 'smcso') {
-      filtered = filtered.filter(c => c.short_name === activeFilter);
-    } else {
-      filtered = filtered.filter(c => String(c.talkgroup) === activeFilter);
-    }
+  if (activeFilter === 'all') {
+    filtered = filtered.filter(c => c.short_name !== 'gmrs');
+  } else if (activeFilter === 'gmrs') {
+    filtered = filtered.filter(c => c.short_name === 'gmrs');
+  } else if (activeFilter === 'mpka' || activeFilter === 'smcso') {
+    filtered = filtered.filter(c => c.short_name === activeFilter);
+  } else {
+    filtered = filtered.filter(c => String(c.talkgroup) === activeFilter);
   }
   if (query) {
     filtered = filtered.filter(c =>
