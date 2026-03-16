@@ -38,6 +38,7 @@
   .call-tag.gmrs { color: var(--purple); }
   .call-meta { color: var(--muted); font-size: 12px; display: flex; align-items: center; gap: 6px; }
   .call-transcript { font-size: 14px; line-height: 1.6; }
+  .call-transcript.morse { font-family: 'SF Mono', 'Menlo', 'Consolas', monospace; color: var(--yellow); }
   .call-transcript mark { background: #d2992244; color: var(--text); border-radius: 2px; padding: 0 2px; }
   .openmhz-link { display: inline-flex; align-items: center; gap: 4px; color: var(--accent); font-size: 12px; text-decoration: none; padding: 2px 8px; border: 1px solid var(--border); border-radius: 4px; margin-left: 4px; }
   .openmhz-link:hover { border-color: var(--accent); background: #58a6ff11; }
@@ -700,7 +701,8 @@ function render(resetLimit) {
       lastDate = dateStr;
     }
 
-    let text = getAnnotated(c);
+    const isMorse = c.transcription_type === 'morse' || (c.transcript || '').startsWith('[CW]');
+    let text = isMorse ? escHtml(c.transcript || '') : getAnnotated(c);
     if (query) {
       const re = new RegExp(`(${query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
       text = text.replace(re, '<mark>$1</mark>');
@@ -722,7 +724,7 @@ function render(resetLimit) {
           ${mhzLink}
         </span>
       </div>
-      <div class="call-transcript">${text}</div>
+      <div class="call-transcript${isMorse ? ' morse' : ''}">${text}</div>
     </div>`;
   }
 
