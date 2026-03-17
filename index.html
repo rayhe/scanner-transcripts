@@ -24,6 +24,17 @@
   .toggle-wrap:hover .toggle-menu, .toggle-wrap:focus-within .toggle-menu { display: block; }
   .toggle-menu label { display: flex; align-items: center; gap: 8px; padding: 6px 12px; font-size: 13px; color: var(--text); cursor: pointer; }
   .toggle-menu label:hover { background: #ffffff08; }
+  .status-bar { display: flex; gap: 8px; margin-bottom: 12px; flex-wrap: wrap; align-items: center; }
+  .status-label { color: var(--muted); font-size: 12px; margin-right: 4px; }
+  .status-pill { display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px; background: var(--surface); border: 1px solid var(--border); border-radius: 6px; font-size: 12px; color: var(--text); }
+  .status-pill .dot { display: inline-block; width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; }
+  .status-pill .dot.ok { background: var(--green); }
+  .status-pill .dot.stale { background: var(--yellow); }
+  .status-pill .dot.down { background: var(--red); }
+  .status-pill .sys-name { font-weight: 600; }
+  .status-pill .sys-metric { color: var(--muted); }
+  .status-bar.stale { opacity: 0.5; }
+  .status-pill .last-call { color: var(--muted); font-size: 11px; }
   .stats { color: var(--muted); font-size: 13px; margin-bottom: 12px; }
   .day-header { color: var(--muted); font-size: 13px; font-weight: 600; padding: 12px 0 6px; border-bottom: 1px solid var(--border); margin-bottom: 8px; }
   .call { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 12px 16px; margin-bottom: 6px; }
@@ -105,6 +116,7 @@
       </div>
     </div>
   </div>
+  <div class="status-bar" id="statusBar"></div>
   <div class="stats" id="stats"><span id="liveIndicator"></span></div>
   <div id="calls"><div class="loading">Loading transcripts...</div></div>
 </div>
@@ -632,9 +644,50 @@ async function loadAllData() {
   const fbOk = await initFirebase();
   if (fbOk) {
     listenFirebase();
+    listenStatus();
     const li = document.getElementById('liveIndicator');
     if (li) li.innerHTML = '<span class="live-dot"></span>Live';
   }
+}
+
+function listenStatus() {
+  if (!fbDb) return;
+  fbDb.ref('scanner/status').on('value', snap => {
+    const s = snap.val();
+    if (!s) return;
+    const bar = document.getElementById('statusBar');
+    const now = Math.floor(Date.now() / 1000);
+    const isStale = (now - (s.updated || 0)) > 120;
+    bar.className = 'status-bar' + (isStale ? ' stale' : '');
+
+    const SYS_LABELS = { mpka: 'MPKA', smcso: 'SMCSO', gmrs: 'GMRS' };
+    let html = '<span class="status-label">' + (isStale ? 'Status stale' : 'System Status') + '</span>';
+    for (const [id, label] of Object.entries(SYS_LABELS)) {
+      const sys = (s.systems || {})[id];
+      if (!sys) { html += `<span class="status-pill"><span class="dot down"></span><span class="sys-name">${label}</span><span class="sys-metric">no data</span></span>`; continue; }
+      const dot = sys.status || 'down';
+      let metric = '';
+      if (id === 'smcso') {
+        metric = sys.decode_rate != null ? sys.decode_rate + '/3s' : '';
+        if (sys.trellis_fail > 0) metric += ' (' + sys.trellis_fail + ' fail)';
+      } else {
+        metric = sys.signal_dbm != null ? sys.signal_dbm + ' dBm' : '';
+      }
+      let lastCall = '';
+      if (sys.last_call) {
+        const ago = now - sys.last_call;
+        if (ago < 60) lastCall = ago + 's ago';
+        else if (ago < 3600) lastCall = Math.floor(ago / 60) + 'm ago';
+        else lastCall = Math.floor(ago / 3600) + 'h ago';
+      }
+      html += `<span class="status-pill"><span class="dot ${dot}"></span><span class="sys-name">${label}</span>`;
+      if (metric) html += `<span class="sys-metric">${metric}</span>`;
+      if (lastCall) html += `<span class="last-call">${lastCall}</span>`;
+      if (sys.calls_1h != null) html += `<span class="sys-metric">${sys.calls_1h}/hr</span>`;
+      html += '</span>';
+    }
+    bar.innerHTML = html;
+  });
 }
 
 function getAnnotated(c) {
