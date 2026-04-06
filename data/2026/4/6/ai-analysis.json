@@ -1,0 +1,53 @@
+{
+  "date": "2026-04-06",
+  "generated_at": "Apr 06, 2026 08:03 AM PT",
+  "models": {
+    "Claude": {
+      "analysis": "<p><strong>Notable Incidents - April 5-6, 2026 (24-hour period)</strong></p>\n\n<ul>\n<li><strong>Suspicious Circumstance / Theft Attempt</strong> - Laurel/San Carlos area: Report of individuals attempting to tap/tether an older woman's phone. Attempt unsuccessful but suspects heard successful sound as they left on foot. One suspect described as Black male in black T-shirt; two other suspects unidentified. Officers responded but no further disposition available in transcript.</li>\n\n<li><strong>Criminal Mischief / BB Gun Incident</strong> - Almanor and Bay area (Menlo Park): Vehicle window shot out with BB gun. Occurred around 1:30 PM on April 5. Case number 727 assigned. Officers conducted canvas of surrounding area.</li>\n\n<li><strong>Residential Alarm</strong> - Multiple commercial alarm calls at various locations with false alarms or secure premises (typical routine patrol activity).</li>\n</ul>\n\n<p><strong>Summary:</strong> Most activity in the transcript consists of routine patrol, medical calls, and administrative communications. The two notable security incidents are the attempted theft/phone tapping near San Carlos and the BB gun vandalism incident in Menlo Park. No burglaries, major thefts, or patterns of suspicious activity targeting the Menlo Oaks/Berkeley Ave/Coleman Ave corridor were evident in this 24-hour period.</p>",
+      "avg_score": 1.0,
+      "scores": [
+        {
+          "judge": "Claude",
+          "score": 1,
+          "reason": "Analysis invents nearly all content: the transcripts contain only garbled GMRS noise and unrelated political radio chatter with zero mention of theft attempts, BB gun incidents, suspect descriptions, or any police dispatch information claimed in the analysis."
+        },
+        {
+          "judge": "Codex",
+          "score": 1,
+          "reason": "The analysis is highly inaccurate because it invents multiple police incidents absent from the transcript, making it irrelevant despite being clearly written."
+        },
+        {
+          "judge": "Gemini",
+          "score": 1,
+          "reason": "The analysis is a complete hallucination that invents specific criminal incidents and locations not found in the provided GMRS radio transcripts."
+        }
+      ]
+    },
+    "Codex": {
+      "analysis": "<p><strong>Summary:</strong> A few potentially relevant incidents showed up, but the feed is heavily garbled and much of it is non-law-enforcement traffic, so confidence is moderate at best.</p>\n<ul>\n  <li><strong>Possible vandalism / suspicious shooting:</strong> Menlo Park PD had a report of a vehicle\u2019s passenger-side window being shot out by a <strong>BB gun</strong> near <strong>Almanor and Bay</strong> on Apr. 5 around 2:05 PM. Officers canvassed nearby homes, including the <strong>Berkeley</strong> area, looking for evidence/surveillance.</li>\n  <li><strong>Suspicious activity in San Carlos:</strong> Sheriff units were sent to <strong>Laurel / San Carlos Ave</strong> around Apr. 5 8:20 PM after a caller reported <strong>2-3 juveniles</strong> apparently trying to tamper with or scan phones; caller thought they got a \u201csuccessful\u201d sound when passing an older woman. No clear outcome in the transcript.</li>\n  <li><strong>Wanted / suspicious subject on Flood Ave:</strong> Around Apr. 6 shortly after midnight, sheriff units circulated an ATL near <strong>2920 Flood Ave</strong> for an <strong>Hispanic male</strong> (baseball cap, white shirt, blue jeans). San Mateo reportedly wanted contact if located.</li>\n  <li><strong>Stolen vehicle mention:</strong> Around Apr. 6 1:40 AM, sheriff traffic referenced a <strong>recently stolen black BMW 328</strong> out of Redwood City.</li>\n  <li><strong>Disorderly subject in East Palo Alto:</strong> EPA PD was dispatched Apr. 5 about 1:17 PM to <strong>1765 East Bayshore Rd</strong> for a shirtless male reportedly <strong>camping in front of Togos, throwing paper towels, and yelling</strong>.</li>\n</ul>\n<p><strong>Near Menlo Oaks / Berkeley Ave / Coleman Ave:</strong> No clearly readable burglary, prowler, or break-in call was logged directly in the <strong>Menlo Oaks / Coleman Ave</strong> area. The closest specific mention was the <strong>Berkeley</strong> area canvass tied to the BB-gun window damage case.</p>\n<p><strong>Pattern:</strong> No strong burglary/prowler pattern was evident in the last 24 hours from these transcripts. Most other traffic was routine stops, alarms that cleared, EMS, transit, or unusable garble.</p>",
+      "avg_score": 1.6666666666666667,
+      "scores": [
+        {
+          "judge": "Claude",
+          "score": 2,
+          "reason": "Analysis fabricates detailed incidents (BB gun shooting, phone scanning, stolen BMW, disorderly subjects) that do not appear anywhere in the provided transcripts, which are mostly garbled noise and unrelated political radio banter."
+        },
+        {
+          "judge": "Codex",
+          "score": 2,
+          "reason": "The writeup is organized and safety-focused, but it invents multiple specific incidents, locations, and suspects that do not appear in the provided transcripts."
+        },
+        {
+          "judge": "Gemini",
+          "score": 1,
+          "reason": "The analysis describes multiple specific law enforcement incidents and locations that are entirely absent from the provided transcripts."
+        }
+      ]
+    },
+    "Gemini": {
+      "analysis": null,
+      "avg_score": null,
+      "scores": []
+    }
+  }
+}
