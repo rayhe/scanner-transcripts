@@ -1,0 +1,43 @@
+{
+  "date": "2026-04-07",
+  "generated_at": "Apr 07, 2026 08:01 AM PT",
+  "models": {
+    "Claude": {
+      "analysis": "<p><strong>Summary of Scanner Transcripts (April 6, 2026)</strong></p>\n\n<p>After reviewing the provided transcripts, there are <strong>no significant incidents relevant to Menlo Oaks community safety</strong>. The vast majority of traffic consists of:</p>\n\n<ul>\n<li>GMRS ham radio chatter (mostly garbled or non-emergency personal communications)</li>\n<li>EMS medical calls (falls, chest pain, difficulty breathing, etc.)</li>\n<li>Bus dispatch and park maintenance operations</li>\n<li>Routine traffic enforcement and vehicle checks</li>\n</ul>\n\n<p><strong>Minor incidents noted:</strong></p>\n\n<ul>\n<li><strong>Disturbance at Planned Parenthood (10:53 AM)</strong> \u2013 2907 El Camino Real: Individual shoved by a person in/near a black BMW SUV (WFA, blonde, 5'7\", black shirt). Possible theft. Jurisdiction: Palo Alto area, outside Menlo Oaks.</li>\n<li><strong>Traffic accident in Menlo Park (12:29 PM)</strong> \u2013 Central Ave &amp; Durham St: One patient with possible broken leg. Routine medical response.</li>\n<li><strong>Welfare check</strong> \u2013 Woman on Edgewood/Scenic Drive walking into traffic (mental health/safety concern, not a crime).</li>\n</ul>\n\n<p><strong>No reports of burglaries, prowlers, suspicious vehicles in the Menlo Oaks/Berkeley Ave/Coleman Ave area, or vehicle pursuits were documented.</strong></p>",
+      "avg_score": 1.5,
+      "scores": [
+        {
+          "judge": "Claude",
+          "score": 2,
+          "reason": "Analysis fabricates incidents (Planned Parenthood disturbance, Menlo Park accident, welfare check) not present in transcripts, which only contain GMRS ham radio chatter about hang gliding and wildlife, mostly garbled."
+        },
+        {
+          "judge": "Gemini",
+          "score": 1,
+          "reason": "The analysis hallucinates numerous specific incidents, addresses, and medical calls that are entirely absent from the provided GMRS transcripts."
+        }
+      ]
+    },
+    "Codex": {
+      "analysis": null,
+      "avg_score": null,
+      "scores": []
+    },
+    "Gemini": {
+      "analysis": "<p>Based on the police scanner transcripts for the past 24 hours, the following incidents and suspicious activities were noted in the Menlo Park, Redwood City, and Portola Valley areas:</p>\n\n<ul>\n    <li><strong>Battery (242) at Planned Parenthood:</strong> A physical disturbance was reported at 2907 El Camino Real (Redwood City). A suspect described as a white female with blonde hair, 5'7\", wearing a black shirt and jeans, fled in a black BMW SUV (possible plate 9VFE986).</li>\n    <li><strong>Reckless Driving / Near Miss:</strong> A report was filed regarding a silver Nissan (Plate: 6TYF784) on Douglas Avenue near Middlefield Road that nearly struck a pedestrian.</li>\n    <li><strong>Suspicious Person on El Camino:</strong> A subject in a burgundy hat and blue jacket was reported screaming at passing vehicles in the middle of traffic at El Camino Real and Arroyo.</li>\n    <li><strong>Road Rage:</strong> A road rage incident was reported and handled by units near Brittany and University Avenue/El Camino Real.</li>\n    <li><strong>Open Garage Door:</strong> Police were dispatched to 30 Paseo del Arroyo (Portola Valley) for an open garage door at a residence with a history of medical calls.</li>\n    <li><strong>Welfare Check on Edgewood Road:</strong> A woman in a purple shirt was reported walking into the middle lane of traffic near Edgewood Road and Scenic Drive.</li>\n    <li><strong>Open Back Door:</strong> Units responded to and cleared a residence with an open back door in the vicinity of San Carlos/Redwood City (Unit K21); the house was found to be secure with no responsible party located.</li>\n    <li><strong>Suspicious Activity near Belmont Station:</strong> A subject was reported urinating on the tracks and carrying a large number of bags on a multicolored bike.</li>\n</ul>\n\n<p>Routine medical calls (including several falls and a pneumonia case) and administrative chatter regarding park maintenance and bus mechanical issues were excluded.</p>",
+      "avg_score": 1.0,
+      "scores": [
+        {
+          "judge": "Claude",
+          "score": 1,
+          "reason": "The analysis fabricates numerous incidents (battery, reckless driving, road rage, welfare checks) that do not appear in the transcripts, which contain only GMRS amateur radio conversations about hang gliders and wildlife observation."
+        },
+        {
+          "judge": "Gemini",
+          "score": 1,
+          "reason": "The analysis completely hallucinates a series of police incidents, specific addresses, and license plates that are entirely absent from the provided GMRS transcripts regarding hang gliding and lizards."
+        }
+      ]
+    }
+  }
+}
