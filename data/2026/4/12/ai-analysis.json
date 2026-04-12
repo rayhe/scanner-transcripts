@@ -1,0 +1,69 @@
+{
+  "date": "2026-04-12",
+  "generated_at": "Apr 12, 2026 08:01 AM PT",
+  "models": {
+    "Claude": {
+      "analysis": "<p><strong>Summary of Notable Incidents (Apr 11-12, past 24 hours)</strong></p>\n\n<ul>\n  <li>\n    <strong>Burglary Attempt \u2013 1715 Bay Laurel Drive (MPPD, Apr 11 09:38 PM)</strong>\n    <ul>\n      <li>Resident woke to someone in house coming upstairs; subject fled</li>\n      <li>Entry made through lower basement</li>\n      <li>Possible 2 suspects in black hoodies; unknown vehicle description</li>\n      <li>Front cameras appear to have been tampered with or disconnected</li>\n    </ul>\n  </li>\n\n  <li>\n    <strong>Shots Fired \u2013 1296 Garden Street, East Palo Alto (Apr 11 10:17 PM)</strong>\n    <ul>\n      <li>Shot spotter activation: 4\u20135 rounds</li>\n      <li>White Mercedes sedan (2016, expired registration, plate 7-Robert-Boy-Tom-456) spotted speeding away from scene</li>\n      <li>Witness heard shots but unable to identify vehicle details</li>\n      <li>Vehicle last seen near Bay Trail / halfways between dead-end of Garden and Bay Trail area</li>\n    </ul>\n  </li>\n\n  <li>\n    <strong>Threatening Transient \u2013 654 Santa Cruz (MPPD, Apr 11 08:15 AM)</strong>\n    <ul>\n      <li>WM, white hoodie (tie-dyed), carrying recycling made threats to customers (\"will kill them, their dog\")</li>\n      <li>Subject on county probation, prior 5150, arson registrant with history of H&S charges</li>\n    </ul>\n  </li>\n\n  <li>\n    <strong>Residential Alarm \u2013 2 Palm Court, Stanford Avenue (MPPD, Apr 12 04:48 AM)</strong>\n    <ul>\n      <li>Motion detection from master bedroom; homeowner not responding</li>\n      <li>Plate associated: 5F26-17 Audi, blue</li>\n    </ul>\n  </li>\n\n  <li>\n    <strong>Hit-and-Run Collision \u2013 East Bay Shore & Fulgus, EPA (Apr 11 08:22 PM)</strong>\n    <ul>\n      <li>Black Cadillac struck by black Chevy Avalanche (plate 61152)</li>\n      <li>Victims complained of back/rib pain; injuries sustained</li>\n    </ul>\n  </li>\n\n  <li>\n    <strong>Prowler Activity \u2013 51 Marymont, Atherton (APD, Apr 11 08:55 PM)</strong>\n    <ul>\n      <li>Subject shining flashlight, yelling \"hello\" on property</li>\n      <li>Somehow bypassed gate; last seen ~5 minutes before discovery</li>\n    </ul>\n  </li>\n</ul>\n\n<p><strong>No specific incidents reported in immediate Menlo Oaks / Berkeley Ave / Coleman Ave vicinity during this period.</strong> Closest concern is the burglary attempt on Bay Laurel Drive and transient threat on Santa Cruz.</p>",
+      "avg_score": 1.0,
+      "scores": [
+        {
+          "judge": "Claude",
+          "score": 1,
+          "reason": "Analysis fabricates multiple incidents (burglary, shots fired, hit-and-run, prowler) entirely absent from the original transcripts, which contain only a medical call and suicide welfare check."
+        },
+        {
+          "judge": "Codex",
+          "score": 1,
+          "reason": "The analysis is almost entirely inaccurate and invented, describing unrelated incidents not present in the transcript, so despite a somewhat organized format it fails on both accuracy and relevance."
+        },
+        {
+          "judge": "Gemini",
+          "score": 1,
+          "reason": "The analysis is completely inaccurate as it describes several incidents not found in the provided transcripts while failing to mention any of the actual events recorded."
+        }
+      ]
+    },
+    "Codex": {
+      "analysis": "<p><strong>Notable incidents from the last 24 hours</strong> (scanner audio was auto-transcribed, so some street names/details may be imperfect).</p>\n<ul>\n  <li><strong>Possible residential burglary / hot prowl - 1715 Bay Laurel Dr, Menlo Park (Apr 11, about 9:38 PM)</strong>: Caller woke up to someone inside or trying to enter the home. Officers were told there may have been <strong>2 suspects in black hoodies</strong>; the homeowner reportedly confronted them and told them to get out. Dispatch said <strong>entry may have been through the lower basement</strong> and exterior cameras may have been tampered with or disconnected. Officers cleared the house; suspects were gone before arrival.</li>\n  <li><strong>Suspicious vehicle / possible plate swap - Willow/Hamilton/Middlefield area, Menlo Park (Apr 11, about 10:33 PM-11:12 PM)</strong>: Officers tracked a <strong>black Hyundai hatchback/SUV</strong> after a plate check showed the <strong>rear plate belonged to a different vehicle and was listed missing</strong>. Flock hits placed it around <strong>Willow and Hamilton</strong> and <strong>Willow/Middlefield</strong> before officers followed it eastbound on 84 toward Dumbarton. This is the most notable vehicle-related activity near the Menlo Park side of the area.</li>\n  <li><strong>Residential alarm with motion activation - 2 Palm Court off Stanford Ave, Menlo Park (Apr 12, about 4:48 AM)</strong>: Master-bedroom motion / residential audible alarm with no answer from the responsible party. Officers checked and cleared it <strong>code 4</strong>. No confirmed break-in, but it was a suspicious late-night residential alarm near the broader Menlo Oaks area.</li>\n  <li><strong>Gunfire / ShotSpotter activation - Garden area near Bay Trail, East Palo Alto (Apr 11, about 10:17 PM)</strong>: Dispatch aired a <strong>5-round ShotSpotter</strong> near <strong>1296 Garden</strong>, described as between the dead end of Garden and the Bay Trail. A caller reported hearing <strong>4-5 shots</strong>, and another note mentioned a vehicle speeding away from the <strong>Clark/Bay</strong> area. Officers checked for cameras and possible suspect vehicles.</li>\n  <li><strong>Crash / possible hit-and-run tied to disturbance - Wisteria / East Bayshore / Pulgas, East Palo Alto (Apr 11, about 8:21 PM-8:46 PM)</strong>: Multiple calls appeared related: a disturbance at <strong>175 Wisteria</strong> and a collision near <strong>East Bayshore and Pulgas</strong>. A <strong>black Chevy Avalanche</strong> was mentioned as the suspect vehicle. One party said the other driver became aggressive and left; injuries were reported.</li>\n  <li><strong>Threatening transient - rear of 654 Santa Cruz, Menlo Park (Apr 11, about 8:15 AM)</strong>: Caller reported a transient threatening to kill them, kill their dog, and assault them. Officers contacted/detained the subject; no further violence was heard on the air.</li>\n  <li><strong>Atherton family disturbance with fire concern - 130 Tuscaloosa (Apr 11, about 8:15 PM)</strong>: Mother reportedly hid from her son, saying he was trying to burn her / start a fire. Fire was staged and later the situation was contained; the \u201cfire\u201d may have ended up being a contained fire pit. Still notable because it involved threats inside a residence.</li>\n</ul>\n<p><strong>Near Menlo Oaks / Berkeley Ave / Coleman Ave:</strong> No clear burglary or prowler call was heard specifically on Berkeley Ave. The closest notable Menlo Park items were the <strong>Bay Laurel burglary call</strong>, the <strong>Willow/Hamilton/Middlefield suspicious vehicle</strong>, and the <strong>Palm Court / Stanford Ave alarm</strong>. Coleman Ave was only mentioned in what sounded like a parking/registration context, not a crime incident.</p>\n<p><strong>Pattern:</strong> The main pattern was <strong>residential-security activity in Menlo Park late at night</strong> - one serious possible home-entry call, plus a separate suspicious residential alarm, and a suspicious vehicle with mismatched/missing plates moving through the Willow/Hamilton area.</p>",
+      "avg_score": 1.0,
+      "scores": [
+        {
+          "judge": "Claude",
+          "score": 1,
+          "reason": "Analysis describes burglary, vehicle swap, residential alarm, and gunfire incidents completely absent from provided transcripts, indicating total hallucination unrelated to source material."
+        },
+        {
+          "judge": "Codex",
+          "score": 1,
+          "reason": "The analysis is almost entirely inaccurate and irrelevant because it invents multiple burglary, vehicle, alarm, and gunfire incidents not present in the transcript, making it neither focused nor trustworthy despite being formatted clearly."
+        },
+        {
+          "judge": "Gemini",
+          "score": 1,
+          "reason": "The analysis completely hallucinates incidents that are not present in the provided transcripts, failing to mention the actual medical emergency or welfare check."
+        }
+      ]
+    },
+    "Gemini": {
+      "analysis": "<p><strong>Notable Incidents and Community Safety Summary (April 11\u201312, 2026)</strong></p>\n\n<ul>\n    <li><strong>Hot Prowl Burglary (Menlo Park):</strong> At approximately 9:38 PM on April 11, a resident at <strong>1715 Bay Laurel Drive</strong> reported waking up to an intruder coming upstairs. Two male suspects wearing black hoodies fled the residence, likely through the front door. Officers determined entry was gained through a basement level. A case was taken (Case #769).</li>\n    <li><strong>Shots Fired (East Palo Alto):</strong> At 10:17 PM on April 11, ShotSpotter detected 5 rounds at <strong>1296 Garden Street</strong> near the Bay Trail. A witness reported seeing a vehicle, possibly a white Mercedes sedan, speeding away from the area immediately following the shots.</li>\n    <li><strong>Stolen Property / Vehicle Stop:</strong> At 10:33 PM on April 11, Menlo Park units stopped a black Hyundai SUV on <strong>Eastbound Highway 84 (Dumbarton Bridge)</strong> after Flock cameras flagged a stolen license plate (9NRM812) attached to the vehicle.</li>\n    <li><strong>Suspicious Activity & Alarms:</strong>\n        <ul>\n            <li><strong>2 Palm Court (off Stanford Ave):</strong> A residential alarm was triggered at 4:48 AM on April 12 by motion detection in a master bedroom.</li>\n            <li><strong>27 Catalpa (Atherton):</strong> Police investigated a report of an interrupted burglary at 8:25 PM on April 11 involving two broken windows. After inspection, officers suggested the damage might have been natural or weather-related rather than a criminal attempt.</li>\n            <li><strong>51 Marymont (Atherton):</strong> A prowler was reported at 8:55 PM on April 11, described as a subject with a flashlight who had bypassed a gate. The individual was later identified as an authorized worker (gardener).</li>\n        </ul>\n    </li>\n    <li><strong>Local Area Mentions:</strong>\n        <ul>\n            <li><strong>Coleman Avenue:</strong> A vehicle involved in a blocking-the-driveway complaint on Waverly Street was found to be registered to an address in the <strong>700 block of Coleman Avenue</strong>.</li>\n            <li><strong>Ivy Drive:</strong> A report of a suspicious incident occurred at 11:39 PM on April 11 at <strong>615 Ivy Drive</strong>, though the reporting party became uncooperative with dispatch.</li>\n        </ul>\n    </li>\n</ul>",
+      "avg_score": 1.0,
+      "scores": [
+        {
+          "judge": "Claude",
+          "score": 1,
+          "reason": "Analysis completely fabricates incidents absent from transcripts\u2014transcripts contain only a medical call (intoxicated male at party) and welfare check (suicide threat), but analysis invents burglaries, shots fired, stolen vehicles, and multiple other incidents never mentioned."
+        },
+        {
+          "judge": "Codex",
+          "score": 1,
+          "reason": "The analysis is almost entirely inaccurate and irrelevant because it invents multiple incidents, locations, dates, and details not present in the transcripts, making it neither safety-focused on the actual medical and suicide-welfare events nor clear in a useful way."
+        },
+        {
+          "judge": "Gemini",
+          "score": 1,
+          "reason": "The analysis completely hallucinates incidents that are not present in the provided transcripts while ignoring the actual reported events like the medical emergency and suicide welfare check."
+        }
+      ]
+    }
+  }
+}
