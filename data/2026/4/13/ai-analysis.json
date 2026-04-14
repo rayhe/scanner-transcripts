@@ -1,0 +1,69 @@
+{
+  "date": "2026-04-13",
+  "generated_at": "Apr 13, 2026 08:01 AM PT",
+  "models": {
+    "Claude": {
+      "analysis": "<p><strong>Notable Incidents (Apr 12):</strong></p>\n\n<ul>\n  <li><strong>Potential Gunfire</strong> \u2014 3639 Haven Avenue, unit B (MPPD 11:41 AM): Report of pop noise followed by apparent bullet hole in living room ceiling. Response dispatched; unit with history of 415s in building.</li>\n  \n  <li><strong>Domestic Violence with Injury</strong> \u2014 2405 Saga (EPAPD 11:08 AM): 20-year-old male assaulted 16-year-old brother and mother (head injury). Extensive family disturbance history. Both brothers involved in incident; medics staged.</li>\n  \n  <li><strong>Robbery</strong> \u2014 West Bay Shore & Newell (EPAPD 10:37 AM): White Toyota, burnout, vehicle remained on scene waiting for PD.</li>\n  \n  <li><strong>Warrant Subject Identified</strong> \u2014 Haven Avenue area (MPPD 11:56 AM): Female out of Menlo Park with multiple warrants (theft, vandalism, unknown offenses; $65K+); associated address Mountain View.</li>\n  \n  <li><strong>Repeated Welfare Checks</strong> \u2014 31 Huskett Drive (MPPD 09:53\u201310:54 AM): Rope-related concern, second call same day; resident checked.</li>\n  \n  <li><strong>DV Case / Released Custody</strong> \u2014 350 Sharon Park Drive (MPPD 11:00 AM): Ex released from custody yesterday; witness interview pending.</li>\n</ul>\n\n<p><strong>Note:</strong> No mention of Coleman Ave or Berkeley St area specifically. Gunfire incident is most serious safety concern.</p>",
+      "avg_score": 1.6666666666666667,
+      "scores": [
+        {
+          "judge": "Claude",
+          "score": 2,
+          "reason": "Fabricates 5+ major incidents (gunfire, robbery, DV, warrant) entirely absent from transcripts; only the repeated welfare check at 31 Huskett Drive is verifiable."
+        },
+        {
+          "judge": "Codex",
+          "score": 1,
+          "reason": "The analysis is largely inaccurate and irrelevant because it invents multiple serious incidents not present in the transcript, leaving only the Huskett Drive welfare check as loosely supported despite clear formatting."
+        },
+        {
+          "judge": "Gemini",
+          "score": 2,
+          "reason": "The analysis hallucinates five out of six major incidents, including potential gunfire and robbery, which are not present in the provided source transcripts."
+        }
+      ]
+    },
+    "Codex": {
+      "analysis": "<p><strong>Notable incidents from the past 24 hours</strong></p>\n<ul>\n  <li><strong>Menlo Park:</strong> Around 8:07 AM, callers reported a person screaming in the roadway near <strong>403 Laurel</strong>, with an additional report of a <strong>Black male adult in a purple shirt/turban walking on Gilbert</strong>. Officers contacted a transient male and cleared the call.</li>\n  <li><strong>Menlo Park:</strong> At about 11:41 AM, a caller at <strong>3639 Haven Ave, Unit B/214</strong> reported hearing loud \u201cpop\u201d noises and then finding what appeared to be a <strong>bullet hole in the living room ceiling</strong>. Dispatch noted <strong>prior disturbance history</strong> involving the area/unit above. This is the most significant suspicious incident in the logs provided.</li>\n  <li><strong>East Palo Alto:</strong> Around 9:33 AM, officers checked a residence near <strong>640 Circle Dr / 650 Circle Dr</strong> after a caller reported an <strong>alarm sounding for many hours</strong> and uncertainty about whether anyone was home. Officers could hear the alarm but could not access the residence.</li>\n  <li><strong>East Palo Alto:</strong> Around 10:37 AM at <strong>West Bayshore and Newell</strong>, a caller reported a <strong>white Toyota</strong> that nearly hit pedestrians in a crosswalk and did a burnout. The caller believed it may have been intentional; the vehicle was reportedly still on scene when police were called.</li>\n  <li><strong>East Palo Alto:</strong> Around 12:03 PM at <strong>St. Francis / 1425 Bay Rd</strong>, a caller reported a <strong>Hispanic female adult dressed in black</strong> who appeared to be transient and was eating from trash cans. This was a suspicious-person type call, though no crime was described.</li>\n</ul>\n\n<p><strong>Menlo Oaks / Berkeley Ave / Coleman Ave area</strong></p>\n<ul>\n  <li>No clear burglary, prowler, break-in, stolen vehicle, or pursuit call in the provided logs specifically tied to <strong>Menlo Oaks, Berkeley Ave, or Coleman Ave</strong>.</li>\n</ul>\n\n<p><strong>Patterns</strong></p>\n<ul>\n  <li>No clear burglary/theft pattern appears in these transcripts.</li>\n  <li>The main repeat-theme item was the <strong>Haven Ave</strong> call, where dispatch mentioned <strong>prior disturbance history</strong> at or near the involved unit.</li>\n  <li>Most other calls were welfare, mental health, domestic, or miscellaneous quality-of-life incidents rather than property crime.</li>\n</ul>",
+      "avg_score": 1.6666666666666667,
+      "scores": [
+        {
+          "judge": "Claude",
+          "score": 2,
+          "reason": "Fabricates ~4 of 5 major incidents (bullet hole, Toyota, alarm, trash-person) that don't appear in transcripts; only 403 Laurel is verifiable."
+        },
+        {
+          "judge": "Codex",
+          "score": 1,
+          "reason": "The analysis invents multiple major incidents, locations, times, and details not present in the transcript and therefore is neither accurate nor relevant despite being clearly formatted."
+        },
+        {
+          "judge": "Gemini",
+          "score": 2,
+          "reason": "The analysis invents four out of five major incidents, including a bullet hole and a reckless driver, that are completely absent from the provided transcripts."
+        }
+      ]
+    },
+    "Gemini": {
+      "analysis": "<p><strong>Notable Incidents and Suspicious Activity (April 12, 2026)</strong></p>\n\n<ul>\n  <li><strong>Suspicious Circumstance (Possible Discharge of Firearm):</strong> At 11:41 AM, a resident at <strong>3639 Haven Avenue</strong> reported hearing \"pop\" noises followed by the discovery of what appeared to be a bullet hole in their living room ceiling. Officers investigated a neighboring unit with a history of disturbances.</li>\n  <li><strong>Warrant Arrest (Theft):</strong> During the Haven Avenue investigation at 11:56 AM, a female subject was identified with multiple outstanding warrants (totaling over $70k) for theft (484 PC) and other offenses out of Santa Clara and San Jose PDs.</li>\n  <li><strong>Disturbance/Suspicious Person:</strong> At 8:07 AM, police responded to <strong>403 Laurel Avenue</strong> and the area of <strong>Gilbert</strong> (near the Willows/Menlo Oaks border) regarding a male in a purple shirt and turban screaming in the roadway. The subject was later contacted on Pope Street and determined to be a transient from Menlo Park.</li>\n  <li><strong>Prolonged Residential Alarm:</strong> At 9:33 AM, an alarm was reported to have been sounding for 24 hours at a residence on the <strong>600 block of Circle Drive</strong> (East Palo Alto). Officers were unable to access the residence to confirm the cause.</li>\n  <li><strong>Domestic Violence Arrest:</strong> At 11:08 AM, officers responded to <strong>2405 Gonzaga Street</strong> (East Palo Alto) for a physical altercation where a 20-year-old male allegedly assaulted his mother and brother. The subject was taken into custody and transported to County Jail.</li>\n  <li><strong>Welfare Check (High Priority):</strong> At 11:00 AM, a welfare check was requested at <strong>350 Sharon Park Drive</strong> involving a prior kidnapping (207 PC) and domestic violence case after the suspect was released from custody.</li>\n</ul>\n\n<p>No specific suspicious activity was reported directly on Berkeley Ave or Coleman Ave during this period; however, the disturbance near Laurel/Gilbert and the firearms-related report on Haven Ave are the closest significant incidents to the Menlo Oaks area.</p>",
+      "avg_score": 2.0,
+      "scores": [
+        {
+          "judge": "Claude",
+          "score": 2,
+          "reason": "Most incidents are hallucinated (firearm discharge, warrant arrest, alarm, domestic violence); only the 8:07 AM purple-shirt incident at 403 Laurel/Gilbert is verifiable in transcripts. Scanner quality is poor but the analysis invents details beyond what even a generous interpretation of the garbled audio would support."
+        },
+        {
+          "judge": "Codex",
+          "score": 2,
+          "reason": "The analysis is mostly inaccurate because it invents multiple incidents, times, addresses, and outcomes not present in the transcripts, though it does include one loosely relevant welfare/disturbance event and is clearly formatted."
+        },
+        {
+          "judge": "Gemini",
+          "score": 2,
+          "reason": "The analysis hallucinates several major incidents not found in the provided transcripts and fails to include multiple actual events that were recorded."
+        }
+      ]
+    }
+  }
+}
