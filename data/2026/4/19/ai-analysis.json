@@ -1,0 +1,43 @@
+{
+  "date": "2026-04-19",
+  "generated_at": "Apr 19, 2026 08:01 AM PT",
+  "models": {
+    "Claude": {
+      "analysis": "<p><strong>Notable Incidents - Last 24 Hours (Apr 18-19)</strong></p>\n\n<p><strong>High Priority:</strong></p>\n<ul>\n<li><strong>Apr 19, 3:21-3:39 AM (MPPD) - Prowler/Attempted Break-In:</strong> 245 El Camino (Cambridge & Partridge area). Transient male, 60+, attempting to enter residence\u2014tried doors, rang doorbell, entered utility closet outside. Subject detained. Had priors for assault (245 PC) and assault charges (243 PC).</li>\n\n<li><strong>Apr 18, 8:52 PM - 9:30 PM (MPPD/APD) - Waymo Carjacking with Child Inside:</strong> 3 male suspects stole/commandeered Waymo at Stanford Shopping Center with <strong>6-year-old child on board</strong>. Vehicle $1,000 cash taken. Suspects detained at 77 Frederick (near Green Oaks/Ringwood). Subjects: Phillips (suspended/revoked DL, restraining orders on file), Bishop, and a third adult. Police liaised with Palo Alto PD regarding possible theft at Apple Store (unconfirmed).</li>\n\n<li><strong>Apr 18, 6:10 PM (EPAPD/MV PD) - Auto Theft Alert:</strong> Silver Mercedes coupe stolen from Palo Alto (4330 Showers Drive). $1,000 cash also taken. Suspect: <strong>Antoine Wilkins</strong>, Black male, 40s, blue shirt/jeans, facial/neck/arm tattoos, out of San Francisco. Vehicle fled towards San Antonio Road.</li>\n</ul>\n\n<p><strong>Medium Priority:</strong></p>\n<ul>\n<li><strong>Apr 19, 12:59-1:06 AM (EPAPD) - Possible Burglary:</strong> 948 Beach Street (near Clarks), East Palo Alto. Vacant house; neighbor heard 2 subjects in backyard. Officers cleared after visual search. Prior burglary (10851) report at location in 2024.</li>\n\n<li><strong>Apr 19, 4:02-4:20 AM (APD) - Abandoned Vehicle:</strong> White Mercedes unoccupied in roadway, 90 Catalpa (Atherton). Expired registration (expired 8th of month). Appears connected to party activity in area; vehicle's owner from Palo Alto.</li>\n\n<li><strong>Apr 18, 9:03 PM (EPAPD) - Assault/Phone Theft:</strong> McDonald's (1721 East Bay Shore). Phone theft dispute between two individuals. Suspect Nicholas (on probation, priors for burglary 459.5). Mention of possible knife; later clarified as false.</li>\n</ul>\n\n<p><strong>Other:</strong> Noise complaints and traffic enforcement routine. No other burglaries or significant suspicious activity reported in Menlo Oaks/Berkeley Ave/Coleman Ave vicinity specifically.</p>",
+      "avg_score": 1.5,
+      "scores": [
+        {
+          "judge": "Claude",
+          "score": 2,
+          "reason": "Analysis almost entirely invents incidents absent from provided transcripts (prowler, carjacking, stolen Mercedes, burglary, abandoned vehicle)\u2014only actual content is noise complaint and vehicle registration checks from dispatcher chatter; accuracy catastrophically failed despite good formatting."
+        },
+        {
+          "judge": "Gemini",
+          "score": 1,
+          "reason": "The analysis reports on numerous major incidents that are not contained within the provided transcripts, representing a total failure of accuracy."
+        }
+      ]
+    },
+    "Codex": {
+      "analysis": null,
+      "avg_score": null,
+      "scores": []
+    },
+    "Gemini": {
+      "analysis": "<p>Based on police scanner transcripts from the past 24 hours (April 18-19, 2026), here are the notable incidents and suspicious activities relevant to the Menlo Park, Atherton, and East Palo Alto areas:</p>\n\n<ul>\n    <li><strong>Attempted Residential Entry / Prowler (Menlo Park):</strong> At approximately 3:21 AM on April 19, a male suspect (identified as Douglas Leyva, a transient on probation) was reported trying to enter a residence at <strong>245 El Camino Real</strong> (near Cambridge and Partridge). The resident reported the subject tried the door, rang the doorbell, and was later found hiding in a utility/electrical closet. MPPD confirmed the subject was on core probation.</li>\n    <li><strong>Reported Shots Fired (East Palo Alto):</strong> At 3:19 AM on April 19, officers responded to reports of shots fired near the <strong>100 block of Great Avenue</strong> and Hazel West. While officers searched the area on foot, no property damage or shell casings were located.</li>\n    <li><strong>Waymo Hijacking Report / Detention (Atherton/Menlo Border):</strong> On the evening of April 18 (approx. 8:54 PM), a high-priority call involved 3 males who allegedly jumped into a Waymo vehicle at the Stanford Apple Store that was intended for other passengers. The vehicle traveled to <strong>77 Frederick Avenue</strong> (near Ringwood). APD and MPPD conducted a \"Code 3\" response and a high-risk stop, detaining 3 adults and a 6-year-old child. However, Palo Alto PD could not confirm a crime occurred at the Apple Store, and the subjects were eventually released.</li>\n    <li><strong>Brandishing of a Firearm (East Palo Alto):</strong> At 7:26 PM on April 18, a \"417\" (brandishing) was reported at <strong>Jervis and Newbridge</strong>. Two subjects in a Cadillac Escalade reportedly flashed a firearm at a resident before fleeing. The reporting party was uncooperative with further details.</li>\n    <li><strong>Suspicious Activity / Trespassing (East Palo Alto):</strong> At 12:59 AM on April 19, neighbors reported hearing voices in the backyard of a vacant house at <strong>948 Beach Street</strong>. Officers observed movement in the backyard but were unable to contact a responsible party for the property.</li>\n    <li><strong>Stolen Vehicle BOLO (Regional):</strong> A regional alert was issued for a <strong>silver Mercedes coupe (CA Plate: 9VRL041)</strong> stolen from Mountain View. The suspect was described as Antoine Wilkins, a male in his 40s with distinct tattoos on his face, neck, and arms, last seen heading toward San Antonio Road.</li>\n    <li><strong>Disturbance with Potential Weapon (East Palo Alto):</strong> At 9:11 PM on April 18, officers responded to a 415 disturbance at the <strong>McDonald's on East Bayshore</strong>. A witness reported a male in a brown sweater possibly concealing a knife, though officers on scene were unable to locate the weapon during the investigation.</li>\n    <li><strong>Noise and Large Gatherings:</strong> Multiple large parties were reported, including a \"Coachella-style\" backyard party at <strong>206 Santa Margarita</strong> (Menlo Park) and a loud party at <strong>2881 Drew Court</strong> (EPA). Both were monitored or shut down by responding units.</li>\n</ul>\n\n<p>No other significant criminal activity was noted specifically for Berkeley Ave or Coleman Ave during this period.</p>",
+      "avg_score": 1.5,
+      "scores": [
+        {
+          "judge": "Claude",
+          "score": 2,
+          "reason": "Analysis invents major incidents (Waymo hijacking, residential prowler at 245 El Camino Real, shots fired) with specific addresses and names not present in the source transcripts\u2014severe hallucination."
+        },
+        {
+          "judge": "Gemini",
+          "score": 1,
+          "reason": "The analysis reports multiple detailed incidents, including a Waymo hijacking and shots fired, that are completely absent from the provided source transcripts."
+        }
+      ]
+    }
+  }
+}
