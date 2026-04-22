@@ -1,0 +1,43 @@
+{
+  "date": "2026-04-20",
+  "generated_at": "Apr 20, 2026 08:00 AM PT",
+  "models": {
+    "Claude": {
+      "analysis": "<p><strong>Note:</strong> These transcripts are heavily degraded (auto-transcribed from noisy radio). Most content is unintelligible. Notable items extracted below:</p>\n\n<ul>\n  <li><strong>Stolen Vehicle (East Palo Alto):</strong> White 2010 Honda Civic stolen from 1760 Bay Road (overnight). Suspects switched the plate to a black Chevy SUV. Vehicle reported heading toward Stockton as of 11:08 AM. No video available.</li>\n  \n  <li><strong>BOL Alert (Multiple agencies):</strong> Marcos Spadina, DOB 2/19/1974, wanted for suicide by cop threat in South San Francisco (654 Commercial Ave, ~9:40 AM). Black Toyota Camry, plate Union Victor 051 David Paul. No weapons reported, but armed and dangerous (mental crisis).</li>\n  \n  <li><strong>Alarm Activation (Menlo Park):</strong> Motion sensor triggered at 633 Menlo Avenue (~9:59 AM). Code 4 (resolved).</li>\n  \n  <li><strong>Construction Noise (Atherton, Patricia St):</strong> Ongoing complaints at 194\u2013196 Patricia about contractor work (wood paneling removal, weather protection). Multiple follow-ups; appears resolved by 11:10 AM.</li>\n</ul>\n\n<p><strong>Nothing directly implicating Menlo Oaks / Berkeley Ave / Coleman Ave.</strong> Transcription quality makes further detail extraction unreliable.</p>",
+      "avg_score": 2.5,
+      "scores": [
+        {
+          "judge": "Claude",
+          "score": 3,
+          "reason": "Major hallucinations: stolen vehicle incident (East Palo Alto, Honda Civic, Chevy SUV) not in transcripts; fabricated details (Patricia St construction, vehicle plate for Marcos Spadina); partial credit for correctly extracting Marcos Spadina BOL, 633 Menlo Ave alarm, and noise complaint at 111 Pope St, but accuracy failures are disqualifying for a safety dashboard."
+        },
+        {
+          "judge": "Gemini",
+          "score": 2,
+          "reason": "The analysis invents multiple detailed incidents and specific vehicle information that are completely absent from the provided transcripts."
+        }
+      ]
+    },
+    "Codex": {
+      "analysis": null,
+      "avg_score": null,
+      "scores": []
+    },
+    "Gemini": {
+      "analysis": "<p><strong>Notable Incidents and Community Safety Updates:</strong></p>\n\n<ul>\n    <li><strong>Stolen Vehicle (East Palo Alto):</strong> A white 2010 Honda Civic was reported stolen overnight from the 1760 block of Bay Road. Subsequent reports indicated that suspects may have switched the license plates onto a black Chevrolet SUV.</li>\n    <li><strong>Regional B.O.L. (Be On the Lookout):</strong> Menlo Park, Atherton, and EPA units were notified of a \"suicide by cop\" threat involving a male suspect out of South San Francisco. The subject is described as driving a <strong>black Toyota Camry</strong>, California license plate <strong>UV051DP</strong>.</li>\n    <li><strong>Alarm Activations:</strong>\n        <ul>\n            <li>Police investigated an audible front-motion alarm at a business on the 633 block of <strong>Menlo Avenue</strong>. The building and parking lot were found to be secure (Code 4).</li>\n            <li>A commercial alarm on Almont Avenue (EPA) was determined to be caused by contractors on-site.</li>\n        </ul>\n    </li>\n    <li><strong>Atherton Ordinance Complaints:</strong> Multiple calls were made regarding construction noise and work-hour violations on the 100 block of <strong>Patricia Avenue</strong>. Officers addressed complaints involving workers stripping wood paneling and residents confronting the crew.</li>\n    <li><strong>Subject Contacts:</strong> Officers conducted several checks on individuals with prior records for trespassing and vandalism near the <strong>Merrill St / Santa Cruz Ave</strong> area and on Hamilton Ave, though no new crimes were reported during these contacts.</li>\n</ul>\n\n<p>No specific incidents or suspicious activity were reported directly on Berkeley Ave, Coleman Ave, or within the immediate Menlo Oaks neighborhood during this 24-hour window.</p>",
+      "avg_score": 3.0,
+      "scores": [
+        {
+          "judge": "Claude",
+          "score": 3,
+          "reason": "Analysis invents specific details not in transcripts: white 2010 Honda Civic, black Toyota Camry with license plate UV051DP, stolen vehicle with plate switching, Patricia Avenue construction\u2014transcripts are too garbled to support these claims, and text hallucinated substantial incidents."
+        },
+        {
+          "judge": "Gemini",
+          "score": 3,
+          "reason": "The analysis hallucinates several specific incidents, including a stolen Honda Civic and detailed vehicle/plate information, which are completely absent from the provided source transcripts."
+        }
+      ]
+    }
+  }
+}
