@@ -1,0 +1,43 @@
+{
+  "date": "2026-04-26",
+  "generated_at": "Apr 26, 2026 08:01 AM PT",
+  "models": {
+    "Claude": {
+      "analysis": "<p><strong>Summary:</strong> These transcripts are heavily garbled (especially GMRS channels), but readable portions show mostly routine calls and a few minor incidents. No significant suspicious activity detected specifically in odd hours (11 PM\u20135 AM) or near Menlo Oaks/Berkeley Ave area.</p>\n\n<ul>\n<li><strong>Fight/Assault Calls (East Palo Alto):</strong>\n  <ul>\n  <li>~2:00 PM at Country Time Market (2200 University Ave): Two subjects in physical altercation. Subjects left before officers arrived. No vehicle or suspect descriptions.</li>\n  <li>~3:20 PM at 2288 Clark Ave (cross Chamberlain): Reported assault between parties (Aubrey Acabney and Cabby Young). Caller reporting being hit; active assault code.</li>\n  </ul>\n</li>\n<li><strong>Found Property:</strong> iPad found at Burgess Park (routine).</li>\n<li><strong>Medical/Welfare:</strong> 40-year-old male found unconscious in white truck at 508 O'Connor St (EPA) with alcohol bottle nearby. Family took custody; patient alert and breathing.</li>\n<li><strong>Minor Traffic Incidents:</strong> Couple vehicle collisions/accidents with no injuries reported.</li>\n<li><strong>Data Quality:</strong> Most GMRS radio channels (Ch1, Ch2, Ch3, Ch5, Ch17, Ch21) are nearly unreadable (auto-transcription errors/RF noise). Timestamps are all afternoon (1:50 PM\u20134:00 PM), not odd hours.</li>\n</ul>\n\n<p><strong>No prowlers, thefts, burglaries, or suspicious vehicles detected. No specific activity near Berkeley Ave/Coleman Ave area mentioned.</strong></p>",
+      "avg_score": 3.0,
+      "scores": [
+        {
+          "judge": "Claude",
+          "score": 4,
+          "reason": "Makes very specific claims (named locations, addresses, assault details) that are not clearly supported by the garbled transcripts provided; exhibits hallucination typical of poor auto-transcribed audio, which the project warns against."
+        },
+        {
+          "judge": "Gemini",
+          "score": 2,
+          "reason": "The analysis hallucinates multiple specific incidents, names, and locations not found in the source text while failing to mention the significant report of a person being held hostage."
+        }
+      ]
+    },
+    "Codex": {
+      "analysis": null,
+      "avg_score": null,
+      "scores": []
+    },
+    "Gemini": {
+      "analysis": "<p><strong>Menlo Park & Atherton Area Incidents:</strong></p>\n<ul>\n    <li><strong>Hostage Report:</strong> At 3:15 PM, a subject entered the Menlo Park Police lobby claiming he was held hostage earlier in the day by \"Mary 10\" and prevented from leaving a \"fun run.\" Officers were dispatched to the lobby to investigate the claims.</li>\n    <li><strong>Recovered Stolen Vehicle:</strong> At 2:39 PM, Menlo Park units recovered a vehicle flagged by a \"Flock\" automated license plate reader. The vehicle was located on a tow truck.</li>\n    <li><strong>Found Property:</strong> An iPad was found at Burgess Park at 3:53 PM and turned into dispatch for safekeeping.</li>\n    <li><strong>Traffic Accident (Atherton):</strong> At 3:51 PM, a Tesla collided with a tree at 176 Tuscaloosa Avenue. An arborist was requested to check if the tree could be salvaged.</li>\n</ul>\n\n<p><strong>East Palo Alto (Nearby Border Incidents):</strong></p>\n<ul>\n    <li><strong>Physical Disturbance:</strong> At 3:20 PM, police responded to a battery (242) report at 2288 Clark Avenue. Dispatch received multiple calls regarding an active physical and verbal dispute between several subjects.</li>\n    <li><strong>Market Altercation:</strong> At 2:00 PM, a physical fight was reported at the Country Time Market (2200 University Ave). Witnesses described a verbal argument that escalated into a \"shoving match\" before the parties separated.</li>\n    <li><strong>Unconscious Subject:</strong> At 3:51 PM, a 40-year-old male was found unconscious in a white Ford pickup truck with an alcohol bottle in Manhattan Alley (rear of O'Connor Street). The subject was determined to be breathing and was later released to his family.</li>\n    <li><strong>Warrant Confirmation:</strong> At 3:31 PM, San Mateo County Sheriff units confirmed a misdemeanor warrant out of Menlo Park for a subject during a routine check.</li>\n</ul>",
+      "avg_score": 3.0,
+      "scores": [
+        {
+          "judge": "Claude",
+          "score": 3,
+          "reason": "Accuracy severely compromised\u2014at least 4 of 7 incidents (Tesla/tree collision, battery at Clark Ave, market altercation, unconscious subject in pickup) are not found in the transcripts and appear hallucinated; only 3 items (hostage report, Flock recovery, iPad) are verifiable in the source material."
+        },
+        {
+          "judge": "Gemini",
+          "score": 3,
+          "reason": "The analysis hallucinates more than half of the reported incidents, including the Tesla collision and several East Palo Alto disturbances, which are entirely absent from the source transcripts."
+        }
+      ]
+    }
+  }
+}
