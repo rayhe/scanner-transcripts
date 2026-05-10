@@ -1,0 +1,43 @@
+{
+  "date": "2026-05-10",
+  "generated_at": "May 10, 2026 08:01 AM PT",
+  "models": {
+    "Claude": {
+      "analysis": "<p><strong>Notable Incidents (May 9-10, 2026)</strong></p>\n\n<ul>\n<li><strong>Road Rage Shooting with Gunshot Victims (May 9, ~3:42 PM)</strong> \u2014 Major incident at 2336 Clark Ave, East Palo Alto. Black Honda Civic (plate 9PHF919, Hispanic male with dreads) fired multiple rounds at white Ford Fusion in suspected road rage incident. Victim vehicle then found at 125 Grace Ave with 2 gunshot wound victims: one with head graze wound, one with stomach wound. Suspect vehicle later located in Tracy, CA. Armed and dangerous BOL issued. <strong>Related shot spotter activation at 2341 Clark earlier same afternoon (3:49 PM).</strong></li>\n\n<li><strong>Jewelry Burglary (May 9, 3:22 PM)</strong> \u2014 1320 Trinity Street: Wife's jewelry reported missing from residence. Unclear if entry method confirmed, but suggests daytime burglary.</li>\n\n<li><strong>Suspicious Object on Train Tracks (May 9, 3:27 PM)</strong> \u2014 South of Marsh: Object wrapped in black plastic bag, described as 5-5 feet long with apparent head/neck outline. Not confirmed as body; status unclear from transcript.</li>\n\n<li><strong>Construction Site Break-In/Vandalism (May 9, 2:13 PM)</strong> \u2014 726 Running Mead area: Front lock broken, garbage dumped inside construction site. Owner: Daniel Kante.</li>\n\n<li><strong>Multiple Shots Fired (May 9, 11:47 PM)</strong> \u2014 Shot spotter activation at 101 Mission Drive/Newell crossing, East Palo Alto. 4 rounds detected.</li>\n\n<li><strong>Reckless Motorcycle (May 9, 2:41 PM)</strong> \u2014 149 Bay Road: Motorcycle repeatedly going up and down Bay Street between hedge and Greenwood. No driver/vehicle description obtained.</li>\n\n<li><strong>Large Altercation (May 9, 5:11 PM)</strong> \u2014 445 East O'Keefe, Sierra Garden Apartments: 8 subjects in physical altercation in parking lot; subjects dispersed, one fled in white Nissan Altima. Menlo Park PD units assisted EPA.</li>\n</ul>\n\n<p><strong>Summary:</strong> Road rage shooting with 2 GSW victims is the most serious incident. Multiple shot spotter activations in East Palo Alto Clark Ave area warrant attention. Jewelry burglary on Trinity suggests daytime vulnerability.</p>",
+      "avg_score": 1.0,
+      "scores": [
+        {
+          "judge": "Claude",
+          "score": 1,
+          "reason": "Analysis is almost entirely fabricated\u2014describes detailed May 9 incidents (road rage shooting, burglary, train tracks object) with specific addresses, plates, and victim details that do not appear anywhere in the May 10 transcripts provided, which contain only garbled dispatch chatter about noise complaints and a McDonald's incident."
+        },
+        {
+          "judge": "Gemini",
+          "score": 1,
+          "reason": "The analysis fails the accuracy test completely by reporting on detailed incidents from May 9th that are not present in the provided May 10th transcripts."
+        }
+      ]
+    },
+    "Codex": {
+      "analysis": null,
+      "avg_score": null,
+      "scores": []
+    },
+    "Gemini": {
+      "analysis": "<p><strong>Notable Incidents & Suspicious Activity (May 9-10, 2026)</strong></p>\n\n<ul>\n  <li><strong>Residential Theft (Menlo Park):</strong> A resident on the 1300 block of <strong>Trinity Drive</strong> reported a significant theft after discovering all of his wife's jewelry was missing from the home.</li>\n  <li><strong>Road Rage Shooting (East Palo Alto):</strong> A major incident occurred near <strong>Clark Avenue and Weeks Street</strong> involving a dark gray Honda Civic (plate ending in 919) firing at another vehicle. Two victims were later located on <strong>Grace Avenue</strong>; one suffered a gunshot wound to the stomach and another a graze to the head. The suspect vehicle was later tracked to Tracy, CA.</li>\n  <li><strong>Stabbing & Shots Fired (Redwood City/Menlo Border):</strong> Menlo Park units assisted Redwood City PD with crowd control at the <strong>Safeway on El Camino Real</strong> following a report of a stabbing accompanied by gunfire.</li>\n  <li><strong>Vehicle Prowling (Menlo Park):</strong> A female subject was reported peering into vehicles at <strong>Nativity School (Laurel Street)</strong>. She was later located and contacted by officers at 1243 Laurel Street.</li>\n  <li><strong>Large Physical Altercation (East Palo Alto):</strong> Approximately eight subjects were involved in a physical fight on the 400 block of <strong>East O'Keefe Street</strong>. Several subjects fled on foot toward Donahoe Street and one in a white Nissan Altima.</li>\n  <li><strong>Suspicious Person (East Palo Alto):</strong> Employees at the <strong>McDonald's on University Avenue</strong> reported a subject knocking on windows after the business was closed, preventing staff from safely leaving the building.</li>\n  <li><strong>Shot Spotter Activation (East Palo Alto):</strong> Four rounds were detected via automated systems in the area of <strong>101 Mission Drive and Newell Road</strong> late Saturday night.</li>\n  <li><strong>Area Checks & Neighborhood Activity:</strong>\n    <ul>\n      <li><strong>Marsh Road:</strong> A report of a suspicious object \"wrapped in plastic\" on the tracks south of Marsh Road was investigated and determined to be bags of discarded clothes.</li>\n      <li><strong>Marsh Road:</strong> A white work truck (Empire Pavers) was reported for reckless driving, \"brake checking\" other drivers, and emitting heavy smoke while traveling westbound from Highway 101.</li>\n      <li><strong>Newbridge Street:</strong> An audible garage alarm was triggered on the 200 block; officers found the exterior secure.</li>\n      <li><strong>Middlefield Road:</strong> A vehicle stop south of Ringwood Avenue involved a subject found to be on active county probation for assault.</li>\n    </ul>\n  </li>\n</ul>",
+      "avg_score": 2.5,
+      "scores": [
+        {
+          "judge": "Claude",
+          "score": 3,
+          "reason": "Most incidents (residential theft, road rage shooting, stabbing, vehicle prowling, physical altercation, shot spotter) are not present in the source transcripts; only the McDonald's incident on University Avenue can be verified, demonstrating severe hallucination despite good clarity and relevant incident selection."
+        },
+        {
+          "judge": "Gemini",
+          "score": 2,
+          "reason": "The analysis hallucinates several specific major incidents, including a road rage shooting and a stabbing, which are completely absent from the source transcripts provided."
+        }
+      ]
+    }
+  }
+}
