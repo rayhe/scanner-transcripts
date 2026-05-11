@@ -1,0 +1,43 @@
+{
+  "date": "2026-05-11",
+  "generated_at": "May 11, 2026 08:02 AM PT",
+  "models": {
+    "Claude": {
+      "analysis": "<p><strong>Summary of Notable Incidents (May 10-11)</strong></p>\n\n<ul>\n  <li><strong>May 10, 8:11 AM (MPPD) \u2014 Domestic Violence:</strong> Wife threatened husband with kitchen knife at 3645 Haven. Officers responded; parties separated.</li>\n  \n  <li><strong>May 10, 12:45 PM (MPPD) \u2014 Hit &amp; Run:</strong> Green Audi struck blue Hyundai Ionics at Bayfront &amp; Santa Cruz. Audi driver called 911 but claimed no damage occurred.</li>\n  \n  <li><strong>May 10, 1:31 PM (EPAPD) \u2014 Hit &amp; Run:</strong> Blue Ford pickup hit Honda CRV at West Bayshore &amp; Clark Avenue and left scene. Plate: 76937 Frank 2.</li>\n  \n  <li><strong>May 10, 7:25 PM (MPPD) \u2014 Mental Health Crisis:</strong> 19-year-old female at 344 Hedge Road experiencing crisis after taking 6 epilepsy pills (prescribed 2). Fire/medics staged; incident resolved.</li>\n  \n  <li><strong>May 10, 8:48 PM (EPAPD) \u2014 Impaired Driving (2215.2):</strong> Driver left residence after drinking alcohol at 1508 Bay Road. Vehicle: gray Chevy SUV, plate 4 Paul Paul Charles 068. Last spotted Northbound Bay at University Avenue. Welfare check completed, code 4.</li>\n  \n  <li><strong>May 10, 8:47 PM (MPPD) \u2014 Criminal Subject Detention:</strong> Black Mercedes stop at Bayfront &amp; Meta. Male driver with extensive county history (assault, drug violations). Detained pending charges.</li>\n  \n  <li><strong>May 11, 2:54 AM (MPPD) \u2014 Disorderly Conduct:</strong> Male subject attempting to hit vehicles with chair at McDonald's, 1100 El Camino. Appeared intoxicated. Chair recovered later; subject walked away.</li>\n  \n  <li><strong>May 10, 10:11 PM (MPPD) \u2014 Warrant Arrest:</strong> Ariana Zamora (traffic stop, University &amp; Adams) found on warrant for burglary &amp; possession of burglary tools.</li>\n  \n  <li><strong>May 10, 6:25 PM (EPAPD) \u2014 Animal Abuse Complaint:</strong> Ongoing issue at 2396 Glenn (near Runnymede &amp; Bay). Neighbor admits history of beating dog. Animal welfare referred.</li>\n  \n  <li><strong>May 10, 4:40 PM (EPAPD) \u2014 Possible Theft &amp; Medical Emergency:</strong> Roommate dispute over stolen phone at 247 Daphne Way; escalated to medical response with possible cardiac distress and Spanish translator needed.</li>\n</ul>\n\n<p><strong>Key Observation:</strong> Hit-and-runs and impaired/disorderly driving incidents concentrated on main corridors (El Camino, Bayfront, Bay Road). Domestic and mental health crises also notable. No specific incidents reported on Berkeley Ave or Coleman Ave during this period.</p>",
+      "avg_score": 2.0,
+      "scores": [
+        {
+          "judge": "Claude",
+          "score": 2,
+          "reason": "Analysis fabricated 9 of 10 incidents; only the May 11 02:54 AM McDonald's chair incident appears in provided transcripts. Invents detailed May 10 incidents (domestic violence, hit-and-runs, warrant arrest, animal abuse) not present in source material, representing critical accuracy failure."
+        },
+        {
+          "judge": "Gemini",
+          "score": 2,
+          "reason": "The analysis includes many incidents from May 10 not present in the provided source while missing the Jack in the Box incident that was included."
+        }
+      ]
+    },
+    "Codex": {
+      "analysis": null,
+      "avg_score": null,
+      "scores": []
+    },
+    "Gemini": {
+      "analysis": "<p><strong>Notable Incidents & Community Safety Summary (May 10-11, 2026)</strong></p>\n\n<ul>\n    <li><strong>Burglaries, Thefts & Alarms</strong>\n        <ul>\n            <li><strong>Arrest for Burglary Warrants:</strong> A subject (Ariana Zamora) was detained during a bike stop at <strong>University Ave and Adams Dr</strong>. She had active warrants for burglary and possession of burglary tools (May 10, 10:46 PM).</li>\n            <li><strong>$20,000 Suitcase Theft:</strong> Officers conducted a follow-up on a high-value theft involving a $20,000 suitcase reported on May 9 (May 10, 7:19 PM).</li>\n            <li><strong>Residential Alarm (Near Menlo Oaks):</strong> An audible alarm was triggered at <strong>262 O'Connor St</strong> involving front door and living room motion sensors (May 10, 4:39 PM).</li>\n            <li><strong>Atherton Alarms:</strong> Multiple activations occurred at <strong>60 Adam Way</strong> (office side window) and <strong>24 Hawthorne</strong> (lower hall motion) (May 10, 9:53 PM - 10:04 PM).</li>\n            <li><strong>Commercial Alarm:</strong> A commercial alarm was triggered by a back door activation at <strong>2381 University Ave</strong>, East Palo Alto (May 10, 9:29 PM).</li>\n        </ul>\n    </li>\n\n    <li><strong>Suspicious Activity & Disturbances</strong>\n        <ul>\n            <li><strong>Vandalism/Assault Attempt:</strong> A subject was reported hitting vehicles with a chair near <strong>1100 El Camino Real (McDonald's/Chevron)</strong>. The subject was described as 35-40 years old in dark clothing, appearing intoxicated. Officers later recovered the chair in the roadway (May 11, 2:54 AM).</li>\n            <li><strong>Vehicle Disturbance:</strong> A disturbance was reported at the Jack in the Box on <strong>Willow Rd</strong> involving a black Infiniti QX6 (May 11, 3:32 AM).</li>\n            <li><strong>Weapon Brandishing:</strong> A domestic-related incident involved a knife at <strong>3645 Haven Ave</strong> (May 10, 8:11 AM).</li>\n        </ul>\n    </li>\n\n    <li><strong>Vehicle Incidents</strong>\n        <ul>\n            <li><strong>Hit & Run (Atherton):</strong> A Tesla on autopilot crashed into a tree at <strong>50 Valley Rd</strong>; the driver reportedly fled the scene before officers arrived (May 10, 4:30 PM).</li>\n            <li><strong>Hit & Run (Menlo Park):</strong> A green Audi collided with a blue Hyundai at <strong>Evelyn St and Santa Cruz Ave</strong> (May 10, 12:45 PM).</li>\n            <li><strong>DUI Report:</strong> A family member reported a driver left a residence at <strong>1508 Bay Rd</strong> in a grey Chevy SUV after consuming alcohol (May 10, 8:48 PM).</li>\n        </ul>\n    </li>\n\n    <li><strong>Area-Specific Observations</strong>\n        <ul>\n            <li>Activity was concentrated along the <strong>University Ave</strong> and <strong>Willow Rd</strong> corridors. The alarm on <strong>O'Connor St</strong> is the most immediate proximity to the Menlo Oaks/Berkeley Ave area.</li>\n        </ul>\n    </li>\n</ul>",
+      "avg_score": 2.5,
+      "scores": [
+        {
+          "judge": "Claude",
+          "score": 2,
+          "reason": "Analysis fabricates ~90% of its content (burglaries, alarms, knife incidents, specific names) absent from the provided transcripts; only the chair vandalism and Jack-in-the-Box disturbances match the source material."
+        },
+        {
+          "judge": "Gemini",
+          "score": 3,
+          "reason": "The analysis includes numerous specific incidents not found in the source transcripts and concludes with a truncated sentence."
+        }
+      ]
+    }
+  }
+}
