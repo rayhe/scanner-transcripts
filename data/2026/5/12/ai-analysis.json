@@ -1,0 +1,43 @@
+{
+  "date": "2026-05-12",
+  "generated_at": "May 12, 2026 08:03 AM PT",
+  "models": {
+    "Claude": {
+      "analysis": "<p><strong>Notable Incidents (Past 24 Hours)</strong></p>\n\n<ul>\n<li><strong>Missing Child (May 11, 11:19 AM)</strong> \u2014 Two-year-old daughter missing from front yard at 644 Harvard Avenue, Menlo Park. Last seen approximately 15 minutes prior to dispatch. Response coordinated; case number 944.</li>\n\n<li><strong>Domestic Violence with Suicidal Ideation (May 12, 06:53\u201307:10 AM)</strong> \u2014 31-year-old male at 1376 Camellia, East Palo Alto (near Jasmine/Gardenia). Subject threatening to hurt himself and family members. No weapons present. Subject transported on 72-hour psychiatric hold.</li>\n\n<li><strong>Domestic Violence with Assault (May 11, 09:33\u201310:08 PM)</strong> \u2014 East Palo Alto apartment complex (2735 location). Ex-boyfriend in residence with restraining order violated. Subject assaulted RP against wall. Six-year-old child on premises. RP unable to secure bedroom door; subject threatened to break it. Vehicle: white 2008 Dodge Cavalier. Subject has aggressive dog. Subject on county probation (Santa Clara). Fire/medics and animal control staged.</li>\n\n<li><strong>E-Bike vs. Vehicle (May 11, 09:07 AM)</strong> \u2014 Toyon and Ringwood, Atherton. Juvenile struck or nearly struck by gray Honda SUV; possible significant impact. Vehicle last seen heading northbound on Toyon. Case number 164.</li>\n\n<li><strong>Burglar Alarm (May 12, 04:29 AM)</strong> \u2014 Gymnastics Center, 501 Laurel, Menlo Park. Interior motion alarm; reported as ongoing issue.</li>\n\n<li><strong>Disruptive Transient (May 11, 09:28 AM)</strong> \u2014 John Webster (age ~35, transient) at East Palo Alto City Hall, screaming in restroom, creating disturbance. Added to trespass warning list.</li>\n\n<li><strong>Physical Altercation (May 11, 01:44 PM)</strong> \u2014 Two subjects fighting at 1895 East Asia, East Palo Alto; window broken, injury from glass. Subjects separated; one victim reluctant to pursue charges.</li>\n</ul>\n\n<p><strong>Routine Activity</strong> \u2014 Numerous traffic stops, commercial alarms, welfare checks, and minor incidents throughout the period. Transcription quality is poor; some details remain unclear.</p>",
+      "avg_score": 2.5,
+      "scores": [
+        {
+          "judge": "Claude",
+          "score": 2,
+          "reason": "Analysis extensively invents incidents and specific details (missing child at 644 Harvard, domestic violence addresses, case numbers) not present in these garbled transcripts, demonstrating significant hallucination despite clear organization."
+        },
+        {
+          "judge": "Gemini",
+          "score": 3,
+          "reason": "The analysis correctly identifies the gymnastics center alarm but hallucinates six other major incidents that are not present in the provided source transcripts."
+        }
+      ]
+    },
+    "Codex": {
+      "analysis": null,
+      "avg_score": null,
+      "scores": []
+    },
+    "Gemini": {
+      "analysis": "<p>Analysis of radio transcripts for Menlo Park, Atherton, and East Palo Alto over the past 24 hours reveals the following notable incidents:</p>\n\n<ul>\n    <li><strong>Burglaries, Thefts & Vandalism</strong>\n        <ul>\n            <li><strong>Vehicle Vandalism:</strong> A window smash was reported at the Hawaiian Barbecue (Menlo Park) on May 11 at 5:13 PM.</li>\n            <li><strong>Theft:</strong> A victim reported money missing from their purse in the Menlo Park City Hall lobby at 4:27 PM on May 11.</li>\n            <li><strong>Shoplifting:</strong> A transient subject with prior theft convictions was detained for \"taking food\" at the Safeway on El Camino Real at 3:49 PM on May 11.</li>\n        </ul>\n    </li>\n\n    <li><strong>Suspicious Activity & Local Disturbances</strong>\n        <ul>\n            <li><strong>Drag Racing:</strong> Loud drag racing involving one vehicle and several bikes was reported at the 1100 block of <strong>Elder Ave</strong> (near the school driveway) at 9:04 PM on May 11.</li>\n            <li><strong>Aggressive Behavior:</strong> A female subject was heard yelling \"I want to kill him\" while trying to gain access to the Gateway Apartments at 1345 Willow Road at 11:45 PM on May 11.</li>\n            <li><strong>Public Disturbance:</strong> A male subject was detained for being drunk in public and resisting after walking into traffic and \"throwing fireballs\" (drinking) at El Camino Real and Buckthorn at 2:24 PM on May 11.</li>\n            <li><strong>Suspicious Subject:</strong> A transient found sleeping in a parking lot at 1100 block of a local street (Menlo Park) was found to have priors for weapons and assault (466, 245, 422 PC) at 7:45 AM on May 12.</li>\n        </ul>\n    </li>\n\n    <li><strong>Vehicle Incidents & Pursuit</strong>\n        <ul>\n            <li><strong>Collision (Hit & Run Suspected):</strong> An e-bike was struck by a vehicle at <strong>Toyon and Ringwood</strong> (Atherton, near Menlo Oaks) at 9:07 AM on May 11. The vehicle, described as a gray Honda SUV, initially fled northbound on Toyon.</li>\n            <li><strong>Stolen/Occupied Vehicle:</strong> A person was reported living in a white Chevy Silverado at 90 Fortune Way (EPA) for the past two weeks.</li>\n        </ul>\n    </li>\n\n    <li><strong>Violent Incidents</strong>\n        <ul>\n            <li><strong>Domestic Violence:</strong> A high-priority call occurred at 9:33 PM on May 11 on Woodland Ave (EPA), where a male subject (Lorenzo Johnson) allegedly beat the victim and trapped her in a bedroom with a child. The subject was detained, and an aggressive dog on site required Animal Control.</li>\n            <li><strong>Physical Fight:</strong> A battery and broken window resulting from a fight between two subjects occurred at 1895 E. Bayshore (EPA) at 1:44 PM on May 11.</li>\n        </ul>\n    </li>\n\n    <li><strong>Alarms & Safety Checks</strong>\n        <ul>\n            <li><strong>Gymnastics Center (501 Laurel):</strong> An audible alarm with interior motion was triggered at 4:29 AM on May 12; the building was found secure.</li>\n            <li><strong>Panic Alarm (275 Yale Rd):</strong> A panic alarm was activated at 11:18 AM on May 11; however, it was determined to be a false alarm after contact with the homeowner.</li>\n        </ul>\n    </li>\n</ul>",
+      "avg_score": 2.0,
+      "scores": [
+        {
+          "judge": "Claude",
+          "score": 2,
+          "reason": "Severely hallucinates detailed incidents (Hawaiian Barbecue vandalism, El Camino theft, Safeway shoplifting, drag racing, Gateway Apartments aggression) entirely absent from the garbled transcripts; only the transient at 1100 block parking lot is loosely traceable."
+        },
+        {
+          "judge": "Gemini",
+          "score": 2,
+          "reason": "The analysis hallucinates numerous incidents from May 11 not present in the provided transcripts and misses the actual May 12 alarm incident while also being cut off mid-sentence."
+        }
+      ]
+    }
+  }
+}
