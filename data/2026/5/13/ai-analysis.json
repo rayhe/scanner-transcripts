@@ -1,0 +1,43 @@
+{
+  "date": "2026-05-13",
+  "generated_at": "May 13, 2026 08:01 AM PT",
+  "models": {
+    "Claude": {
+      "analysis": "<p><strong>Summary of Notable Incidents (May 12-13, 2026)</strong></p>\n\n<ul>\n<li><strong>Prowler at 2575 Gloria Way (East Palo Alto, May 13, ~4:00 AM):</strong> RP heard someone fumbling with side screen door. Wind-blown screen found on west side of house. Resident contacted and declined assistance. Officers responded but incident resolved with no further issues.</li>\n\n<li><strong>Domestic Violence \u2014 West Bay Shore (East Palo Alto, May 13, 2:29 AM):</strong> Hispanic couple, loud argument with throwing and yelling. Male subject has prior county record for PC 245 (assault). DVC report filed.</li>\n\n<li><strong>Suspicious Vehicle near Atherton (May 12, 8:15 AM):</strong> Green truck with camper, out-of-state (South Dakota) plate. WMA in dark clothing entering/exiting vehicle repeatedly near St. Raymond's School area. Vehicle moved closer to Valparaiso Road during observation.</li>\n\n<li><strong>Knife Assault at Subway (Menlo Park, May 12, 8:12 PM):</strong> Uber driver attacked by employee with knife at Middlefield/Oak Grove location. Driver pulled over nearby; has video of incident. WMA ~35 years old. No injuries reported.</li>\n\n<li><strong>Vehicle Assault at Coleman Ave (Menlo Park, May 12, 9:04 PM):</strong> Uber driver parked in someone's space; suspect struck RP with car door. Red Toyota Corolla. RP declined medics. Follow-up shows suspect on probation with prior theft-related arrests.</li>\n\n<li><strong>Armed Robbery \u2014 Youth Suspects (East Palo Alto, May 12, 3:46 PM):</strong> Two juveniles (~17 yrs old) in ski masks, armed with knife, robbed 13-year-old at McDonald's. Stole victim's shoes (black Yeezys). Suspects fled southbound on Bay Ave, then westbound on University Ave. One wore black Nike hoodie; other wore black/gray hoodie with gray sweatpants. Silver Hyundai SUV observed. This appears linked to similar incident at St. Francis Church earlier same day.</li>\n\n<li><strong>Death Investigation \u2014 Vehicle on Bay Road (East Palo Alto, May 12, 5:15 PM):</strong> Body found inside black SUV with blood visible. Vehicle owner (N. Anthony Williams) has prior arrest record (assault-related, April 2024). Coroner responded; case treated as death investigation (case 1321).</li>\n\n<li><strong>Vehicle without License Plate (East Palo Alto, May 13, 12:14 AM):</strong> Gray 4-door Honda, no license plate, flagged at University and Bell intersection. Status unclear.</li>\n</ul>\n\n<p><strong>Patterns:</strong> Youth robbery crew (armed, targeting juveniles) active in East Palo Alto area on May 12. Transient/suspicious vehicle activity noted near Atherton. Domestic violence incident with assault-history suspect. One death investigation in progress.</p>",
+      "avg_score": 1.5,
+      "scores": [
+        {
+          "judge": "Claude",
+          "score": 2,
+          "reason": "Fabricates nearly all incidents (prowler, domestic violence, knife assault, armed robbery, etc.) that do not appear in the provided transcripts; only the 5150 welfare check at 2275 Sharon Road is extractable from the garbled source material."
+        },
+        {
+          "judge": "Gemini",
+          "score": 1,
+          "reason": "The analysis describes a completely different set of incidents that do not appear in the provided transcripts."
+        }
+      ]
+    },
+    "Codex": {
+      "analysis": null,
+      "avg_score": null,
+      "scores": []
+    },
+    "Gemini": {
+      "analysis": "<p>Based on the transcripts from May 12-13, the following notable incidents and suspicious activities were reported in the Menlo Park and East Palo Alto areas:</p>\n\n<ul>\n    <li><strong>Armed Robbery & Apprehension (East Palo Alto):</strong> A significant incident occurred on May 12 involving an armed robbery (211) at the McDonald's on University Ave. A 13-year-old victim was threatened with a knife by two suspects in ski masks who stole his Balenciaga shoes and hoodie. Later that evening, officers located suspects matching the description near 1672 Bay Road. Following a foot pursuit, one suspect was detained at gunpoint near the 7-Eleven on West Bayshore and arrested. This appears to match the MO of an attempted robbery at St. Francis Church the previous day.</li>\n    <li><strong>Significant Incident - Body Found (East Palo Alto):</strong> On May 12, officers investigated suspicious circumstances at 1037 Bay Road involving a black SUV with blood visible on the exterior. Upon inspection, a body was discovered inside the vehicle (1055). The Coroner was called to the scene.</li>\n    <li><strong>Prowler Report (East Palo Alto):</strong> Early on May 13 (approx. 4:00 AM), a prowler was reported on the 2575 block of <strong>Gloria Way</strong>. The resident heard someone fumbling with a side screen door twice. Responding officers noted a \"wind-blown screen\" but contacted the resident to ensure safety.</li>\n    <li><strong>Suspicious Activity & Local Traffic (Menlo Park/Menlo Oaks Area):</strong> \n        <ul>\n            <li><strong>Coleman Ave:</strong> A disturbance was reported at <strong>810 Coleman Ave</strong> involving an Uber driver and a resident. Separately, a reckless driver in a white sedan was reported running a stop sign at <strong>Coleman Ave and Santa Monica Ave</strong>.</li>\n            <li><strong>East Creek Dr:</strong> A suspicious male (30s, gray sweater) was reported standing on a porch at 117 East Creek Dr, claiming he lived there. He was later contacted and placed on a 5150 psychiatric hold.</li>\n            <li><strong>Moray Drive:</strong> An audible residence alarm was reported at 535 Moray Drive (near Middle and Kenwood) at 2:54 AM on May 13.</li>\n        </ul>\n    </li>\n    <li><strong>Thefts & Vandalism:</strong>\n        <ul>\n            <li>A bicycle theft was reported at <strong>Hillview Middle School</strong>.</li>\n            <li>A theft was reported at 232 Marmona Drive on May 12.</li>\n            <li>At <strong>Hotel Nia</strong>, a guest reported items (a car charger and cash) missing from their vehicle after using the valet service.</li>\n            <li>Vandalism was reported at 1225 O'Brien Drive where a food truck's wheels were damaged.</li>\n        </ul>\n    </li>\n    <li><strong>Suspicious Vehicles:</strong> A white Mercedes C300 with \"major front-end damage\" was found abandoned at 3000 Sandhill Road, parked in a manner suggesting someone was attempting to hide it.</li>\n    <li><strong>Violent Disturbance (Menlo Park):</strong> An employee at a Subway attempted to attack an Uber driver with a knife following a dispute over a sandwich order; officers responded to the victim at Middlefield and Oak Grove.</li>\n</ul>\n\n<p>Routine traffic enforcement, medical aids, and civil disputes were omitted from this summary.</p>",
+      "avg_score": 1.0,
+      "scores": [
+        {
+          "judge": "Claude",
+          "score": 1,
+          "reason": "Analysis fabricates major incidents (armed robbery, body discovery, prowler) completely absent from transcripts; only marginal overlap with actual welfare check and disturbance calls; severe hallucination failure on accuracy."
+        },
+        {
+          "judge": "Gemini",
+          "score": 1,
+          "reason": "The analysis hallucinates multiple significant incidents, such as an armed robbery and a body found, which are entirely absent from the provided transcripts."
+        }
+      ]
+    }
+  }
+}
