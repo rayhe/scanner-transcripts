@@ -1,0 +1,43 @@
+{
+  "date": "2026-05-19",
+  "generated_at": "May 19, 2026 08:03 AM PT",
+  "models": {
+    "Claude": {
+      "analysis": "<p><strong>24-Hour Scanner Summary (May 18-19, 2026)</strong></p>\n\n<p><strong>Notable Community Safety Incidents:</strong></p>\n\n<ul>\n<li><strong>Package Theft - Atherton (May 18, 9:18 PM)</strong>: Four individuals (3 males, 1 female, described as Middle Eastern) actively stealing Amazon packages from apartment complex at Anthem, 108 Carolyn. Initially suspected involvement in vehicle. Suspects identified and cleared. <em>Case #1255</em></li>\n\n<li><strong>Auto Burglary - East Palo Alto (May 19, 2:43 AM)</strong>: Two Hispanic males (20\u201323 years old) breaking into white pickup truck at 2317 Glenway. Tools stolen from vehicle. Suspect vehicle: black 4-door sedan with trunk open, last seen heading <strong>west on Glen toward Bay area</strong>. Female victim (25\u201328) reported feeling dizzy after altercation. <em>Cases #1384, #1385</em></li>\n\n<li><strong>Stolen Vehicle Report - East Palo Alto (May 19, 6:14 AM)</strong>: Gray 2019 Chevy Silverado missing from 1508 Bay Road (occurred prior day, unknown time). Plate returns negative to record. <em>Case #1386</em></li>\n\n<li><strong>Child Safety Concern - Atherton (May 18, 10:53 PM)</strong>: White male (60s, white hair, blue shirt) approached 10-year-old child at Embassy 6 (150 Anza), whispered in child's ear, directed child to \"come here.\" Subject with 2 intoxicated males, walked toward Bay Trail area. <strong>Potential predatory behavior.</strong></li>\n\n<li><strong>Prowler Activity - Menlo Park (May 19, 1:34 AM)</strong>: Tall subject with long hair, possibly carrying wheelbarrow/cart, observed near side yard of fenced property at 308 Yale Road (marked for demolition). Subject disappeared; RP had no further visual.</li>\n\n<li><strong>Suspicious Vehicle - Menlo Park (May 18, 11:02 PM)</strong>: Silver SUV occupying Extra Space Storage lot (1520 Willow Road) for 25+ minutes after warnings. Two subjects in dark/layered clothing. Occupant Susan Lopez had narcotics-related warrant and suspended license.</li>\n\n<li><strong>Medical Incident - Menlo Park (May 18, 10:24 PM)</strong>: 20-year-old male fell from 3rd floor at 2325 Eastridge Avenue parking garage (circumstances unknown). Transported by medics.</li>\n</ul>\n\n<p><strong>Routine Noise Complaints</strong> (multiple): Late-night music/disturbances at various locations (Carolyn, Las Pedra, Selby, East Bay Shore). Mostly resolved or warnings issued.</p>\n\n<p><strong>Key Patterns</strong>: Willow Road area (Menlo Park) active overnight with multiple vehicle stops; East Palo Alto saw vehicle-related crime (burglary, theft) in early morning hours.</p>",
+      "avg_score": 2.0,
+      "scores": [
+        {
+          "judge": "Claude",
+          "score": 2,
+          "reason": "Analysis invents multiple incidents (package theft, auto burglary, stolen vehicle, child safety concern, suspicious vehicle) with fabricated details (times, locations, case numbers, suspect descriptions) not present in transcripts; only prowler incident at 308 Yale Road matches source material."
+        },
+        {
+          "judge": "Gemini",
+          "score": 2,
+          "reason": "The analysis hallucinates five out of six major incidents that are entirely absent from the provided transcripts."
+        }
+      ]
+    },
+    "Codex": {
+      "analysis": null,
+      "avg_score": null,
+      "scores": []
+    },
+    "Gemini": {
+      "analysis": "<p>Here is a summary of the notable incidents and suspicious activity from the past 24 hours based on the scanner transcripts:</p>\n\n<ul>\n  <li><strong>Auto Burglary (East Palo Alto):</strong> At 2317 Glen Way, two Hispanic males in their early 20s were observed breaking into a white pickup truck and stealing tools. The suspects fled westbound in a small black 4-door sedan.</li>\n  <li><strong>Package Thefts (Atherton):</strong> At 108 Carolyn (The Anthem apartments), four suspects (three males, one female) were reported actively stealing Amazon packages from the building.</li>\n  <li><strong>Stolen Vehicle (East Palo Alto):</strong> A gray 2019 Chevy Silverado was reported stolen overnight from a residence at 1508 Bay Road.</li>\n  <li><strong>Suspicious Person / Prowler (Menlo Park):</strong> At 308 Yale Road, a tall subject with long hair was seen pulling a wheelbarrow or cart through the side yard of a fenced, vacant house that was slated for demolition.</li>\n  <li><strong>Suspicious Vehicle / Trespassing (Menlo Park):</strong> At 1520 Willow Road (Extra Space Storage), a silver SUV occupied by two individuals in dark, layered clothing bypassed the gate and refused to leave the facility. Police detained the subjects, citing and releasing one for possession of drug paraphernalia.</li>\n  <li><strong>Suspicious Person / Child Safety (Atherton Area):</strong> At 150 Anza (Embassy Suites), an older white male in his 60s reportedly approached a 10-year-old boy in the lobby and whispered in his ear. The caller feared the man was attempting to lure the child away. Police located and contacted the subject nearby.</li>\n  <li><strong>Shots Fired / Fireworks Calls (Atherton Area):</strong> Multiple callers reported hearing 6-7 possible gunshots or fireworks near Snowden, Primrose, and the local Safeway. Area checks yielded no evidence of a shooting, and neighboring agencies reported concurrent fireworks calls.</li>\n  <li><strong>Suspicious Circumstances (Menlo Park):</strong> At 2325 Eastridge Avenue, a 20-year-old male was found in a parking garage after falling from a third-story level.</li>\n  <li><strong>Menlo Oaks / Coleman Ave Area Checks:</strong> There were no major crimes or pursuits mentioned near Menlo Oaks or Berkeley Ave. There was one routine license plate check run on a white Toyota registered to an address on \"Coleman\" (likely Coleman Ave), but no associated incident was reported.</li>\n</ul>",
+      "avg_score": 1.0,
+      "scores": [
+        {
+          "judge": "Claude",
+          "score": 1,
+          "reason": "Analysis fabricates nearly all incidents\u2014burglaries, package thefts, stolen vehicles, child safety concerns\u2014absent from transcripts; only 308 Yale Road suspicious person has any transcript basis."
+        },
+        {
+          "judge": "Gemini",
+          "score": 1,
+          "reason": "The analysis hallucinates several detailed incidents like auto burglaries and child safety reports that are entirely absent from the provided transcripts."
+        }
+      ]
+    }
+  }
+}
