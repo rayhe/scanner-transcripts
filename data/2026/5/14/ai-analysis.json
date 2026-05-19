@@ -1,0 +1,43 @@
+{
+  "date": "2026-05-14",
+  "generated_at": "May 14, 2026 08:01 AM PT",
+  "models": {
+    "Claude": {
+      "analysis": "<p><strong>Summary of Notable Incidents \u2014 May 13, 2026 (Last 24 Hours)</strong></p>\n\n<ul>\n  <li><strong>Scooter Pursuit & Drug Arrest (East Palo Alto, 08:30\u201308:44 AM):</strong> Subject on scooter evaded police, pursued westbound on Euclid, then west on University near Donahoe. Apprehended on overpass. Subject had H&S charges (drug-related), multiple warrants, expired ID, and multiple aliases. Code 4.</li>\n  \n  <li><strong>Aggressive Person at Store (Atherton, ~10:33 AM):</strong> Individual in Xfinity shirt aggressively knocking and ringing doorbell at store on ECR. Possibly departed in red utility truck.</li>\n  \n  <li><strong>Vehicle with Stolen/Lost Plate (Menlo Park, 12:29 PM):</strong> Mercedes stopped with missing front plate, showing as lost/stolen from recently recovered vehicle (Fremont PD). Actual vehicle likely a Hyundai.</li>\n  \n  <li><strong>Domestic Disturbance with Knife Mention (Menlo Park, 12:37\u201312:45 PM):</strong> Roommate harassing resident's father, language barrier. Knife mentioned during call. Subject no longer in possession of knife per final update. Last prior contact (May 9) was welfare check, code 4.</li>\n  \n  <li><strong>Attempted Vehicle Theft\u2014Domestic (East Palo Alto, 10:13 AM):</strong> Ex-partner attempted to steal vehicle at 1079 Garden (Light Tree Apartments), broke windshield wipers. Subject in apartment. Parties separated.</li>\n  \n  <li><strong>Missing Person Report (East Palo Alto, 12:33 PM):</strong> Eric reported missing for 4 days, last heard from unknown. Palo Alto PD already conducted welfare check at 239 Gardenia Way (unable to locate). RP waiting at EPAPD with report.</li>\n</ul>\n\n<p><strong>False Alarms:</strong> Panic alarm (property keypad malfunction), prowler report (turned out to be resident's roommate).</p>\n\n<p><strong>No direct activity reported on Berkeley Ave, Coleman Ave, or immediate Menlo Oaks area during this period.</strong></p>",
+      "avg_score": 1.0,
+      "scores": [
+        {
+          "judge": "Claude",
+          "score": 1,
+          "reason": "Analysis fabricates nearly all incidents: scooter pursuit, knife threat, stolen plate, missing person\u2014none appear in provided transcripts; transcript times only go to 10:45 AM but analysis describes 12:29\u201312:45 PM incidents."
+        },
+        {
+          "judge": "Gemini",
+          "score": 1,
+          "reason": "The analysis includes numerous incidents and specific details, such as a scooter pursuit and events occurring after 10:45 AM, that are completely absent from the provided transcripts."
+        }
+      ]
+    },
+    "Codex": {
+      "analysis": null,
+      "avg_score": null,
+      "scores": []
+    },
+    "Gemini": {
+      "analysis": "<p><strong>Notable Incidents and Community Safety Summary (May 13, 2026)</strong></p>\n\n<ul>\n    <li><strong>Vehicle Pursuit and Arrest (East Palo Alto):</strong> A subject on a scooter fled from officers near <strong>East Bayshore and Euclid</strong>. After a brief pursuit toward the University Avenue overpass, the individual was detained and found to have multiple warrants, H&S charges, and a criminal protective order.</li>\n    <li><strong>Attempted Vehicle Theft (East Palo Alto):</strong> An incident occurred at the <strong>Light Tree Apartments (1805 East Bayshore)</strong> where a suspect attempted to steal a vehicle and broke a windshield wiper. The incident was linked to a domestic dispute and a violation of a restraining order.</li>\n    <li><strong>Aggressive Solicitor (Atherton):</strong> A resident near <strong>El Camino Real</strong> reported a male wearing an \"Xfinity\" shirt who was aggressively banging on doors and ringing doorbells. The subject reportedly left the area in a red utility truck.</li>\n    <li><strong>Student Safety Alert (East Palo Alto):</strong> Increased patrols were requested for <strong>Ravenswood Middle School</strong> following reports of two separate incidents in recent days where students were assaulted.</li>\n    <li><strong>Suspicious Activity (East Palo Alto):</strong> Six individuals were reported looking into vehicles near <strong>Joel Davis Park (Tate St)</strong>. Upon contact by police, the subjects claimed they were looking for money hidden in the area as part of a social media trend.</li>\n    <li><strong>Reckless Driving (Menlo Park):</strong> Multiple reports were made regarding a green Toyota Prius driving erratically, speeding, and tailgating other vehicles near <strong>Bayfront Expressway and Willow Road</strong>.</li>\n    <li><strong>Suspicious Person Report (East Palo Alto):</strong> Police responded to <strong>McNair Street</strong> for a report of an unauthorized male entering a garage. The situation was determined to be a \"Code 4\" after officers confirmed the individual was a resident's roommate.</li>\n    <li><strong>Weapon Disturbance (Menlo Park):</strong> Officers responded to a disturbance involving a roommate brandishing a knife. The scene was secured and determined to be a civil issue after the weapon was discarded.</li>\n</ul>",
+      "avg_score": 1.5,
+      "scores": [
+        {
+          "judge": "Claude",
+          "score": 2,
+          "reason": "Extensively invents unsupported details (vehicle pursuits, theft incidents, solicitor, school alerts) not present in the garbled transcripts; confuses a parked Toyota Matrix with reckless driving in a Prius; only the EPA detention mention has minimal source support."
+        },
+        {
+          "judge": "Gemini",
+          "score": 1,
+          "reason": "The analysis is entirely hallucinated, inventing specific safety incidents and locations that are completely absent from the provided transcripts."
+        }
+      ]
+    }
+  }
+}
