@@ -1,0 +1,43 @@
+{
+  "date": "2026-05-20",
+  "generated_at": "May 20, 2026 08:00 AM PT",
+  "models": {
+    "Claude": {
+      "analysis": "<p><strong>Summary: May 19, 2026 Police Scanner Activity</strong></p>\n\n<p>The transcripts show mostly routine traffic stops and administrative calls. One notable incident requires attention:</p>\n\n<ul>\n  <li><strong>Brandishing with weapon (East Palo Alto):</strong> Suspect at King Park (435 Daisy Lane, EPA) \u2014 male, approx. 25\u201330 years old, black sweater, red shirt, black backpack \u2014 threatened victim with pocket knife, later screaming at people in parking lot. Subject fled and was apprehended on the beach/Ravenswood trail. Arrested for brandishing (PC 69), assault on peace officer (243 B), possession of paraphernalia (HS 11 364). Subject has prior criminal history including ADW (assault with deadly weapon) conviction from November 2025.</li>\n</ul>\n\n<p><strong>Other minor issues (non-priority):</strong></p>\n\n<ul>\n  <li>Attempted theft at CVS (EPA) \u2014 suspect with hospital bag stole body shampoos; items recovered</li>\n  <li>False alarm at 80 Wisteria (Atherton) \u2014 kitchen door sensor</li>\n  <li>Disorderly subject at City Hall (2415 University Ave, EPA) \u2014 intoxicated, arguing about library card; subject cleared from area</li>\n  <li>Parking violations at Elena and Atherton Ave (Atherton) \u2014 multiple trucks blocking intersection; no vehicles found upon officer arrival</li>\n  <li>Noise complaint (Menlo Park) \u2014 loud music at 1066 Sonoma Avenue</li>\n</ul>\n\n<p><strong>No incidents reported near Menlo Oaks, Berkeley Ave, or Coleman Ave during this period.</strong></p>",
+      "avg_score": 1.5,
+      "scores": [
+        {
+          "judge": "Claude",
+          "score": 2,
+          "reason": "Analysis hallucinates extensive details\u2014brandishing incident, CVS theft, false alarm, City Hall incident, parking violations, noise complaint\u2014none of which appear in transcripts; only actual incident is the suicidal subject being transported to Palo Alto."
+        },
+        {
+          "judge": "Gemini",
+          "score": 1,
+          "reason": "The analysis entirely fabricates multiple detailed incidents such as a brandishing at King Park and a CVS theft that do not appear in the provided transcripts."
+        }
+      ]
+    },
+    "Codex": {
+      "analysis": null,
+      "avg_score": null,
+      "scores": []
+    },
+    "Gemini": {
+      "analysis": "<p><strong>Notable Incidents & Community Safety Summary (May 19, 2026)</strong></p>\n\n<ul>\n  <li><strong>Violent Crime & Arrest (Knife Brandishing):</strong> East Palo Alto Police responded to <strong>King Park (Daisy Lane)</strong> for a male suspect threatening individuals with a knife. The suspect (identified as Alfredo Menendez Ponce) fled on foot toward the <strong>Bay Trail</strong> and <strong>Runnymede/Weeks</strong> area. After a coordinated foot pursuit, he was taken into custody for brandishing and resisting arrest.</li>\n  <li><strong>Suspicious Activity & Prowling:</strong>\n    <ul>\n      <li><strong>Bay Trail:</strong> A male in his 40s on a bicycle was observed \"looking into vehicles\" at the end of the trail in Atherton. This follows a separate foot pursuit by MPPD on the Bay Trail earlier that morning where a subject escaped.</li>\n      <li><strong>3:00 AM Prowler:</strong> An Atherton resident reported concern for an elderly neighbor after an unidentified person was seen banging on the neighbor's door in the middle of the night.</li>\n      <li><strong>CVS Shoplifting:</strong> A male suspect (described as wearing no shoes and carrying a hospital bag) attempted to steal products from the CVS on El Camino Real; the items were recovered.</li>\n    </ul>\n  </li>\n  <li><strong>Neighborhood-Specific Mentions (Menlo Oaks / Berkeley Ave / Willow):</strong>\n    <ul>\n      <li><strong>Sonoma Ave:</strong> Officers responded to reports of loud music/noise complaints.</li>\n      <li><strong>Royal Court:</strong> A non-injury collision occurred where a vehicle backed into a fire hydrant, causing localized flooding.</li>\n      <li><strong>Willow Rd:</strong> Multiple contacts were made regarding suspicious or abandoned vehicles, including an RV marked with a 72-hour sticker near Laurel St.</li>\n    </ul>\n  </li>\n  <li><strong>Vehicle Pursuits & Hit and Runs:</strong>\n    <ul>\n      <li><strong>Hit and Run:</strong> A <strong>Silver Volvo SUV</strong> was involved in a hit-and-run at Ocean Honda on California Ave, striking a white Mazda before fleeing the scene.</li>\n      <li><strong>Stolen Property:</strong> MPPD officers checked serial numbers on several bicycles (including a 21-speed Schwinn) during a stop, though no immediate matches for stolen property were found.</li>\n    </ul>\n  </li>\n  <li><strong>Alarms:</strong> Residential alarms were triggered at <strong>779 Santa Cruz Ave</strong> and <strong>80 Wisteria Dr</strong>. Both were investigated and cleared after residents provided proper authorization codes.</li>\n</ul>",
+      "avg_score": 1.5,
+      "scores": [
+        {
+          "judge": "Claude",
+          "score": 2,
+          "reason": "Analysis fabricates extensive incidents (knife brandishing, prowling suspects, shoplifting, hit-and-run) absent from source transcripts; only bike serial lookups, alarm at 779 Santa Cruz, and 5150 call at 795 Willow are verifiable."
+        },
+        {
+          "judge": "Gemini",
+          "score": 1,
+          "reason": "The analysis hallucinates nearly all incidents, names, and locations, as they do not appear in the provided transcripts."
+        }
+      ]
+    }
+  }
+}
