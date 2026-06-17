@@ -1,0 +1,32 @@
+{
+  "date": "2026-06-17",
+  "generated_at": "Jun 17, 2026 08:05 AM PT",
+  "models": {
+    "Claude": {
+      "analysis": "<p><strong>Notable Incidents - June 16-17, 2026 (Past 24 Hours)</strong></p>\n\n<ul>\n<li><strong>Possible Auto Theft Ring - East Palo Alto (01:07-04:50 AM, Jun 17):</strong> Officers stopped vehicle on Bay Shore at Lincoln with mismatched license plates. Investigation revealed complex plate situation with multiple registered owners (Garcia, Sanchez, Nguen). Possible stolen Lexus from Hayward involved. Vehicle was in SBS (Stolen Broadcast System) and marked as located. Registered owner from Hayward arrived on scene. Recommend follow-up with Hayward PD on this incident.</li>\n\n<li><strong>Stolen Vehicle Report - East Palo Alto (06:38 AM, Jun 17):</strong> 1949 Corey Avenue - Dodge vehicle (appears to be 350 engine) reported stolen overnight. Vehicle has GPS tracker; last pinged eastbound on MacArthur Boulevard at Seminary Avenue in Oakland (~50 min before report). Oakland PD notified. Vehicle still outstanding.</li>\n\n<li><strong>Suspicious Activity - Atherton (10:37-10:41 PM, Jun 16):</strong> 270 Lyndon Lane - RP reported seeing flashlights moving inside one-story house. Security confirmed they were on-site checking property. Resolved without incident.</li>\n\n<li><strong>Multiple Drug/Loitering Arrests - Menlo Park (02:51-03:52 AM, Jun 17):</strong> Series of stops around Willow/Laurel area involving multiple subjects with charges including 647H (loitering), 11364 (drug paraphernalia), 11550 (indecent exposure). Multiple warrants confirmed from San Mateo and Mendocino counties. Pattern suggests organized loitering activity.</li>\n\n<li><strong>Abandoned Dog - East Palo Alto (06:01-06:07 AM, Jun 17):</strong> 2101 East Bay Shore area - large brown dog allegedly abandoned by family, chasing people in driveway. Officers contained dog back inside house.</li>\n</ul>\n\n<p><strong>Summary:</strong> Most significant activity was the multi-plate vehicle incident and stolen Dodge recovery in East Palo Alto. No major burglaries or prowler activity reported in target areas (Menlo Oaks/Berkeley Ave/Coleman Ave).</p>",
+      "avg_score": 1.5,
+      "scores": [
+        {
+          "judge": "Claude",
+          "score": 2,
+          "reason": "Analysis hallucinates entire incidents (stolen Dodge at 06:38 AM, Atherton flashlights at 10:37 PM, abandoned dog) absent from provided transcripts; invents names (Garcia, Sanchez, Nguen) and timeframes not supported by source material."
+        },
+        {
+          "judge": "Gemini",
+          "score": 1,
+          "reason": "The analysis is a complete hallucination, reporting fictional incidents and locations in East Palo Alto and Atherton that do not exist in the provided Menlo Park transcripts."
+        }
+      ]
+    },
+    "Codex": {
+      "analysis": null,
+      "avg_score": null,
+      "scores": []
+    },
+    "Gemini": {
+      "analysis": null,
+      "avg_score": null,
+      "scores": []
+    }
+  }
+}
