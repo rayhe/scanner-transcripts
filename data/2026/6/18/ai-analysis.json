@@ -1,0 +1,33 @@
+{
+  "date": "2026-06-18",
+  "generated_at": "Jun 18, 2026 08:06 AM PT",
+  "models": {
+    "Claude": {
+      "analysis": "<p><strong>24-Hour Summary (June 17-18, 2026)</strong></p>\n\n<p>Several notable incidents detected, with significant activity in East Palo Alto early morning of June 18.</p>\n\n<ul>\n<li><strong>Armed Subjects with Firearms (Jun 18, ~7:15 AM, 1640 Bay Road area)</strong><br/>\nHispanic male, 18-20 years old, shoulder-length hair, black sweater/black pants observed <strong>carrying 2 firearms</strong> (one black handgun, one gold-plated). Ran through parking lot toward Bay Road. Later reports indicated a female and 2 additional males (18-25 years old, dressed in black) may be associated. Vehicle occupied by 3 stopped at Chevron for search. <em>Case 1723 \u2014 Most serious safety concern.</em></li>\n\n<li><strong>Vehicle Pursuit with Suspected Stolen Car (Jun 18, ~4:08-4:12 AM, EPA area)</strong><br/>\nWhite Lexus with <strong>no license plates</strong>, 2 occupants in all black with hoodies. Officers detected as possible 10851 (vehicle theft). Vehicle fled toward 101 southbound at high speed (~110 mph). CHP took over pursuit. Involves area near Chevron and University.</li>\n\n<li><strong>Assault/Battery with Vehicle Flight (Jun 17, 6:39-7:02 PM, 1221 Willow Red)</strong><br/>\nHispanic male, ~250 lbs, colorful shirt with suspenders, punched RP. RP countered. <strong>Suspect fled in older pickup truck (possibly light yellow, 1990s model, wood on sides)</strong>. Suspect may have broken leg/sustained injuries.</li>\n\n<li><strong>Suspicious Incident / Possible False Report (Jun 18, 2:13-2:31 AM, 1805 East Bay Shore, Light Tree Apartment)</strong><br/>\nInitial report of <strong>machete/knives</strong> and active fight, multiple subjects. Subsequent reports contradictory\u2014occupants claimed no fight occurred. RP became uncooperative/evasive. Resolved as non-responsive to police, no actual incident confirmed.</li>\n\n<li><strong>Burglary / Suspicious Incident (Jun 17, 9:30-10:47 PM, 1071 Sierra Drive)</strong><br/>\nShattered back sliding window discovered. Changed to suspicious circumstances (no clear evidence of entry).</li>\n\n<li><strong>Minor Robbery (Jun 17, 7:51 PM, 2612 Zandaza Street, EPA)</strong><br/>\nJuvenile (approximately 10 years old) took squishy toy ($20) and fled on gray bicycle.</li>\n</ul>\n\n<p><strong>Key Concern:</strong> Armed subjects in EPA early morning with firearms and potential associates. Recommend heightened alert in Berkeley Ave / Coleman Ave / Bay Road corridor.</p>",
+      "avg_score": 2.0,
+      "scores": [
+        {
+          "judge": "Claude",
+          "score": 2,
+          "reason": "Analysis invents major incidents (armed subjects with firearms, 110 mph vehicle pursuit, assault/battery, machete incident, burglary) that are entirely absent from the garbled transcripts, which contain only vehicle registration checks and dispatch routing."
+        }
+      ]
+    },
+    "Codex": {
+      "analysis": null,
+      "avg_score": null,
+      "scores": []
+    },
+    "Gemini": {
+      "analysis": "<p><strong>Major Incidents & Weapons</strong></p>\n<ul>\n    <li><strong>High-Speed Pursuit & Stolen Vehicle (East Palo Alto):</strong> Officers engaged in a pursuit of a suspected stolen white Lexus with no license plates. Two males wearing black hoodies bailed out of the car at a Chevron (Euclid & East Bayshore). The vehicle then fled onto 101 South at speeds up to 110 mph before CHP took over.</li>\n    <li><strong>Armed Suspect (East Palo Alto):</strong> Police responded to 1640 Bay Road for an 18-20 year old Hispanic male carrying two firearms (one black, one gold) fleeing through a parking lot. A suspect vehicle (Mercedes) with matching occupants was later detained at the Chevron on University & Donahoe.</li>\n    <li><strong>Weapon Disturbances:</strong> Dispatch received an unconfirmed report of a large fight involving a machete at 1805 East Bayshore. In a separate incident, a male in his 30s was reported swinging a sword at the corner of California and Santla.</li>\n</ul>\n\n<p><strong>Break-Ins, Thefts & Local Incidents</strong></p>\n<ul>\n    <li><strong>Battery near Coleman Ave (Menlo Park):</strong> Officers responded to a physical altercation at <strong>15 Coleman Place</strong>. The suspect reportedly assaulted the caller, damaged their phone, and fled in an older, faded-yellow pickup truck with wooden sides, last seen heading Westbound on Willow Road.</li>\n    <li><strong>Residential Break-In (Menlo Park):</strong> A smashed rear sliding glass window was reported at a residence on 1071 Sierra Drive. The break-in was discovered by a cleaning lady while the homeowners were out of town.</li>\n    <li><strong>E-Bike Theft (East Palo Alto):</strong> An electric bicycle was reported stolen overnight from an apartment complex at 1735 Woodland Avenue.</li>\n    <li><strong>Strong-Arm Theft (East Palo Alto):</strong> A juvenile on a gray bicycle snatched an item an individual was attempting to sell at 2612 Zandaza Street and fled toward Illinois Street.</li>\n</ul>\n\n<p><strong>Suspicious Activity & Prowlers</strong></p>\n<ul>\n    <li><strong>Repeated Suspicious Person (Atherton):</strong> A resident at 199 Oak Grove reported that a subject had been repeatedly appearing at their gate over several days, claiming to be trying to deliver a package.</li>\n    <li><strong>Suspicious Drone (Atherton):</strong> A resident at 1045 Cadillac reported a drone hovering outside their window, shining a light directly through their blackout curtains.</li>\n    <li><strong>Suspicious Person (Menlo Park):</strong> Units checked the North lot area near the Menlo Park Library early in the morning for reports of a man screaming.</li>\n</ul>",
+      "avg_score": 1.0,
+      "scores": [
+        {
+          "judge": "Claude",
+          "score": 1,
+          "reason": "Analysis fabricates major violent incidents (armed suspects, high-speed pursuit, machete/sword attacks) entirely absent from transcripts; transcripts contain only routine vehicle registration checks and heavily garbled dispatch chatter."
+        }
+      ]
+    }
+  }
+}
