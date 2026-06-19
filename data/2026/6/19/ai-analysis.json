@@ -1,0 +1,27 @@
+{
+  "date": "2026-06-19",
+  "generated_at": "Jun 19, 2026 08:01 AM PT",
+  "models": {
+    "Claude": {
+      "analysis": "<p><strong>Summary of Notable Incidents (Jun 18-19)</strong></p>\n\n<ul>\n<li><strong>Arson / Property Damage</strong> (Jun 19, ~1:51 AM, 1010 Alma area, MPPD): Subject burned down canopies and fled toward 7-Eleven. Male in all black clothing. Case #1290.</li>\n\n<li><strong>Retail Theft & Robbery</strong> (Jun 18, 1:33\u20132:00 PM, Willows Market on Middlefield, MPPD): Repeat suspect Nitin Sharma (~50M) and female (~40s) concealing wine in bags. Became robbery (242) when RP attempted to stop them. Suspect vehicle: white Toyota Corolla with flat tire, fled south on Woodland. Vehicle eventually tracked to East Palo Alto with RP authorization. Cross-referenced with earlier 242 from Safeway on Jun 13. Case #1283.</li>\n\n<li><strong>Indecent Exposure</strong> (Jun 18, 11:32 AM, Willow Oaks Park, MPPD): Adult male (black shirt, green shorts) staring at children with inappropriate hand behavior.</li>\n\n<li><strong>Assault on Minor</strong> (Jun 18, 4:11 PM, 1837 Clark, East Palo Alto): 13-year-old chased home by 6\u20137 teenage boys (3 identified: Massey, Freddy, Charlie). History of CPS/abuse concerns at address. Case #1727.</li>\n\n<li><strong>Suspicious Vehicle</strong> (Jun 18, 4:38 PM, Community Center area, East Palo Alto): Mercedes 4-door making repeated turns; RP suspects drug activity.</li>\n\n<li><strong>Mental Health Crisis</strong> (Jun 18, 10:42 AM, 1805 East Bay Shore, East Palo Alto): Subject recently released from psychiatric hold (5150 on Jun 13), exhibiting acute distress; transported to hospital.</li>\n</ul>\n\n<p><strong>Locations near Menlo Oaks:</strong> Alma area (arson), Middlefield/Willows Market (robbery), Coleman Ave (inspection call), Willow Oaks Park.</p>",
+      "avg_score": 2.0,
+      "scores": [
+        {
+          "judge": "Claude",
+          "score": 2,
+          "reason": "Only the arson incident (case #1290) is verifiable from transcripts; 5 of 6 incidents (retail theft, indecent exposure, assault, suspicious vehicle, mental health crisis) are hallucinated\u2014not present in provided scanner data."
+        }
+      ]
+    },
+    "Codex": {
+      "analysis": null,
+      "avg_score": null,
+      "scores": []
+    },
+    "Gemini": {
+      "analysis": null,
+      "avg_score": null,
+      "scores": []
+    }
+  }
+}
