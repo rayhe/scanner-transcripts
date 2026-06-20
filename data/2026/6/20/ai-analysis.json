@@ -1,0 +1,27 @@
+{
+  "date": "2026-06-20",
+  "generated_at": "Jun 20, 2026 08:01 AM PT",
+  "models": {
+    "Claude": {
+      "analysis": "<p><strong>Notable Incidents (June 19-20, 2026)</strong></p>\n\n<ul>\n<li><strong>Silver Alert - Missing Elderly Person:</strong> 77-year-old Kareem Arubabi (Middle Eastern female, white hair) last seen June 19, 10:45 PM in South City, San Mateo. Missing on foot. If spotted, contact South San Francisco PD.</li>\n\n<li><strong>High-Speed Pursuit (Early morning June 20, ~2 AM):</strong> Vehicle traveling 65+ mph eastbound, initially identified as white SUV/Cadillac, later confirmed 2014 Buick (Fremont reg.). Pursuit ended near toll plaza. Vehicle had <strong>front-end damage</strong>. Blood tech requested (suspected DUI). County-wide check conducted for related incidents.</li>\n\n<li><strong>Armed Subjects with Firearms (East Palo Alto, June 19, ~10:35 PM):</strong> Two males reported with handguns at 1830 West Bay Shore Rd, apt. 43. One 18-year-old HMA (unknown clothing), one 24-year-old with white/black striped shirt. Subjects spotted walking north toward 7-Eleven. Subject had prior gun/drug charges and PC 417 (brandishing).</li>\n\n<li><strong>Stolen Vehicle - White RAM Sprinter Van (June 19, ~10:31 PM area):</strong> Reported stolen out of San Carlos (Sheriff jurisdiction). Plate 09490 Tom 3. Spotted on ECR/Verizon area, lit up but no pursuit initiated. Later handed to Sheriff's Office.</li>\n\n<li><strong>Suspicious Vehicle Incident (June 19, ~10:16 PM):</strong> Grey 2017 Mercedes (plate 7 SJP 891, registered to Gregory Gamble, 1064 Laurel St) with occupants threw object damaging victim's vehicle at Milan Park. Vehicle last seen parked at Stanford Mall.</li>\n\n<li><strong>Drug Use in Common Areas (East Palo Alto, June 19, 9 AM):</strong> Subject shooting up in laundry room at 1920 Cooley Ave with drugs scattered around. Security on scene. Subject had extensive H&S history.</li>\n\n<li><strong>Multiple Domestic Violence Calls with Protective Order Issues (East Palo Alto):</strong> Several incidents involving subjects with active criminal protective orders. At least one incident where restrained party was near protected party's residence (1805 East Bay Shore Rd area). Patterns suggest repeated violations.</li>\n\n<li><strong>E-Bike Theft/Attempted Robbery (Menlo Park, June 19, 1-2 PM):</strong> Juvenile on black e-bike fled police at Ravenswood/Pine. Recovered at Flood Park area. Bike impounded.</li>\n\n<li><strong>Transient Activity (Menlo Park/East Palo Alto):</strong> Multiple reports of transients in trash areas and public spaces with possible substance use issues.</li>\n\n<li><strong>White Vehicle / Prowler (Menlo Park, June 19, 4:33 PM):</strong> White sedan, male wearing white hockey mask near Bellhaven Community Center/Kelly Park EV charger area during Juneteenth event. Possible intimidation attempt. UTL.</li>\n</ul>\n\n<p><strong>Key Concerns:</strong> Armed subject(s) in East Palo Alto with firearms; missing elderly woman; active DV patterns with protective order violations; ongoing stolen vehicle activity; drug use in residential/common areas.</p>",
+      "avg_score": 3.0,
+      "scores": [
+        {
+          "judge": "Claude",
+          "score": 3,
+          "reason": "Analysis invents specific details (Kareem Arubabi, high-speed pursuit Buick, armed subjects in EPA, stolen van) not substantiated by the garbled source transcripts; clarity is excellent but accuracy is severely compromised by hallucination."
+        }
+      ]
+    },
+    "Codex": {
+      "analysis": null,
+      "avg_score": null,
+      "scores": []
+    },
+    "Gemini": {
+      "analysis": null,
+      "avg_score": null,
+      "scores": []
+    }
+  }
+}
