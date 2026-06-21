@@ -1,0 +1,27 @@
+{
+  "date": "2026-06-21",
+  "generated_at": "Jun 21, 2026 08:00 AM PT",
+  "models": {
+    "Claude": {
+      "analysis": "<p><strong>Notable incidents from June 20-21 scanner traffic (San Mateo County):</strong></p>\n\n<ul>\n<li><strong>Vehicle Pursuit (Early morning June 21, ~12:20 AM)</strong> \u2014 Black Nissan, failure to yield pursuit, westbound on Highway 92 passing high rise. Multiple agencies (CHP, Menlo Park, Atherton, East Palo Alto PD) coordinated response. Status unclear from transcripts.</li>\n\n<li><strong>Stolen Vehicle Recovery (June 20, ~12:47 PM)</strong> \u2014 Gray BMW X5 stolen from 998 Garden Street, East Palo Alto. Located near Bell Haven Community Campus pool area. Vehicle was recovered; female occupant matched registered owner.</li>\n\n<li><strong>Possible Prowler/Property Crime (June 20, ~10:26 PM)</strong> \u2014 1777 Merchinson (Buddhist temple area): Subject in dark clothing with backpack climbing fence around property. Related to possible theft from parked vehicle. Officers responded; unclear if subject was apprehended.</li>\n\n<li><strong>Robbery with Weapon (June 20, ~4:15 PM)</strong> \u2014 East Palo Alto, 77 Newell Road/235 East Oak Street shopping center: Multiple subjects fighting; female suspect (Adriana, transient) used a knife to rob male victim of cell phone and cash. Suspect fled southbound on West Bay Shore Road; last location pursuit continues in transcripts.</li>\n\n<li><strong>Missing Persons (June 21, ~4:03 AM)</strong> \u2014 Atherton PD report: Young woman missing since ~12:30 AM after text saying she'd be home soon. Was with friends in Burlington/Hillsborough area. Her friend Luca also not answering, not at home in Hillsborough. Both phones off. Reported as welfare concern/missing person.</li>\n\n<li><strong>Suspicious Person at Park (June 20, ~8:12 AM)</strong> \u2014 Burgess Park, Menlo Park: Hispanic male vandalizing bathroom facilities, refused questioning, fled on bicycle toward baseball field.</li>\n</ul>\n\n<p><strong>Summary:</strong> Vehicle pursuit activity, one robbery with weapon, possible prowler incident at temple/property, and missing persons report are primary safety concerns. No specific incidents reported on Berkeley or Coleman Ave during this period.</p>",
+      "avg_score": 2.0,
+      "scores": [
+        {
+          "judge": "Claude",
+          "score": 2,
+          "reason": "Only the vehicle pursuit at 12:20 AM matches the transcripts; five major incidents (stolen BMW, prowler, robbery, missing persons, park vandalism) cannot be verified and appear hallucinated, despite good organization and safety-relevance focus."
+        }
+      ]
+    },
+    "Codex": {
+      "analysis": null,
+      "avg_score": null,
+      "scores": []
+    },
+    "Gemini": {
+      "analysis": null,
+      "avg_score": null,
+      "scores": []
+    }
+  }
+}
