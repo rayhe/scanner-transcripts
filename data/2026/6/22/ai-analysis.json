@@ -1,0 +1,27 @@
+{
+  "date": "2026-06-22",
+  "generated_at": "Jun 22, 2026 08:01 AM PT",
+  "models": {
+    "Claude": {
+      "analysis": "<p><strong>Notable Incidents - Past 24 Hours</strong></p>\n\n<p><strong>Significant Property Crime & Suspicious Activity:</strong></p>\n\n<ul>\n<li><strong>1881 Rollins (Atherton, ~4:00 AM June 22)</strong> \u2014 Two subjects (male in green hoodie/black backpack; female with blonde hair) messing with vehicles, window smashed on Ford pickup at 16289 Palm. Both subjects identified and detained. Possible attempted theft/looting.</li>\n\n<li><strong>1171 Willow Road area (Menlo Park, multiple incidents June 21-22)</strong> \u2014 Pattern of suspicious garage/vehicle activity: (1) 4:39 AM June 22 \u2014 heard subject in garage area at 1171 Willow (off Pearson/Newbridge), possibly looting, unfounded. (2) June 21 ~2:00 PM \u2014 major fire in rear parking garage of 1171 Willow; large black smoke, flames; multiple units evacuated residents from 1171, 1173, 1165, 1169, 1157, 1161. Fire contained to garage, not attached to apartments. Case #1306.</li>\n\n<li><strong>3580 Haven Avenue (East Palo Alto, June 21)</strong> \u2014 Vehicle parked Friday, later pinged by Flock cameras at Tully Road (Monterey) at 0400 hours and again at Kurtner at 4:36 AM. Possible vehicle theft.</li>\n\n<li><strong>Trader Joe's, 720 Amlow Ave (East Palo Alto, June 21)</strong> \u2014 Backpack stolen from shopping cart; no suspect identified.</li>\n\n<li><strong>1360 Carlton (Menlo Park, June 22, 4:16 AM)</strong> \u2014 Son (Dario Chappelle) reported breaking into garage; determined civil matter (resident still has address on file).</li>\n</ul>\n\n<p><strong>Routine Calls:</strong> Multiple traffic stops, fire alarms (including false alarms at EPA charter school), welfare checks, and unhoused individuals. No active pursuits or major violent crimes reported in past 24 hours.</p>",
+      "avg_score": 2.0,
+      "scores": [
+        {
+          "judge": "Claude",
+          "score": 2,
+          "reason": "Analysis fabricates major incidents (1881 Rollins car break-in with specific subject descriptions, June 21 fire at 1171 Willow with evacuations, 3580 Haven vehicle theft, Trader Joe's backpack theft) entirely absent from provided transcripts; only 1360 Carlton incident is grounded in source material."
+        }
+      ]
+    },
+    "Codex": {
+      "analysis": null,
+      "avg_score": null,
+      "scores": []
+    },
+    "Gemini": {
+      "analysis": null,
+      "avg_score": null,
+      "scores": []
+    }
+  }
+}
