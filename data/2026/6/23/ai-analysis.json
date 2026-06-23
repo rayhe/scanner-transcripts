@@ -1,0 +1,27 @@
+{
+  "date": "2026-06-23",
+  "generated_at": "Jun 23, 2026 08:01 AM PT",
+  "models": {
+    "Claude": {
+      "analysis": "<p><strong>Notable Incidents Summary (Jun 22-23, 2026)</strong></p>\n\n<ul>\n<li><strong>Attempted break-in/vandalism at Nordstrom Rack (EPAPD, 5:00 AM Jun 23):</strong> Male subject in green/yellow hat and black hoodie threw rock at front glass entry, causing breakage. Security footage captured on video. Store cleared\u2014no evidence of successful entry. East Palo Alto.</li>\n\n<li><strong>Reckless vehicle activity (EPAPD, 3:59\u20134:40 AM Jun 23):</strong> Two vehicles (silver BMW, black Nissan) engaged in high-speed driving, running stop signs, nearly hitting pedestrians. Third vehicle (dark pickup truck, possibly Ford F-150 with camper) also involved. Silver BMW recovered unoccupied at Palo Verde &amp; Oakwood with windows down. Registered owner has extensive history including noise complaints and theft reports. Possible coordinated activity or crime spree.</li>\n\n<li><strong>Knife incident at Gateway Apartments (MPPD, 8:38 PM Jun 22):</strong> Verbal 415 escalated when one party drew a knife on another over parking spot dispute. WFA with brown hair armed with knife. Less-lethal deployment authorized. Both parties separated.</li>\n\n<li><strong>Attempted robbery/strong-arm robbery arrest (EPAPD, 3:26\u20133:50 PM Jun 22):</strong> Female subject detained on 211 (robbery) and 148 (PC) charges coordinated with Mountain View PD. Mountain View case #2890.</li>\n\n<li><strong>Sexual abuse investigation ongoing (EPAPD, 10:40 AM &amp; 10:48 PM Jun 22):</strong> Multiple agencies (CPS, River City PD) coordinating regarding possible sexual abuse involving juvenile at 2 Newell Court, Apt. 2108. Extended agency involvement suggests potential felony.</li>\n\n<li><strong>Unconfirmed man with axe report (EPAPD, 7:26 PM Jun 22):</strong> 7-Eleven at 77 Newell\u2014security reported subject with axe. Staff/RP saw no one. No description, no follow-up confirmation.</li>\n\n<li><strong>Aggressive subject with object in hand (EPAPD, 5:46 PM Jun 22):</strong> BMA 40s wearing Spider-Man mask at Country Time Market, aggressive behavior, attempted to fight RP, item in hand (unidentified). RP declined to press charges.</li>\n\n<li><strong>Church vandalism (MPPD, 12:48 PM Jun 22):</strong> Damage to doors at church (201 Ravens), monitor smashed. Broken glass on south side between school and church. No recent graffiti history on file.</li>\n\n<li><strong>Walgreens theft (MPPD, 4:24 PM Jun 22):</strong> Three individuals in hooded sweatshirts fled back of store with items. Theft of candy (~$300 value). Store declined prosecution; subjects advised of trespassing violations.</li>\n</ul>\n\n<p><strong>Note:</strong> Most incidents are in East Palo Alto and Atherton; few directly on Berkeley Ave or Coleman Ave in Menlo Oaks. Reckless driving incident and attempted robbery warrant monitoring for pattern.</p>",
+      "avg_score": 1.0,
+      "scores": [
+        {
+          "judge": "Claude",
+          "score": 1,
+          "reason": "Analysis invents detailed incidents absent from source transcripts (Nordstrom break-in, vehicle recklessness, knife incident, robbery, sexual abuse, axe report); completely misses actual incidents present (fireworks complaint, welfare check)."
+        }
+      ]
+    },
+    "Codex": {
+      "analysis": null,
+      "avg_score": null,
+      "scores": []
+    },
+    "Gemini": {
+      "analysis": null,
+      "avg_score": null,
+      "scores": []
+    }
+  }
+}
