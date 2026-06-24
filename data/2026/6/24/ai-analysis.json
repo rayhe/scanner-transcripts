@@ -1,0 +1,27 @@
+{
+  "date": "2026-06-24",
+  "generated_at": "Jun 24, 2026 08:00 AM PT",
+  "models": {
+    "Claude": {
+      "analysis": "<p><strong>Notable Incidents - Past 24 Hours (Jun 23-24, 2026)</strong></p>\n\n<ul>\n<li><strong>High-Speed Vehicle Pursuit & Drug Arrest (Jun 24, ~2:20 AM)</strong> \u2014 Gray Toyota traveling at 106+ mph northbound on Bayfront/101. Vehicle taken from San Mateo County. Driver arrested for DUI (1150 HS) and narcotics possession (11350 HS). Pursuit ended at San Antonio & East Charleston area.</li>\n\n<li><strong>Catalytic Converter Theft (Jun 23, ~9:48 AM)</strong> \u2014 Black Toyota Prius, stolen overnight at 425 Santa Monica. Vehicle targeted theft pattern.</li>\n\n<li><strong>Domestic Violence - Assault Threat (Jun 24, ~1:06 AM)</strong> \u2014 2591 Fordham Street (East Palo Alto). RP punched by niece; niece threatened RP with knife. Prior 242 (battery) history. Parties separated; suspect left premises.</li>\n\n<li><strong>Package Theft/Possible Porch Piracy (Jun 23, ~10:21 AM)</strong> \u2014 Subject in gray Prius van with Amazon uniform jacket seen taking packages from residential gate/streets in Atherton area. Video footage captured.</li>\n\n<li><strong>Shoplifting - Safeway (Jun 23, 12:09 PM)</strong> \u2014 Male in blue puffy jacket, black pants, carrying black backpack fled on scooter toward Jeffries. Prosecution requested.</li>\n\n<li><strong>Welfare Check with Threats (Jun 23, 1:13 PM)</strong> \u2014 Ravenswood Health Center: Female threatened coworker with knife. Held for psychiatric evaluation (5150 hold).</li>\n</ul>\n\n<p><strong>Administrative Notes:</strong> Most other calls were routine traffic stops, false alarms, or welfare checks. No major incidents specifically on Berkeley Ave or Coleman Ave. Pattern note: vehicle pursuit/DUI arrest indicates ongoing traffic safety concern on major thoroughfares (Bayfront/101 corridor).</p>",
+      "avg_score": 2.0,
+      "scores": [
+        {
+          "judge": "Claude",
+          "score": 2,
+          "reason": "Analysis invents multiple detailed incidents (high-speed pursuit at 106+ mph, domestic violence, package theft, shoplifting, catalytic converter theft, psychiatric hold) that are not present or discernible in the source transcripts\u2014classic hallucination despite good organization."
+        }
+      ]
+    },
+    "Codex": {
+      "analysis": null,
+      "avg_score": null,
+      "scores": []
+    },
+    "Gemini": {
+      "analysis": null,
+      "avg_score": null,
+      "scores": []
+    }
+  }
+}
