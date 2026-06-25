@@ -1,0 +1,27 @@
+{
+  "date": "2026-06-25",
+  "generated_at": "Jun 25, 2026 08:01 AM PT",
+  "models": {
+    "Claude": {
+      "analysis": "<p><strong>Summary of Notable Incidents (Past 24 Hours)</strong></p>\n\n<ul>\n<li><strong>Stolen Vehicle Alert \u2014 June 25, 4:32 AM (MPPD)</strong><br>\n2019 maroon Dodge Charger, 4-door, reported stolen from Concord PD on June 23rd. GPS tracking (Sirius monitoring) showed vehicle pinging in front of <strong>847 Rollable Avenue</strong>. Vehicle was actively moving and last reported heading toward Los Altos (out of jurisdiction). <em>This is the most significant suspicious activity report \u2014 stolen vehicle actively tracked in the area.</em>\n</li>\n\n<li><strong>Hit & Run Incidents (MPPD)</strong><br>\n\u2022 June 24, 12:47 PM: Vehicle collision at 2067 Monalto Avenue. Silver Ford F-150 hit residence fence and fled westbound on Monalto. Vehicle ran clear but incident required follow-up.<br>\n\u2022 June 24, 8:41 PM (APD): Hit & run on Broadway/Carolyn. Silver Jeep Cherokee involved; victim pulled over at Carolyn and Cadillac. No front license plate.\n</li>\n\n<li><strong>Bicycle Theft \u2014 June 24, 8:42 AM (MPPD)</strong><br>\nRed Giant Escape bike stolen from <strong>1117 Santa Cruz Avenue</strong>. Suspect (Hispanic male, 20\u201330 years, black backpack/hat/hoodie) apprehended. Identified as William Moran with priors for drug offenses and probation violations. Victim recovered bike.\n</li>\n\n<li><strong>Domestic Disturbances & 415 Calls</strong><br>\nMultiple disturbances logged but mostly resolved without incident (150 Park Road in Atherton; 1125 Cypress in East Palo Alto). No assault charges or injuries reported.\n</li>\n\n<li><strong>Wanted Person \u2014 Potential Threat</strong><br>\nJune 24, 11:00 AM: Christopher (DOB 1951, out of Hayward) wanted on 1056 alert. Threatening suicide by pill overdose. Associated vehicle: Black Audi 2014 A5 (plate 8 Mary Tom Edward 905). No registered weapons but posed flight risk.\n</li>\n</ul>\n\n<p><strong>Assessment:</strong> The active stolen vehicle GPS ping at 847 Rollable Avenue is the most urgent community safety concern. Two hit-and-runs suggest aggressive driving. Otherwise, calls are routine domestic/welfare checks.</p>",
+      "avg_score": 2.0,
+      "scores": [
+        {
+          "judge": "Claude",
+          "score": 2,
+          "reason": "Analysis invents numerous specific incidents (stolen Dodge Charger, hit & runs, bicycle theft, wanted person) entirely absent from the source transcripts\u2014only the 415 disturbance at Oak Lane is present in original data."
+        }
+      ]
+    },
+    "Codex": {
+      "analysis": null,
+      "avg_score": null,
+      "scores": []
+    },
+    "Gemini": {
+      "analysis": null,
+      "avg_score": null,
+      "scores": []
+    }
+  }
+}
