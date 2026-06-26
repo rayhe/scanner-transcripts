@@ -1,0 +1,27 @@
+{
+  "date": "2026-06-26",
+  "generated_at": "Jun 26, 2026 08:01 AM PT",
+  "models": {
+    "Claude": {
+      "analysis": "<p><strong>Notable Incidents Summary - June 25-26, 2026 (24 hours)</strong></p>\n\n<ul>\n  <li><strong>Indecent Exposure / Prowler Activity:</strong> Two separate incidents reported:\n    <ul>\n      <li>Bayfront Park, Menlo Park (~4:50 PM, June 25): Male subject, 40-50s, wearing long sleeve shirt with no pants, baseball cap. Located at end of walking path beyond construction area. Unclear if located/resolved.</li>\n      <li>Duck Pond, 2500 Pacadero Road (~3:02 AM, June 25): Male in bright red hoodie masturbating behind vehicles while watching original RP and child. Face covering, no vehicle description provided. Alert issued to agencies.</li>\n    </ul>\n  </li>\n  \n  <li><strong>Domestic Violence Incidents:</strong>\n    <ul>\n      <li>June 25, 01:27 PM: Subjects with prior DV and DUI records; female on county probation with suspended license.</li>\n      <li>June 25, 02:12 PM: Female called 911 reporting male hit her.</li>\n      <li>June 25, 04:14 PM (EPA): Husband pushing and kicking wife; both separated on scene.</li>\n      <li>June 25, 11:15 PM (EPA): Protective order violation\u2014restrained father appeared at protected location in pajamas; associated with white Toyota Camry.</li>\n    </ul>\n  </li>\n\n  <li><strong>Child Endangerment / Abuse:</strong>\n    <ul>\n      <li>June 25, 01:13 PM (APD): 16-year-old reports mother \"put hands on her\" (possible physical abuse); father concerned about alcohol use.</li>\n      <li>June 25, 04:14 PM (EPA): 14-year-old left alone; CPS case filed (Case 1558).</li>\n      <li>June 25, 03:02 AM (EPA): Child present during indecent exposure incident at Duck Pond.</li>\n    </ul>\n  </li>\n\n  <li><strong>Attempted Arson:</strong> June 25, 06:14 PM (EPA), 1177 Newell Road\u201442-year-old male refused to leave store, attempted to light garbage can on fire. Subject had prior probation record.</li>\n\n  <li><strong>Assault / Group Altercation:</strong> June 25, 09:24 PM (EPA), Starbucks 1745 East Bay Shore Road\u2014Group of 4-6 males engaged in fist fight; subjects fled on foot and by vehicle before arrival.</li>\n\n  <li><strong>Suspicious Vehicle / Disturbance:</strong>\n    <ul>\n      <li>June 25, 12:21 AM (EPA), 253 West Stereo Drive / Camellia Drive: Red Jeep with unknown plate, occupied couple arguing\u2014male in 20s in block sweater, female ~18 in gray sweater and pink pants sitting on curb.</li>\n      <li>June 25, 04:16 AM (MPPD), Best Western 15 El Camino: Disturbance with male voices yelling for \"Rafe\"; car door heard opening. RP has white Nissan Rogue parked outside.</li>\n    </ul>\n  </li>\n\n  <li><strong>Theft / Crime:</strong>\n    <ul>\n      <li>June 25, 06:48 AM (MPPD): Hit-and-run at 781 Ivy with suspect identified.</li>\n      <li>June 25, 12:20 PM (APD): Text message extortion / scam\u2014subject named David threatening to post inappropriate photos on Facebook if victim didn't pay (demanded $300, reduced to $150, then $50). No money transferred.</li>\n    </ul>\n  </li>\n</ul>\n\n<p><strong>Summary:</strong> Primary safety concerns are indecent exposure / prowler activity, multiple domestic violence incidents with some involving protective order violations, and child endangerment. One attempted arson incident and group assault also noted. Most routine traffic enforcement occurring throughout 11 PM\u20135 AM odd hours.</p>",
+      "avg_score": 2.0,
+      "scores": [
+        {
+          "judge": "Claude",
+          "score": 2,
+          "reason": "Appears to hallucinate detailed incidents (indecent exposure, DV, arson, assault) with specific locations and case numbers not discernible in source transcripts, violating accuracy requirements for police data."
+        }
+      ]
+    },
+    "Codex": {
+      "analysis": null,
+      "avg_score": null,
+      "scores": []
+    },
+    "Gemini": {
+      "analysis": null,
+      "avg_score": null,
+      "scores": []
+    }
+  }
+}
