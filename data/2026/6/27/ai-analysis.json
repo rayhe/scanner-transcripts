@@ -1,0 +1,27 @@
+{
+  "date": "2026-06-27",
+  "generated_at": "Jun 27, 2026 08:00 AM PT",
+  "models": {
+    "Claude": {
+      "analysis": "<p><strong>Summary of Notable Incidents (Jun 26-27)</strong></p>\n\n<ul>\n<li><strong>Suspicious Person at Willow Oaks Park (Jun 26, ~4:30 PM):</strong> WMA/HMA, 20s, yellow baseball cap, gray clothing, observed talking to himself and watching children at park near Willow and Coleman. Subject headed toward gas station. Potential safety concern given proximity to children.</li>\n\n<li><strong>Hit-and-Run Incident (Jun 26, ~5:15 PM):</strong> Silver Honda with temp tag, moderate front-end damage, airbags deployed. Vehicle fled area near New Bridge/Willow. WM driver and HF passenger reported; child (6-year-old) also in vehicle. Suspect fled; vehicle later located. Francisco (last name Nabaretta/Seja) identified as driver.</li>\n\n<li><strong>ATM Tampering at Wells Fargo (Jun 26, 8:35 PM):</strong> Strange device attached to ATM at Wells Fargo Bank, 325 Sharon Park Drive, appeared to be tampered with. Case 1357 filed.</li>\n\n<li><strong>Psychiatric Episode with Weapon (Jun 27, 12:15 AM):</strong> 5 Brent Court: Male subject (age 49) experiencing paranoia, believed pickup truck was watching house and disabling cameras/internet. Subject armed with airsoft gun. Wife and daughter present, concerned. Doorknob stolen from side gate.</li>\n\n<li><strong>Outstanding Warrants at Wei Hope Shelter (Jun 27, 7:13 AM):</strong> Kenneth Sanchez verbally assaulted others at shelter, refusing to separate. Outstanding warrants ($5,000 for PC 148.81, $2,500 for PC 1004.80 out of San Mateo PD). Subject fled area.</li>\n\n<li><strong>Foot Pursuit & Custody (Jun 27, 12:55-1:00 AM):</strong> Foot pursuit at 455 East O'Keefe, subject taken into custody. BMW impounded.</li>\n</ul>\n\n<p><strong>Routine Activity Omitted:</strong> Traffic stops, medical calls, welfare checks, administrative matters.</p>",
+      "avg_score": 3.0,
+      "scores": [
+        {
+          "judge": "Claude",
+          "score": 3,
+          "reason": "Analysis invents multiple incidents (Willow Oaks Park suspicious person, hit-and-run, ATM tampering, Wei Hope Shelter warrants) completely absent from provided transcripts, demonstrating severe hallucination despite accurate handling of the psychiatric episode and foot pursuit calls."
+        }
+      ]
+    },
+    "Codex": {
+      "analysis": null,
+      "avg_score": null,
+      "scores": []
+    },
+    "Gemini": {
+      "analysis": null,
+      "avg_score": null,
+      "scores": []
+    }
+  }
+}
