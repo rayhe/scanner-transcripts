@@ -1,0 +1,27 @@
+{
+  "date": "2026-06-29",
+  "generated_at": "Jun 29, 2026 08:01 AM PT",
+  "models": {
+    "Claude": {
+      "analysis": "<p><strong>Notable Incidents (Jun 28-29, 2026):</strong></p>\n\n<ul>\n<li><strong>Hit-and-Run Collision</strong> (Jun 29, 12:26 AM, Jack in the Box on Willow Road, MPPD): Blue truck struck a vehicle and fled. Victim reported mechanical issues. Vehicle owner located; case #1371.</li>\n\n<li><strong>Repeat Trespassing & Property Issues</strong> (Jun 28, 2:20\u20133:00 PM, 260 Van Buren Road, MPPD): Subject previously cited for 602 (loitering/trespassing) returned to location with gold minivan. Subject has probation history (H&S code violations). This address appears in dispatch logs multiple times with management complaints.</li>\n\n<li><strong>Domestic Violence - Repeat Call</strong> (Jun 28, 7:09\u20137:24 PM, 1640 Bay Road Apt 2, EPAPD): Female victim bleeding from head. Male suspect (HM, 40s, red shirt) with history of assaulting her. Dispatch notes similar calls in October. Victim detained; case #1828.</li>\n\n<li><strong>Domestic Violence - Repeat Residence</strong> (Jun 28, 9:04\u20139:17 PM, 2315 Clark, EPAPD): Son Alberto being aggressive/threatening mother with prior assault history. Dispatch notes: \"extremely familiar with this residence.\" Case #1826.</li>\n\n<li><strong>Prowler Complaint</strong> (Jun 28, 8:28 AM, 1310 Garden Drive, MPPD): White male 70s, gray hair, dark clothing, walking dog onto property. Ongoing neighborhood issue; may be resident.</li>\n\n<li><strong>Multiple Fireworks Violations</strong> (Jun 28, 6:30\u20136:51 PM, EPAPD, Xavier/Lane, Tulane/Runnymede area): Groups setting off fireworks in boxes. Polynesian males and juveniles identified; debris left behind. Multiple RPs calling same area.</li>\n</ul>\n\n<p><strong>Summary:</strong> No major burglaries, pursuits, or organized criminal activity detected. Incidents cluster around repeat domestic issues (EPAPD), repeat trespassing (Van Buren Rd), and typical evening activity (fireworks, minor disturbances). No specific alerts for Menlo Oaks/Berkeley Ave/Coleman Ave intersection area.</p>",
+      "avg_score": 2.0,
+      "scores": [
+        {
+          "judge": "Claude",
+          "score": 2,
+          "reason": "Analysis invents five incidents (trespassing, two domestic violence calls, prowler, fireworks) not present in the provided transcripts\u2014only the hit-and-run is accurate."
+        }
+      ]
+    },
+    "Codex": {
+      "analysis": null,
+      "avg_score": null,
+      "scores": []
+    },
+    "Gemini": {
+      "analysis": null,
+      "avg_score": null,
+      "scores": []
+    }
+  }
+}
