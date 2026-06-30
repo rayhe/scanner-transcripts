@@ -1,0 +1,27 @@
+{
+  "date": "2026-06-30",
+  "generated_at": "Jun 30, 2026 08:00 AM PT",
+  "models": {
+    "Claude": {
+      "analysis": "<p><strong>Notable incidents from past 24 hours (Jun 29-30):</strong></p>\n\n<ul>\n<li><strong>Hit-and-run, Oak Grove/El Camino area (Menlo Park):</strong> White Tesla (plate 9GCR542) struck 14-year-old bicyclist. Driver failed to exchange information and left the scene. Found eating at restaurant on Oak Grove.</li>\n\n<li><strong>Suspicious person with concealed weapon, Oak Grove area:</strong> Hispanic male, 30s, thin build, all black clothing with concealed metal object in waistband spotted near 450 Oak Grove (Bistro Vida area). Subject fled on foot; no weapon recovered, no arrests.</li>\n\n<li><strong>Machete incident, Alberni/Walmart area (East Palo Alto):</strong> Subject hit own vehicle with machete, confronted PG&E workers. Machete located on front porch. Subject refused to exit residence but no threat level escalation. Known address with extensive prior calls (welfare checks, domestics, aggressive dogs). Subject previously arrested for lookalike firearm (2024).</li>\n\n<li><strong>Multiple burglary alarms, Menlo Park:</strong> Alarms triggered at Cascade Drive, Sandhill Road, Laurel Street, and Cafe Vivan (Santa Cruz). Most cleared as false alarms or accidental activations.</li>\n\n<li><strong>Hit-and-run, ECR/Oak Grove area (Menlo Park, Jun 29):</strong> White Tesla hit 14-year-old on bike; driver struck again later same day at El Camino/Oak Grove.</li>\n\n<li><strong>Shoplifting, Safeway 525 ECR:</strong> Subject in wheelchair took miscellaneous items, heading southbound. Field identification match made.</li>\n\n<li><strong>Unhoused individuals:</strong> Multiple reports of transient subjects blocking driveways and parking areas in Menlo Park and Atherton.</li>\n</ul>\n\n<p><strong>No major patterns identified beyond typical activity for the area.</strong></p>",
+      "avg_score": 2.0,
+      "scores": [
+        {
+          "judge": "Claude",
+          "score": 2,
+          "reason": "Analysis fabricates specific incidents (hit-and-run with Tesla plate, machete, shoplifting, weapon sightings) not extractable from the garbled source transcripts; only tangential match is 'Cascade Drive' location mentioned in passing."
+        }
+      ]
+    },
+    "Codex": {
+      "analysis": null,
+      "avg_score": null,
+      "scores": []
+    },
+    "Gemini": {
+      "analysis": null,
+      "avg_score": null,
+      "scores": []
+    }
+  }
+}
