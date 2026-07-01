@@ -1,0 +1,27 @@
+{
+  "date": "2026-07-01",
+  "generated_at": "Jul 01, 2026 08:01 AM PT",
+  "models": {
+    "Claude": {
+      "analysis": "<p><strong>Notable Incidents \u2013 July 1, 2026 (Past 24 Hours)</strong></p>\n\n<ul>\n  <li><strong>AMBER ALERT (Multi-Agency)</strong> \u2013 1-year-old child (Maxence Sirawa) taken by mother Marina Kazakova (42, WFA, 5'6\", 128 lbs). Last seen wearing black shirt and blue jeans. Vehicle: White 2016 Mazda CX-5 (plate: 7 S J W 989). Entered into missing person system. Alert activated June 28 @ ~0100 hrs.</li>\n\n  <li><strong>High-Speed Vehicle Pursuit (EPA)</strong> \u2013 ~1:00 AM: Pursuit over Dumbarton Bridge eastbound, speeds exceeding 100+ mph, suspect blew red lights. Vehicle: dark-colored Lexus (registration expired 6/26/2016, registered to 335 Azalea, Jamie Magana). Property has history of AOA and parking complaints.</li>\n\n  <li><strong>Suspicious Vehicle \u2013 Retail Theft Pattern (Multi-Area)</strong> \u2013 Dark gray Nissan Ultima (9XMU849, San Pablo reg) associated with theft at 1390 Burlingame Ave. Two Black female adults (20s, braids, blue masks, all black). Took multiple leggings, neckwear, pullovers. Recent FLOCK hit on Peninsula.</li>\n\n  <li><strong>Prowler / Home Casing (Menlo Park)</strong> \u2013 RP at 1030 Lassen Drive reports unknown subject repeatedly approaching door; suspects home is being \"cased\" for burglary (6/30, 8:22 PM).</li>\n\n  <li><strong>Suspected Armed Subject, Later Detained (EPA)</strong> \u2013 6/30, 9:30+ AM: Male subject in tan tactical vest in Cardenas area; confirmed to be carrying BB gun (not lethal). Warrants confirmed, subject detained.</li>\n\n  <li><strong>Assault / Spitting Incident (Chevron, 500 Willow Rd)</strong> \u2013 6/30, 9:51 PM: Female reported ex-boyfriend Calvin Horton attacking her and spitting on her. Subject last seen walking away wearing red shirt and blue jeans.</li>\n\n  <li><strong>Domestic Violence w/ Child Present (1150 Carlton)</strong> \u2013 6/30, 9:26 PM: RP witnessed male hitting female; child heard yelling \"stop dad stop.\" Officers upgraded to Code 3 response.</li>\n\n  <li><strong>Armed Domestic Disturbance (2356 Palo Verde)</strong> \u2013 6/30, 11:48+ PM: Subject Adrian (approx. age 20, likely under influence/H&S) holding kitchen knife in front yard, shirtless, blue shorts. RP injured (hit by subject). Subject eventually compliant inside home.</li>\n\n  <li><strong>Stolen Vehicle Recovered</strong> \u2013 6/30, 5:47 PM: White RAM Pro Master van (reported stolen, stripped of ignition) recovered at Bell & Euclid (EPA). Released to registered owner.</li>\n\n  <li><strong>Grass Fire w/ Juvenile Suspects (Cooley Landing, 2100 Bay Road)</strong> \u2013 6/30, 5:54 PM: Grass and leaves fire, spreading, teens fled scene. Three juveniles detained with fireworks. Fire contained by fire department.</li>\n\n  <li><strong>Minor Injury Hit-and-Run (Clark/Woodland area, EPA)</strong> \u2013 6/30, 8:21 PM: 10 Ford Minivan struck RP's black BMW. Driver: Male, 30s, bald, last seen embarcadero/Santa Francis area (Palo Alto). Vehicle plate identified, address follow-up conducted.</li>\n\n  <li><strong>Missing Child (EPA)</strong> \u2013 6/30, 3:42 PM: 11-year-old female (Kayla Toffi, Polynesian, ~5'2\", brown hair) left EPA library asking for directions to Millbrae, not found. Later contacted sister via laptop indicating she does not want to return home.</li>\n</ul>\n\n<p><strong>Summary:</strong> Significant activity includes AMBER Alert, high-speed pursuit, retail theft pattern (multi-jurisdiction), and escalating domestic violence. Weapon-involved and child-safety incidents noted. Multiple transient/welfare checks and mental health holds throughout period.</p>",
+      "avg_score": 2.0,
+      "scores": [
+        {
+          "judge": "Claude",
+          "score": 2,
+          "reason": "Analysis invents nearly all specific incidents (AMBER alert, pursuits, assaults, DV calls) with fabricated names, addresses, and details absent from the garbled transcripts\u2014critical accuracy failure despite good organization."
+        }
+      ]
+    },
+    "Codex": {
+      "analysis": null,
+      "avg_score": null,
+      "scores": []
+    },
+    "Gemini": {
+      "analysis": null,
+      "avg_score": null,
+      "scores": []
+    }
+  }
+}
