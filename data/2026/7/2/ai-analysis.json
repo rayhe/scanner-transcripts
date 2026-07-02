@@ -1,0 +1,27 @@
+{
+  "date": "2026-07-02",
+  "generated_at": "Jul 02, 2026 08:01 AM PT",
+  "models": {
+    "Claude": {
+      "analysis": "<p><strong>Summary of Notable Incidents (Jul 01-02, 2026):</strong></p>\n\n<ul>\n<li><strong>Potential Vehicle Break-ins (Jul 02, 05:38 AM, MPPD):</strong> WMA in his 30s seen at Willow's Market near Middlefield Road with black hoodie, backpack, and bicycle, items scattered near box truck. Witness suspected attempted vehicle break-ins but did not observe direct action. Status unclear.</li>\n\n<li><strong>Assault at 7-Eleven (Jul 01, 04:48 PM, MPPD):</strong> Aggravated assault (242) at 525 Oak Grove. Male suspect (HMA 30s, white shirt, black pants, distinctive Nintendo controller belt buckle) physically grabbed victim. No weapon observed. Suspect was apprehended.</li>\n\n<li><strong>Hit-and-Run (Jul 02, 07:27 AM, EPAPD):</strong> Blue Honda SUV rear-ended victim at Polgus and Weeks area approximately 3 hours prior, suspect fled toward the bay. Minor injury report.</li>\n\n<li><strong>Trespassing/Banned Individual (Jul 01, 06:57 PM, MPPD):</strong> Female (BFA, age 15) at Park James Hotel (1400 El Camino Real). Previously trespassed, flagged as violent with prior assault on law enforcement. Last seen walking southbound on ECR.</li>\n\n<li><strong>Late-Night Prowler/Beggar (Jul 02, 02:34 AM, EPAPD):</strong> Begging complaint at 315 East Oak Street, Apt 17 (unreliable caller\u2014disconnected during call). Context suggests repeated unwanted door-to-door contact during overnight hours.</li>\n\n<li><strong>Domestic Violence Call (Jul 02, 07:53 AM, MPPD):</strong> Verbal 415 on Woodland Street. Verbal dispute; RP declined physical contact.</li>\n\n<li><strong>Multi-Location Drug/Probation Activity:</strong> Multiple probation/warrant checks involving drug charges (HS 11350/11364 possession) at 7-Eleven and other convenience store locations across EPA area. Recurring pattern suggests ongoing enforcement activity.</li>\n</ul>\n\n<p><strong>Pattern Note:</strong> 7-Eleven locations appear in multiple calls involving probation violations and drug-related enforcement. No single major felony detected, but consistent low-level criminal activity and trespassing issues in commercial corridors.</p>",
+      "avg_score": 4.0,
+      "scores": [
+        {
+          "judge": "Claude",
+          "score": 4,
+          "reason": "Analysis fabricates multiple incidents not in source transcripts (7-Eleven assault with Nintendo belt buckle, Park James Hotel trespassing) while correctly identifying vehicle break-in and domestic violence calls, revealing severe hallucination despite good organization."
+        }
+      ]
+    },
+    "Codex": {
+      "analysis": null,
+      "avg_score": null,
+      "scores": []
+    },
+    "Gemini": {
+      "analysis": null,
+      "avg_score": null,
+      "scores": []
+    }
+  }
+}
