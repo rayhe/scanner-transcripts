@@ -1,0 +1,27 @@
+{
+  "date": "2026-07-04",
+  "generated_at": "Jul 04, 2026 08:01 AM PT",
+  "models": {
+    "Claude": {
+      "analysis": "<p><strong>Summary of Notable Incidents (Jul 3-4, 2026)</strong></p>\n\n<ul>\n<li><strong>Officer Safety Broadcast \u2013 Armed Suspect (Jul 3, 11:15 PM):</strong> Black male with black 9mm Glock firearm at 200 Leathup Street, Redwood City. Wearing black hoodie, black shorts with white stripes, carrying orange Gatorade bottle. Fled on foot. Caution advised. <em>[Redwood City jurisdiction, not Menlo Oaks area]</em></li>\n\n<li><strong>Burglary Attempt \u2013 650 Live Oak (Jul 3, 8:07 AM):</strong> Follow-up to arrest of suspect Del Wing Hernandez. Suspect returned to property, attempted multiple locked doors, left when confronted by RP and friends. Suspect described as HM late 20s, 5'6\", mustache, all black clothing. Last seen in parking lot between Live Oak and Robles.</li>\n\n<li><strong>Wells Fargo Bank \u2013 Communication Loss (Jul 4, 2:28 AM):</strong> 325 Sham Park Drive reported loss of all communication and camera feeds. Later determined to be power outage; issue resolved.</li>\n\n<li><strong>Domestic Dispute with Firearm Allegation (Jul 4, 6:53 AM):</strong> 3639 Haven \u2013 two brothers arguing. Andrew claims Stephen has firearm; Stephen denies. Verbal altercation only.</li>\n\n<li><strong>Potential Vehicle Theft (Jul 3, 3:35 PM):</strong> Red van parked near sound wall at 1115 Willow. Vehicle unoccupied, unlocked with keys in ignition. Owner on supervised probation with criminal protective order.</li>\n\n<li><strong>Child Physical Abuse Report (Jul 3, 9:42 AM):</strong> 245 East O'kee Street, apartment 3. CVS requesting police follow-up regarding suspected physical abuse of 3-year-old child.</li>\n\n<li><strong>ICE Impersonation / Threats (Jul 3, 10:25 AM):</strong> Woman reports being followed by multiple males claiming to be ICE agents. One suspect in dark red Charger, threatening to break vehicle window. RP sought safety at police station.</li>\n\n<li><strong>Financial Theft (Jul 3, 9:52 PM):</strong> 2218 Terra Villa \u2013 RP's husband stole her debit card and withdrew $1,700. Suspect not on scene.</li>\n\n<li><strong>Vehicle-Motorcycle Collision (Jul 3, 6:10 PM):</strong> Woodland location. Motorcyclist required medical assistance.</li>\n\n<li><strong>Chronic Noise Complaint (Jul 4, 12:03 AM):</strong> Light Tree Apartments, 1805 East Bay Shore, Unit 1308. Recurring issue noted by RP.</li>\n</ul>\n\n<p><strong>No direct incidents reported for Berkeley Ave / Coleman Ave area. Most activity in broader Menlo Park, Atherton, and East Palo Alto jurisdictions.</strong></p>",
+      "avg_score": 3.0,
+      "scores": [
+        {
+          "judge": "Claude",
+          "score": 3,
+          "reason": "Analysis fabricates multiple incidents (burglary at 650 Live Oak, vehicle theft at 1115 Willow, child abuse at 245 East O'kee, ICE impersonation, financial theft at 2218 Terra Villa) entirely absent from provided transcripts, severely undermining accuracy despite adequate clarity and relevance."
+        }
+      ]
+    },
+    "Codex": {
+      "analysis": null,
+      "avg_score": null,
+      "scores": []
+    },
+    "Gemini": {
+      "analysis": null,
+      "avg_score": null,
+      "scores": []
+    }
+  }
+}
