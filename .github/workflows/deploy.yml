@@ -1,0 +1,59 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Prepare partial deploy (recent audio only)
+        run: |
+          mkdir -p _site
+          cp index.html _site/
+          cp -r data _site/
+          cp -r samples _site/
+          touch _site/.nojekyll
+
+          # Copy only last 10 days of audio to keep under 1 GB Pages limit
+          # Audio grows ~70 MB/day; 10 days ≈ 700 MB, well under limit
+          for i in $(seq 0 9); do
+            D=$(date -d "$i days ago" +%Y/%-m/%-d)
+            SRC="audio/$D"
+            if [ -d "$SRC" ]; then
+              mkdir -p "_site/audio/$D"
+              cp -r "$SRC"/* "_site/audio/$D/"
+            fi
+          done
+
+          echo "=== Deploy artifact size ==="
+          du -sh _site/
+          du -sh _site/audio/ 2>/dev/null || echo "No audio dir"
+          du -sh _site/data/
+          find _site -type f | wc -l
+          echo "files total"
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+      - uses: actions/deploy-pages@v4
+        id: deployment
