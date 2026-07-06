@@ -1,0 +1,27 @@
+{
+  "date": "2026-07-06",
+  "generated_at": "Jul 06, 2026 08:01 AM PT",
+  "models": {
+    "Claude": {
+      "analysis": "<p><strong>Summary of Scanner Activity (July 5-6, 2026)</strong></p>\n\n<p>Transcript quality is poor due to auto-transcription from radio traffic. Most activity represents routine patrol and traffic stops. Notable incidents identified:</p>\n\n<ul>\n<li><strong>Stolen Firearm Report</strong> \u2013 East Palo Alto, 2219 Capital Street. RP reported stolen firearm; subject with criminal history (multiple prior bookings) identified. Case 1922.</li>\n\n<li><strong>Domestic Violence Call</strong> \u2013 East Palo Alto, 1957 Cooley Avenue. Active domestic violence incident; male reportedly striking female at call start. Victim refused medics. Suspect with prior DV restraining order located. Case 2735.</li>\n\n<li><strong>Child Welfare Issue</strong> \u2013 East Palo Alto, East Bay Shore area near public storage. 7-year-old found running in roadway; mother located shortly after in burgundy vehicle. Child returned safely. Case 1921.</li>\n\n<li><strong>Laser at Aircraft</strong> \u2013 East Palo Alto, dead end of Fordham Street. FAA reported person pointing laser at aircraft. CHP responded; no suspect apprehended. Case 1924.</li>\n\n<li><strong>False Alarm</strong> \u2013 Cardinas Market, 1731 East Bay Shore Road (East Palo Alto). Hold-up alarm; determined to be false alarm after officer contact with store manager.</li>\n\n<li><strong>Multiple Noise Complaints</strong> \u2013 Scattered across all jurisdictions; mostly resolved on-scene.</li>\n</ul>\n\n<p><strong>No significant burglaries, vehicle pursuits, or suspicious activity specifically reported near Menlo Oaks/Berkeley Ave area during this period.</strong></p>",
+      "avg_score": 2.0,
+      "scores": [
+        {
+          "judge": "Claude",
+          "score": 2,
+          "reason": "Analysis invents multiple incidents (stolen firearm, domestic violence, child welfare, laser at aircraft) not present in the garbled transcripts, which contain only routine license plate checks and dispatch chatter; a severe hallucination issue despite clear organization."
+        }
+      ]
+    },
+    "Codex": {
+      "analysis": null,
+      "avg_score": null,
+      "scores": []
+    },
+    "Gemini": {
+      "analysis": null,
+      "avg_score": null,
+      "scores": []
+    }
+  }
+}
