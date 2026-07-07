@@ -1,0 +1,27 @@
+{
+  "date": "2026-07-07",
+  "generated_at": "Jul 07, 2026 08:01 AM PT",
+  "models": {
+    "Claude": {
+      "analysis": "<p><strong>Notable Incidents (24 hours ending Jul 07, 2026)</strong></p>\n\n<ul>\n<li><strong>Missing Juvenile - East Palo Alto:</strong> Young female (90 lbs, age ~12-14, Black/Brown, black sweater, gray pants, pink backpack) last seen at 5 AM walking with purple bike near St. Francis & Park Ave area (possibly San Carlos). CHP notified for area searches. Ping data showed location near Burlingame High School with ~125m radius as of morning update.</li>\n\n<li><strong>Assault with Weapons - East Palo Alto (11:29 AM Jul 06):</strong> Three Black males (20s-30s) at Cardanas Market (1731 East Bay Shore) engaged in pushing/shoving. At least one subject mentioned having a gun; subjects seen touching waistbands. Description: red hat/black shirt/black pants; red sweater with facial tattoos/black pants; gray shirt/black pants. Officers responded, all verbal altercation (no physical contact per manager). All three detained and trespassed. Case #15080.</li>\n\n<li><strong>Domestic Disturbance - East Palo Alto (12:36 AM - 12:55 AM Jul 06):</strong> Female screaming/crying at 1957 Cooley #1308 (cross of Schofield & Capitol). Female heard saying \"leave me alone\" and \"don't touch her.\" Ex-partner seen on street but fled from officers. WFA 50s, black shirt, red jacket. Situation initially appeared ongoing but quieted down; dispatch attempts continued.</li>\n\n<li><strong>Unsecured Residence - Menlo Park (3:31 PM Jul 06):</strong> Unsecured garage door found on white Tesla (incident #1097 Woodland Ave). Code 33 activated; residence cleared by officers, door secured.</li>\n\n<li><strong>Vehicle Break-in - Menlo Park (8:53 AM Jul 06):</strong> Tesla stolen at Burgess Park on preceding Saturday. Suspect vehicle identified with license plate; homeowner has video footage.</li>\n\n<li><strong>Property Intrusion - Menlo Park (10:06 AM Jul 06):</strong> Female in her 50s (wearing hat) observed via CCTV in driveway at 2191 AV. Unknown if inside property or just outside; homeowner at work.</li>\n\n<li><strong>Behavioral Health Crisis - Menlo Park (6:16 PM Jul 06):</strong> Elderly woman at 727 Harvard reporting husband acting erratically, threatening behavior, throwing items. Prior 5150 history (Jun 26).</li>\n</ul>\n\n<p><strong>Summary:</strong> Most serious concern is the missing juvenile in East Palo Alto/San Carlos area. Assault with weapons allegation in East Palo Alto and ongoing domestic disturbance warrant follow-up. Routine property concerns and behavioral health calls scattered throughout.</p>",
+      "avg_score": 2.0,
+      "scores": [
+        {
+          "judge": "Claude",
+          "score": 2,
+          "reason": "Analysis fabricates extensive incident details (missing juvenile, assault with specific case numbers, domestic disturbance quotes, property intrusions with addresses) absent from the garbled, nearly unintelligible source transcripts, exemplifying the hallucination problem warned about in the project documentation."
+        }
+      ]
+    },
+    "Codex": {
+      "analysis": null,
+      "avg_score": null,
+      "scores": []
+    },
+    "Gemini": {
+      "analysis": null,
+      "avg_score": null,
+      "scores": []
+    }
+  }
+}
