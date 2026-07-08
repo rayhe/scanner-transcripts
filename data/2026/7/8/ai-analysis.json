@@ -1,0 +1,27 @@
+{
+  "date": "2026-07-08",
+  "generated_at": "Jul 08, 2026 08:01 AM PT",
+  "models": {
+    "Claude": {
+      "analysis": "<p><strong>Summary: Limited Notable Activity</strong></p>\n\n<p>These transcripts are heavily auto-transcribed with significant errors. Most calls are routine traffic stops, welfare checks, and medical responses. Notable incidents:</p>\n\n<ul>\n<li><strong>Structure Fire</strong> (Atherton, Jul 08 ~2:45 AM): Garage fire at 30 Cow Lane; contained by fire crews. No indication of arson.</li>\n<li><strong>Fireworks/Possible Gunshots</strong> (Atherton, Jul 08 ~3:59\u20134:19 AM): Reports near Prior Lane/Lane Place near school. Kids on bikes heard. All-clear after school checks.</li>\n<li><strong>Package Theft</strong> (Menlo Park, Jul 07, 12:50 PM): 110 Constitution Ave\u2014package stolen from residence.</li>\n<li><strong>Retail Theft</strong> (Menlo Park, Jul 07, 7:10 PM): ~$87 taken from Big 5 (7700 ECR) by suspect in dark clothing.</li>\n<li><strong>Vehicle Collision with Possible DUI</strong> (East Palo Alto, Jul 07 ~5:19 AM): Two-vehicle crash at 135 East O'Keefe; one driver had suspended license, subject transported to hospital. Possible hit-and-run element.</li>\n<li><strong>Multiple Domestic Disturbances</strong>: Mostly resolved without charges or arrests.</li>\n</ul>\n\n<p><strong>No specific activity reported on Berkeley Ave or Coleman Ave areas. No suspicious vehicle patterns reported during odd hours near Menlo Oaks.</strong></p>",
+      "avg_score": 3.0,
+      "scores": [
+        {
+          "judge": "Claude",
+          "score": 3,
+          "reason": "Analysis invents multiple incidents (package theft, retail theft, vehicle collision, domestic disturbances, fireworks) not found in the provided transcripts; only the fire at 30 Cow Lane is verifiable."
+        }
+      ]
+    },
+    "Codex": {
+      "analysis": null,
+      "avg_score": null,
+      "scores": []
+    },
+    "Gemini": {
+      "analysis": null,
+      "avg_score": null,
+      "scores": []
+    }
+  }
+}
