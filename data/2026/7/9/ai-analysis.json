@@ -1,0 +1,27 @@
+{
+  "date": "2026-07-09",
+  "generated_at": "Jul 09, 2026 08:01 AM PT",
+  "models": {
+    "Claude": {
+      "analysis": "<p><strong>Notable Incidents (Past 24 Hours)</strong></p>\n\n<ul>\n  <li>\n    <strong>Suspicious Male with Weapon (Jul 08, ~3:32 PM)</strong><br>\n    515 El Camino area (near Safeway). Male, possible mixed race, 20s, wearing black champion hoodie and gray tank top, spotted with large knife (described as machete-like), possibly under the influence of H&S. Reported as painting/scaring people in parking area. Subject last seen heading toward Safeway parking lot. Case #1463.\n  </li>\n  \n  <li>\n    <strong>Volatile Domestic Situation (Jul 08, ~8 AM)</strong><br>\n    Safeway parking lot, 525 El Camino. Female resident living in large RV in lot, volatile situation with male. Officers assisted with civil standby so resident could safely leave to Cora appointment.\n  </li>\n  \n  <li>\n    <strong>Possible Auto Burglary/Vehicle Intrusion (Jul 08, ~11:48 PM)</strong><br>\n    810 College. RP observed unknown male/Hispanic male, 30s, inside parked white Toyota Highlander in driveway. Subject possibly fled before officers arrived. Vehicle owner unsure if it was locked. Case #1467.\n  </li>\n  \n  <li>\n    <strong>Fire in Brushland (Jul 08, ~2:43 PM)</strong><br>\n    West of Extra Space Storage (1520 Willow/Hamilton area). Fire reported in brushes behind Hamilton Court. Fire personnel responded; cause undetermined. Case #1471.\n  </li>\n  \n  <li>\n    <strong>Additional Safeway Area Activity (Jul 08)</strong><br>\n    Starbucks at 1865 El Camino Real (APD): Subject suspected of using H&S, possibly armed, reported wearing red sweater with alcohol. Case #1747.\n  </li>\n</ul>\n\n<p><strong>Summary</strong><br>\nMost activity involved routine traffic enforcement and administrative calls. The knife incident at El Camino/Safeway warrants awareness\u2014suspect matched several name variations (Anthony Stewart/Stuart). No major burglaries, break-ins, or theft patterns reported in Menlo Oaks core area during this period. The brushfire incident and possible auto intrusion are the most concerning incidents for community safety.</p>",
+      "avg_score": 2.0,
+      "scores": [
+        {
+          "judge": "Claude",
+          "score": 2,
+          "reason": "Analysis fabricates multiple incidents and case numbers (1463, 1467, 1471, 1747) not present in the provided transcripts; only the Safeway subject matter (case 1469) appears in the actual audio."
+        }
+      ]
+    },
+    "Codex": {
+      "analysis": null,
+      "avg_score": null,
+      "scores": []
+    },
+    "Gemini": {
+      "analysis": null,
+      "avg_score": null,
+      "scores": []
+    }
+  }
+}
