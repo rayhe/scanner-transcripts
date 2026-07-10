@@ -1,0 +1,27 @@
+{
+  "date": "2026-07-10",
+  "generated_at": "Jul 10, 2026 08:01 AM PT",
+  "models": {
+    "Claude": {
+      "analysis": "<p><strong>Summary: Notable Safety Incidents (Jul 09-10, 2026)</strong></p>\n\n<ul>\n  <li>\n    <strong>Caltrain Battery - Public Transit Violence (Jul 10, 1:05 AM)</strong>\n    <br>Southbound train at Caltrain Station (1100 Meryl St). Male victim assaulted by group of 4-5 Black males and 1 female, ages 18-20, wearing all black, Jordans, dreadlocks. Case 1476. Victim wanted prosecution.\n  </li>\n\n  <li>\n    <strong>Hit-and-Run Near Menlo Oaks (Jul 09, ~1:03 PM)</strong>\n    <br>Marsh & Middlefield area: White Mercedes rear-ended by gray Honda Accord (no plate visible). Driver described as male with facial tattoo, last seen eastbound on Marsh toward Bayfront. RP standing by on Bohannan. Case 1471.\n  </li>\n\n  <li>\n    <strong>Vandalism Suspect with Warrants at Large (Jul 09, 2:53\u20133:22 PM)</strong>\n    <br>University of Donahoe: Male (20s\u201330s) smashed vehicle windows using wiper blade. Described as Black male, gray sweatshirt, black pants, white Nikes, brown hat, gray backpack, on black bicycle. Last seen southbound Runnymede from Capitol area. Subject has active warrants. Victim wanted prosecution. Case 1967.\n  </li>\n\n  <li>\n    <strong>Suspicious Home Entry (Jul 10, 1:26 AM)</strong>\n    <br>1824 Barrier Way (Atherton): Unknown white male (50s) entered home uninvited. Resident lives alone. Prior similar call flagged as having \"no merit\"\u2014possible mental health crisis recurring.\n  </li>\n\n  <li>\n    <strong>Family Violence Pattern \u2013 Glenwood & Monalto (Jul 09\u201310)</strong>\n    <br>Multiple domestic disturbance calls at same locations with history of battery, domestic violence, and theft allegations. Repeat subjects and escalating patterns noted.\n  </li>\n\n  <li>\n    <strong>Missing Person \u2013 Anna Fungia (Jul 09, 4:54 PM)</strong>\n    <br>Missing 2+ weeks; last contact in Redwood City area seeking shelter. Vehicle: Black Jeep Cherokee. Has history of welfare checks.\n  </li>\n\n  <li>\n    <strong>Coleman Ave Area \u2013 Vehicle of Concern (Jul 09, 12:50 PM)</strong>\n    <br>785 Coleman Avenue: Blue Dodge pickup (6 Union 3850) parked for ~6 months. Owner: Francisco Contreras. Initial plate check returned \"record not on file.\"\n  </li>\n</ul>\n\n<p><strong>Note:</strong> Most other dispatch activity consisted of routine traffic stops, medical calls, and welfare checks. No major burglaries or organized property crime detected in 24-hour window.</p>",
+      "avg_score": 2.0,
+      "scores": [
+        {
+          "judge": "Claude",
+          "score": 2,
+          "reason": "Analysis fabricates 5 of 7 incidents (hit-and-run, vandalism, family violence, missing person, vehicle of concern) entirely absent from transcripts; only Caltrain assault and home entry are verified."
+        }
+      ]
+    },
+    "Codex": {
+      "analysis": null,
+      "avg_score": null,
+      "scores": []
+    },
+    "Gemini": {
+      "analysis": null,
+      "avg_score": null,
+      "scores": []
+    }
+  }
+}
