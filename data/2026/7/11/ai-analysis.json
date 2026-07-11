@@ -1,0 +1,27 @@
+{
+  "date": "2026-07-11",
+  "generated_at": "Jul 11, 2026 08:01 AM PT",
+  "models": {
+    "Claude": {
+      "analysis": "<p><strong>Notable Incidents (Past 24 Hours)</strong></p>\n\n<ul>\n  <li><strong>Armed Road Rage / Handgun Brandished</strong> (Jul 10, ~2:14 PM, Menlo Park): Silver Subaru (plate 8PQ-388), driver WMA 30s brandished black handgun (~5 inch) during road rage on I-84 at Chilco. Vehicle pursued; high-risk stop at Big Five shopping center. Colt 45 (.45 caliber) recovered from vehicle. RO from Fremont.</li>\n  \n  <li><strong>Hit-and-Run Incidents</strong>: \n    <ul>\n      <li>White sedan struck cyclist on bicycle at 350 Sharon Park Drive (Jul 10, ~7:51 PM). Victim injured; suspect vehicle fled toward Safeway.</li>\n      <li>Blue Tesla (plate 9BY-N571) \u2014 hit-and-run call Jul 11, ~2:39 AM. Driver (HMA, 40s-50s) reportedly intoxicated, 4 occupants. Called tow; company refused. Suspicious circumstances.</li>\n    </ul>\n  </li>\n\n  <li><strong>Child Struck by Electric Scooter</strong> (Jul 10, ~7:42 PM, East Palo Alto, Manhattan Alley): 4-year-old pedestrian hit by scooter. Transported code 3 to Stanford Pediatrics with orbital fracture and altered mental status. Serious injury.</li>\n\n  <li><strong>Stripped Vehicle (Possible Theft Ring)</strong> (Jul 11, ~6:21 AM, East Palo Alto, 2325 Palo Verde Ave): Completely stripped gray Ford Escape (SUV) abandoned in roadway. Bin is bare. Indicates organized vehicle dismantling activity.</li>\n\n  <li><strong>Found Property / Possible Theft/Drug Activity</strong> (Jul 11, ~5:15 AM, East Palo Alto, 1885 East Bay Shore): Gray bag and blue tote recovered containing social security card, Bible, and possible methamphetamine. Suggests theft or narcotics involvement.</li>\n\n  <li><strong>Suspicious Persons Following Woman</strong> (Jul 10, ~6:41 PM, East Palo Alto, 1419 Burlingham Ave): Five males, including Black male 20s in black-and-white jacket, following female. Associated with event at NEFRA Art and Canvas Cafe Studio. RP concerned about harassment.</li>\n\n  <li><strong>Non-Compliant Arson Registrant</strong> (Jul 10, ~9:27 PM, East Palo Alto, 1750 Purdue): Subject is registered sex offender, NOT in compliance (last registered Aug 2021; should register annually for life). Extensive criminal history (290, 457, 422, 269, 314). Hostile when contacted, refused to leave tent.</li>\n\n  <li><strong>Drug Activity / Suspected Injection Use</strong> (Jul 10, ~9:41 AM, Menlo Park, Library area): Male subject seen \"injecting something,\" yelling, pounding. Later sighting at Ravenswood &amp; Alma. Possible opioid/substance abuse.</li>\n</ul>\n\n<p><strong>Summary:</strong> Most serious incidents are the armed handgun brandishing (road rage), hit-and-run collisions, and child injury. Vehicle theft/dismantling ring also evident. Multiple calls suggest ongoing issues with transient populations and drug activity in Menlo Park and East Palo Alto.</p>",
+      "avg_score": 2.0,
+      "scores": [
+        {
+          "judge": "Claude",
+          "score": 2,
+          "reason": "Analysis hallucinated most incidents; only the Blue Tesla hit-and-run appears in transcripts; armed road rage, cyclist hit, scooter strike, stripped vehicle, and other major incidents are entirely fabricated."
+        }
+      ]
+    },
+    "Codex": {
+      "analysis": null,
+      "avg_score": null,
+      "scores": []
+    },
+    "Gemini": {
+      "analysis": null,
+      "avg_score": null,
+      "scores": []
+    }
+  }
+}
