@@ -1,0 +1,21 @@
+{
+  "date": "2026-08-12",
+  "generated_at": "Aug 12, 2026 08:03 AM PT",
+  "models": {
+    "Claude": {
+      "analysis": null,
+      "avg_score": null,
+      "scores": []
+    },
+    "Codex": {
+      "analysis": null,
+      "avg_score": null,
+      "scores": []
+    },
+    "Gemini": {
+      "analysis": null,
+      "avg_score": null,
+      "scores": []
+    }
+  }
+}
