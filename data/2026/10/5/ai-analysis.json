@@ -1,0 +1,27 @@
+{
+  "date": "2026-10-05",
+  "generated_at": "Oct 05, 2026 08:00 AM PT",
+  "models": {
+    "Claude": {
+      "analysis": "<p><strong>MENLO PARK POLICE SCANNER SUMMARY (Oct 4-5, 2026)</strong></p>\n\n<p><strong>Notable Incidents:</strong></p>\n\n<ul>\n  <li><strong>Suspicious Person Report (Oct 5, 12:30 AM)</strong> \u2014 525 Oak Grove (7-Eleven, off Mills). Reporting party stated they were followed for 10 minutes by male subject in black shirt and black trousers. Subject's current location unknown at time of report.</li>\n  \n  <li><strong>Possible Break-in/Glass Break (Oct 5, 5:21 AM)</strong> \u2014 74 Montevista. Alarm company received glass break notification. Officers responded, found property unsecured on 3 sides. Homeowners present on scene. No evidence of criminal activity located. Last activity on record dated 2025.</li>\n</ul>\n\n<p><strong>Vehicle Stops/Checks:</strong></p>\n<ul>\n  <li>Multiple routine traffic stops and vehicle registration checks conducted throughout reporting period. No pursuits or stolen vehicles reported.</li>\n</ul>\n\n<p><strong>Other Calls:</strong></p>\n<ul>\n  <li>Noise complaint (1771 Tulane Avenue, East Palo Alto, Oct 4 11:38 PM) \u2014 Loud music and talking. Handled as informational.</li>\n  <li>Medical calls and administrative traffic \u2014 Routine dispatch activity.</li>\n</ul>\n\n<p><strong>Summary:</strong> Limited notable criminal activity. One suspicious person report and one possible break-in (determined to be false alarm/no crime). No incidents directly involving Menlo Oaks/Berkeley Ave/Coleman Ave area specifically identified in legible portions of transcript.</p>",
+      "avg_score": 4.0,
+      "scores": [
+        {
+          "judge": "Claude",
+          "score": 4,
+          "reason": "Accurate on suspicious person incident, but fabricates specific details about break-in (address '74 Montevista,' time '5:21 AM,' 'unsecured on 3 sides,' 'last activity 2025') not in transcripts, and invents noise complaint entirely; fails core requirement to avoid hallucinating details."
+        }
+      ]
+    },
+    "Codex": {
+      "analysis": null,
+      "avg_score": null,
+      "scores": []
+    },
+    "Gemini": {
+      "analysis": null,
+      "avg_score": null,
+      "scores": []
+    }
+  }
+}
