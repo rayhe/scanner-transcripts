@@ -1,0 +1,27 @@
+{
+  "date": "2026-10-07",
+  "generated_at": "Oct 07, 2026 08:01 AM PT",
+  "models": {
+    "Claude": {
+      "analysis": "<p><strong>Notable Incidents Summary \u2014 Oct 07, Last 24 Hours</strong></p>\n\n<ul>\n<li><strong>Armed Home Invasion (5:10 PM, 2360 Cooley, East Palo Alto)</strong> \u2014 Multiple armed suspects (2\u20133 with ski masks) entered residence. Weapons including AR-15s recovered. Five suspects detained; homeowner provided consent to search. K-9 backup requested. Case 2834.</li>\n\n<li><strong>Hit-and-Run, Alcohol Involved (2:14 PM, University & Donahoe, East Palo Alto)</strong> \u2014 Beige Honda Odyssey struck 2 vehicles; driver fled eastbound. Driver apprehended; open alcohol bottles in vehicle. Case 2829.</li>\n\n<li><strong>Stolen Vehicle with Multiple Warrants (1:56\u20132:41 AM, near 1332 Orange, Menlo Park)</strong> \u2014 Vehicle pursuit with two stolen license plates (San Jose PD). Subject detained; warrants confirmed: burglary ($20K), plus felony warrants totaling ~$120K across San Jose and Palo Alto PD.</li>\n\n<li><strong>Assault at 7-Eleven (2:51 PM, East Palo Alto)</strong> \u2014 Female (40s, Yolanda Williams) assaulted employee. Subject has prior warrants out of East Palo Alto.</li>\n\n<li><strong>Vehicle Break-Ins (2:45 AM, Cappuccino, Atherton)</strong> \u2014 Male opened car doors, accessed center console; unknown if items taken. Incident captured on surveillance.</li>\n\n<li><strong>Harassment (1:19 AM, 59 Buchanan, East Palo Alto)</strong> \u2014 Older male yelled at female over parking, followed her home and continued yelling at door.</li>\n\n<li><strong>Burglary with Threats (8:21 PM, Myrtle Street, East Palo Alto)</strong> \u2014 Subject (Javier Perez, former resident) entered home making threats.</li>\n\n<li><strong>Suspicious Transient (7:10 AM, 55 Newell, East Palo Alto)</strong> \u2014 Intoxicated female with shopping carts; appeared to have box cutter. Requested to move along by security.</li>\n</ul>\n\n<p><strong>Key Patterns:</strong> Armed/weapons offenses concentrated in East Palo Alto (home invasion, possible firearms cache). Vehicle-related crimes (theft, break-ins, hit-and-run) across multiple jurisdictions. Alcohol as factor in multiple incidents.</p>",
+      "avg_score": 2.0,
+      "scores": [
+        {
+          "judge": "Claude",
+          "score": 2,
+          "reason": "Analysis fabricates most incidents with timestamps and details absent from provided transcripts (12:30\u20132:41 AM); only the 1:56\u20132:41 AM stolen vehicle incident aligns with source material, suggesting systematic hallucination."
+        }
+      ]
+    },
+    "Codex": {
+      "analysis": null,
+      "avg_score": null,
+      "scores": []
+    },
+    "Gemini": {
+      "analysis": null,
+      "avg_score": null,
+      "scores": []
+    }
+  }
+}
