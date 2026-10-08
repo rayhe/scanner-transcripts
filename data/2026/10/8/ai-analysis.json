@@ -1,0 +1,27 @@
+{
+  "date": "2026-10-08",
+  "generated_at": "Oct 08, 2026 08:01 AM PT",
+  "models": {
+    "Claude": {
+      "analysis": "<p><strong>Notable Incidents (Oct 7-8, 2026)</strong></p>\n\n<ul>\n<li><strong>Assault with Weapon (ECR, Oct 7 ~6:40 PM)</strong> \u2014 Road rage incident. Victim (35-40 years old) punched multiple times in face by suspect in dark gray shirt with decal and military camo cargo shorts. Suspect fled in gray Honda Accord (4-door). Victim had Tesla dash cam recording. This incident escalated from verbal to physical assault.</li>\n\n<li><strong>Hit-and-Run (Eleanor &amp; Hamilton, Oct 7 4:27 PM)</strong> \u2014 Elderly person on electric scooter struck by white male driver in small 2-door hatchback (possibly VW). Vehicle was heading toward Willow. Victim had scratches; fire responded. Limited suspect description available.</li>\n\n<li><strong>Prowling/Burglary Attempt (Live Oak Area, Oct 7 ~11:00 PM)</strong> \u2014 Multiple calls for suspicious males in residential yards:\n<ul>\n<li>800 Live Oak Ave: Male (HM, early 20s, blue shirt/pants, black backpack) with video of entry into yard</li>\n<li>850 Live Oak Apartment 2: Shirtless BMA with short curly hair seen at window; neighbor kicked him out</li>\n</ul>\nTwo separate subjects in same area same evening \u2014 possible prowling pattern.</li>\n\n<li><strong>Suspicious Person in Backyard (Galardia Way, Oct 8 12:05 AM)</strong> \u2014 Unknown BM with dreadlocks in residential backyard. Reported by RP's mother via phone. Occurred approximately 1 hour before dispatch received call.</li>\n\n<li><strong>Knife Threat/Domestic (Weeks, EPA, Oct 7 11:14 AM)</strong> \u2014 Male subject threatened daughter with knife and threatened to kill her cat. Daughter traumatized with suicidal ideations. CPS and police joint response.</li>\n\n<li><strong>Reckless Vehicle (Demeter Street, EPA, Oct 7 10:48 AM)</strong> \u2014 Black Jeep wagon, no license plate, continuously speeding through business area. Vehicle fled to Roto Rooter lot. No driver apprehended.</li>\n</ul>\n\n<p><strong>Summary:</strong> Most notable concerns are an assault with road rage element (potentially dangerous driver), multiple prowling incidents in one area in short time, and a weapon-related domestic. Odd-hours suspicious person activity continues at Live Oak addresses.</p>",
+      "avg_score": 2.0,
+      "scores": [
+        {
+          "judge": "Claude",
+          "score": 2,
+          "reason": "Analysis fabricates specific incidents with detailed suspect descriptions, vehicle details, and addresses that are not present in the garbled, unintelligible transcripts\u2014severe hallucination of the kind warned about in project docs."
+        }
+      ]
+    },
+    "Codex": {
+      "analysis": null,
+      "avg_score": null,
+      "scores": []
+    },
+    "Gemini": {
+      "analysis": null,
+      "avg_score": null,
+      "scores": []
+    }
+  }
+}
