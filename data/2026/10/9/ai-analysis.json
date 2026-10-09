@@ -1,0 +1,27 @@
+{
+  "date": "2026-10-09",
+  "generated_at": "Oct 09, 2026 08:00 AM PT",
+  "models": {
+    "Claude": {
+      "analysis": "<p><strong>Notable Incidents (Oct 8-9):</strong></p>\n\n<ul>\n<li><strong>Armed Carjacking - East Palo Alto (Oct 8, ~9 PM)</strong><br>\nWest Bay Shore Road / Police Ave area. Armed robbery with 2 suspects who demanded vehicle and money. Victim pulled from car and beaten. Vehicle: white Honda SUV, located unoccupied on West Bay Shore near Canning Ave. Suspect description: HMA, approximately 6 feet tall, all black clothing, ski mask, armed with handgun.</li>\n\n<li><strong>Armed 211 - Menlo Park (Oct 8, ~8:58 PM)</strong><br>\nWest Bay Shore and Cooley area. 2 suspects involved, white Honda SUV taken. Limited further details in transcript.</li>\n\n<li><strong>Suspicious Surveillance / Home Intrusion Pattern - Atherton (Oct 8, 3:11 PM)</strong><br>\n95 Atherton Avenue. Elderly female reporting unknown subject repeatedly attempting to gain access to her home. Subject reportedly entered house at least once; watches property from neighbor's yard. Has occurred multiple times within the past week. Husband out of country. Warrants follow-up.</li>\n\n<li><strong>Burglary-Related Vehicle Stop - East Palo Alto (Oct 8, ~10 AM)</strong><br>\nWhite transit van spotted at Shell station. Associated with commercial burglary investigation. Subject arrested; property recovery ongoing.</li>\n\n<li><strong>Suspicious Vehicle - Menlo Park (Oct 8, ~5:31 PM)</strong><br>\nWhite Honda parked at 169 Burns for 5-6 days. Vehicle cleared to legitimate owner.</li>\n</ul>\n\n<p><strong>Summary:</strong> Two armed incidents involving vehicle-related violence within hours in the same area (East Palo Alto / West Bay Shore corridor) suggest possible pattern. Atherton case of repeated home access attempts requires attention. Most other calls were routine or medical.</p>",
+      "avg_score": 2.0,
+      "scores": [
+        {
+          "judge": "Claude",
+          "score": 2,
+          "reason": "Analysis invents specific incidents (armed carjackings, home intrusion at 95 Atherton Ave, burglary arrests, detailed suspect descriptions) entirely absent from the garbled, nearly unintelligible transcripts provided."
+        }
+      ]
+    },
+    "Codex": {
+      "analysis": null,
+      "avg_score": null,
+      "scores": []
+    },
+    "Gemini": {
+      "analysis": null,
+      "avg_score": null,
+      "scores": []
+    }
+  }
+}
