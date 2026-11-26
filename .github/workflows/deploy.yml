@@ -19,7 +19,7 @@ jobs:
   deploy:
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+      url: ${{ steps.deployment.outputs.page_url || steps.deployment-2.outputs.page_url || steps.deployment-final.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -56,32 +56,36 @@ jobs:
         with:
           path: _site
 
-      # GitHub's artifact-metadata API is eventually consistent for large
-      # artifacts: deploy-pages intermittently reports "Found 0 artifact(s)"
-      # seconds after a successful upload. Wait until the artifact is
-      # actually visible through the API before deploying.
-      - name: Wait for artifact to be visible
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          for i in $(seq 1 24); do
-            COUNT=$(gh api "repos/${{ github.repository }}/actions/runs/${{ github.run_id }}/artifacts" --jq '[.artifacts[] | select(.name=="github-pages")] | length')
-            echo "artifact check $i: github-pages count=$COUNT"
-            if [ "$COUNT" -ge 1 ]; then
-              exit 0
-            fi
-            sleep 10
-          done
-          echo "::warning::github-pages artifact not visible via API after 4 minutes; attempting deploy anyway"
-
-      - uses: actions/deploy-pages@v4
-        id: deployment
-
-      # One retry absorbs a residual metadata lookup miss in deploy-pages.
-      - name: Wait before deploy retry
-        if: failure() && steps.deployment.outcome == 'failure'
+      # deploy-pages looks the artifact up through GitHub's internal
+      # artifact-metadata service, which lags the upload by tens of seconds
+      # for this repo's ~550 MB artifact. The REST artifacts list shows the
+      # artifact immediately, so polling that API does NOT protect the
+      # deploy step (observed 2026-11-25: REST count=1 one second after
+      # upload, deploy-pages still reported "Found 0 artifact(s)"; the same
+      # lookup succeeds ~60 s later). Give the metadata time to land before
+      # the first attempt, then retry with backoff. Attempts 1-2 are
+      # continue-on-error so a successful retry makes the run green; only
+      # the final attempt decides the job result.
+      - name: Let artifact metadata settle
         run: sleep 60
 
       - uses: actions/deploy-pages@v4
-        if: failure() && steps.deployment.outcome == 'failure'
-        id: deployment-retry
+        id: deployment
+        continue-on-error: true
+
+      - name: Wait before second deploy attempt
+        if: steps.deployment.outcome == 'failure'
+        run: sleep 60
+
+      - uses: actions/deploy-pages@v4
+        id: deployment-2
+        if: steps.deployment.outcome == 'failure'
+        continue-on-error: true
+
+      - name: Wait before final deploy attempt
+        if: steps.deployment-2.outcome == 'failure'
+        run: sleep 120
+
+      - uses: actions/deploy-pages@v4
+        id: deployment-final
+        if: steps.deployment-2.outcome == 'failure'
